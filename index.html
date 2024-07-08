@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html data-wf-page="667d55f1ad7ee84419a5ee69" data-wf-site="667d55f1ad7ee84419a5ee61">
+<html>
   <head>
     <meta charset="utf-8" />
     <title>Unfiltered Expressions</title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="Webflow" name="generator" />
     <link href="css/normalize.css" rel="stylesheet" type="text/css" />
     <link href="css/default.css" rel="stylesheet" type="text/css" />
     <link href="css/unfiltered-expressions.css" rel="stylesheet" type="text/css" />
@@ -16,6 +15,8 @@
           ('ontouchstart' in o || (o.DocumentTouch && c instanceof DocumentTouch)) && (n.className += t + 'touch');
       })(window, document);
     </script>
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="images/webclip.png" rel="apple-touch-icon" />
   </head>
   <body>
     <div class="custome-code w-embed">
@@ -39,17 +40,19 @@
             font-size: calc(100vw / 390) !important;
           }
         }
-        .gallery__card.yellow:hover .gallery__card-name {
-          color: #0049ff;
-        }
-        .gallery__card.red:hover .gallery__card-name {
-          color: #000;
-        }
-        .gallery__card.red:hover .gallery__divider {
-          background-color: var(--blue);
-        }
-        .nav__link:last-child {
-          border-bottom: 1rem solid black;
+        @media screen and (min-width: 480px) {
+          .gallery__card.yellow:hover .gallery__card-name {
+            color: #0049ff;
+          }
+          .gallery__card.red:hover .gallery__card-name {
+            color: #000;
+          }
+          .gallery__card.red:hover .gallery__divider {
+            background-color: var(--blue);
+          }
+          .nav__link:last-child {
+            border-bottom: 1rem solid black;
+          }
         }
         .form__submit:hover .form__submit-text {
           background-color: var(--blue);
@@ -84,6 +87,19 @@
           100% {
             transform: translateX(100%);
           }
+        }
+        .swiper-pagination-bullet {
+          width: 6rem !important;
+          height: 6rem !important;
+          background: var(--grey);
+          margin: 0 3rem !important;
+          opacity: 1 !important;
+        }
+        .swiper-pagination-bullet-active {
+          background: var(--blue);
+        }
+        .swiper-pagination {
+          bottom: 30rem !important;
         }
       </style>
     </div>
@@ -273,7 +289,7 @@
                 alt=""
                 class="img show-on-mobile"
             /></a>
-            <a href="#" class="menu__button w-inline-block">
+            <a class="menu__button w-inline-block">
               <div class="burger__wrapper hide-on-mobile">
                 <span class="burger__dot _1"></span><span class="burger__dot _2"></span
                 ><span class="burger__dot _3"></span><span class="burger__dot _4"></span
@@ -313,8 +329,12 @@
               <span class="hidden-span">Want to Disrupt</span> <span class="hidden-span">the Art World</span>
             </h1>
             <h1 data-words-slide-up="" class="show-on-mobile">
-              Art CoLLectORs TALentED artISTs,  <br />‍<span class="text-span">&amp;</span> All Those Who Want to
-              Disrupt the Art World
+              <span class="hidden-span">Art CoLLectORs</span> <span class="hidden-span">TALentED</span>
+              <span class="hidden-span">artISTs, </span> <br /><span class="hidden-span"
+                ><sub class="rotate-char">&amp;</sub> All Those</span
+              >
+              <span class="hidden-span">Who Want to</span> <span class="hidden-span">Disrupt the</span>
+              <span class="hidden-span">Art World</span>
             </h1>
           </div>
           <div class="mobile-overflow-hide">
@@ -369,14 +389,14 @@
             <h1>mEEt THe ARtisTS. SEe tHE art.</h1>
           </div>
         </div>
-        <div class="gallery__cards-wrapper">
+        <div class="gallery__cards-wrapper swiper">
           <div class="gallery__empty-block bl-none"></div>
           <div id="w-node-_8cc1f6bd-38be-95cb-568e-7ca81f4a0e4b-19a5ee69" class="galery__cards-title">
             <h3>When you buy original artwork through Unfiltered Expressions</h3>
           </div>
           <div id="w-node-e2e5cf59-540b-5baf-8c72-f65511aff2dc-19a5ee69" class="gallery__empty-block br-none"></div>
-          <div id="w-node-_29435755-cabb-b5a7-4119-c90a2f558ca7-19a5ee69" class="gallery__cards">
-            <div class="gallery__card yellow">
+          <div id="w-node-_29435755-cabb-b5a7-4119-c90a2f558ca7-19a5ee69" class="gallery__cards swiper-wrapper">
+            <div class="gallery__card yellow swiper-slide">
               <div class="gallery__card-name">you <br />empower artists</div>
               <span class="gallery__divider"></span>
               <div class="mobile-px-20">
@@ -384,7 +404,7 @@
                 might never have heard of.
               </div>
             </div>
-            <div class="gallery__card blue">
+            <div class="gallery__card blue swiper-slide">
               <div class="gallery__card-name">you <br />discover new talent</div>
               <span class="gallery__divider"></span>
               <div class="mobile-px-20">
@@ -392,7 +412,7 @@
                 might never have heard of.
               </div>
             </div>
-            <div class="gallery__card red">
+            <div class="gallery__card red swiper-slide">
               <div class="gallery__card-name">you<br />connect with creators</div>
               <span class="gallery__divider"></span>
               <div class="mobile-px-20">
@@ -400,6 +420,9 @@
                 might never have heard of.
               </div>
             </div>
+          </div>
+          <div class="swiper-pagination">
+            <a href="#" class="link-block w-inline-block"></a>
           </div>
         </div>
       </section>
@@ -471,7 +494,7 @@
                 src="images/Hope-series---Garden-Walk---48-x-48-7900-1-1_1.webp"
                 loading="lazy"
                 width="307"
-                sizes="(max-width: 479px) 74vw, 20vw"
+                sizes="(max-width: 479px) 62vw, 20vw"
                 alt=""
                 srcset="
                   images/Hope-series---Garden-Walk---48-x-48-7900-1-1_1Hope-series---Garden-Walk---48-x-48-7900-1-1.webp 500w,
@@ -489,7 +512,7 @@
                 src="images/Hope-series---Shining-Through---48-x-48-7900-1_1.webp"
                 loading="lazy"
                 width="307"
-                sizes="(max-width: 479px) 74vw, 20vw"
+                sizes="(max-width: 479px) 62vw, 20vw"
                 alt=""
                 srcset="
                   images/Hope-series---Shining-Through---48-x-48-7900-1_1Hope-series---Shining-Through---48-x-48-7900-1.webp 500w,
@@ -507,7 +530,7 @@
                 src="images/Its-Personal-series---Love-Letters---54-x-54-10000-1_1.webp"
                 loading="lazy"
                 width="307"
-                sizes="(max-width: 479px) 74vw, 20vw"
+                sizes="(max-width: 479px) 62vw, 20vw"
                 alt=""
                 srcset="
                   images/Its-Personal-series---Love-Letters---54-x-54-10000-1_1Its-Personal-series---Love-Letters---54-x-54-10000-1.webp 500w,
@@ -525,7 +548,7 @@
                 src="images/Untilted-78-x-72-20000-1_1.webp"
                 loading="lazy"
                 width="307"
-                sizes="(max-width: 479px) 74vw, 20vw"
+                sizes="(max-width: 479px) 62vw, 20vw"
                 alt=""
                 srcset="
                   images/Untilted-78-x-72-20000-1_1Untilted-78-x-72-20000-1.webp 500w,
@@ -543,11 +566,47 @@
                 src="images/Untitled-48-x-48-7900-1-1_1.webp"
                 loading="lazy"
                 width="307"
-                sizes="(max-width: 479px) 74vw, 20vw"
+                sizes="(max-width: 479px) 62vw, 20vw"
                 alt=""
                 srcset="
                   images/Untitled-48-x-48-7900-1-1_1Untitled-48-x-48-7900-1-1.webp 500w,
                   images/Untitled-48-x-48-7900-1-1_1.webp                          706w
+                "
+                class="img"
+              />
+              <div class="works__detail">
+                <div class="works__name">Love Letters</div>
+                <div class="works__available">AVAILABLE</div>
+              </div>
+            </div>
+            <div class="works__work">
+              <img
+                src="images/Hope-series---Garden-Walk---48-x-48-7900-1-1_1.webp"
+                loading="lazy"
+                width="307"
+                sizes="(max-width: 479px) 62vw, 20vw"
+                alt=""
+                srcset="
+                  images/Hope-series---Garden-Walk---48-x-48-7900-1-1_1Hope-series---Garden-Walk---48-x-48-7900-1-1.webp 500w,
+                  images/Hope-series---Garden-Walk---48-x-48-7900-1-1_1.webp                                             614w
+                "
+                class="img"
+              />
+              <div class="works__detail">
+                <div class="works__name">Shining Through</div>
+                <div class="works__available">AVAILABLE</div>
+              </div>
+            </div>
+            <div class="works__work">
+              <img
+                src="images/Its-Personal-series---Love-Letters---54-x-54-10000-1_1.webp"
+                loading="lazy"
+                width="307"
+                sizes="(max-width: 479px) 62vw, 20vw"
+                alt=""
+                srcset="
+                  images/Its-Personal-series---Love-Letters---54-x-54-10000-1_1Its-Personal-series---Love-Letters---54-x-54-10000-1.webp 500w,
+                  images/Its-Personal-series---Love-Letters---54-x-54-10000-1_1.webp                                                     560w
                 "
                 class="img"
               />
@@ -876,6 +935,6 @@
     <script src="
 https://cdn.jsdelivr.net/npm/inertia-plugin@0.6.0/dist/runtime.iife.min.js
 "></script>
-    <script src="http://localhost:3000/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>
