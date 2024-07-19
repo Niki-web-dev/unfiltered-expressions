@@ -3094,6 +3094,22 @@ h3 {
     padding-bottom: 3rem;
   }
 
+  .works__wrapper {
+    grid-column-gap: 30rem;
+    grid-row-gap: 30rem;
+  }
+
+  .works__work {
+    min-width: 240rem;
+    max-width: 280rem;
+  }
+
+  .yellow__button {
+    max-width: 222rem;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+  }
+
   .yellow__button.big {
     border-width: 1rem;
     max-width: 153rem;
