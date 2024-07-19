@@ -1601,6 +1601,10 @@ h3 {
   display: block;
   transform: translate(0);
 }
+.hidden-span::selection {
+  background-color: var(--yellow);
+  color: var(--black);
+}
 
 .nav__link-wrapper {
   grid-column-gap: 8rem;
