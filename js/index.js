@@ -46,14 +46,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const computedWidth = window.getComputedStyle(item).getPropertyValue('width');
     item.style.minWidth = computedWidth;
 
-    let animation;
-    if (counter >= 3) {
-      animation = createAnimation(item, '-100%');
-    } else {
-      animation = createAnimation(item, '100%');
-    }
-    animation.play();
-    counter = (counter + 1) % 6; // Reset counter after every 6 items
+    setTimeout(() => {
+      let animation;
+      if (counter >= 3) {
+        animation = createAnimation(item, '-100%');
+      } else {
+        animation = createAnimation(item, '100%');
+      }
+      animation.play();
+      counter = (counter + 1) % 6; // Reset counter after every 6 items
+    }, 1000);
 
     const iconAnimation = gsap.to(item.parentElement.querySelectorAll('.nav__icon'), {
       rotation: 360,
