@@ -23,25 +23,25 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 1000);
 
     //work galley scroll while scroll page
-    const worksWrapper = document.querySelector('.works__wrapper');
-    const works = document.querySelector('.works');
+    // const worksWrapper = document.querySelector('.works__wrapper');
+    // const works = document.querySelector('.works');
 
-    const wrapperWidth = worksWrapper.scrollWidth;
-    const containerWidth = works.clientWidth;
-    const scrollDistance = wrapperWidth - containerWidth;
+    // const wrapperWidth = worksWrapper.scrollWidth;
+    // const containerWidth = works.clientWidth;
+    // const scrollDistance = wrapperWidth - containerWidth + 50;
 
-    const scrollAmount = scrollDistance > 0 ? scrollDistance : 0;
+    // const scrollAmount = scrollDistance > 0 ? scrollDistance : 0;
 
-    gsap.to(worksWrapper, {
-      x: -scrollAmount,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: works,
-        start: 'top top',
-        end: `+=${works.clientHeight * 0.5}`,
-        scrub: true,
-      },
-    });
+    // gsap.to(worksWrapper, {
+    //   x: -scrollAmount,
+    //   ease: 'none',
+    //   scrollTrigger: {
+    //     trigger: works,
+    //     start: 'top top',
+    //     end: `+=${works.clientHeight * 0.5}`,
+    //     scrub: true,
+    //   },
+    // });
 
     //Paralax animation
     gsap.registerPlugin(ScrollTrigger, InertiaPlugin);

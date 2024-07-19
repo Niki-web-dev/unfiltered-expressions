@@ -13,66 +13,72 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //Burger menu function
     const menuButton = document.querySelector('.menu__button');
-
+    const closeButton = document.querySelector('.close-icon');
     menuButton.addEventListener('click', function () {
       document.querySelector('.nav__menu').classList.toggle('active');
       document.querySelectorAll('.burger__dot').forEach((el) => {
         el.classList.toggle('active');
       });
     });
+
+    closeButton.addEventListener('click', function () {
+      document.querySelector('.nav__menu').classList.toggle('active');
+    });
   });
 });
 
 //gsap H1 Hero text animation
 document.addEventListener('DOMContentLoaded', function () {
-  window.addEventListener('load', function () {
-    // infinity navbar scroll text function
-    let counter = 0;
+  // infinity navbar scroll text function
+  let counter = 0;
 
-    function createAnimation(item, direction) {
-      return gsap.to(item, {
-        x: direction,
-        duration: 15,
-        ease: 'linear',
-        paused: true,
-        repeat: -1,
-      });
+  function createAnimation(item, direction) {
+    return gsap.to(item, {
+      x: direction,
+      duration: 25,
+      ease: 'linear',
+      paused: true,
+      repeat: -1,
+    });
+  }
+
+  document.querySelectorAll('.nav__link-wrapper').forEach((item) => {
+    const computedWidth = window.getComputedStyle(item).getPropertyValue('width');
+    item.style.minWidth = computedWidth;
+
+    let animation;
+    if (counter >= 3) {
+      animation = createAnimation(item, '-100%');
+    } else {
+      animation = createAnimation(item, '100%');
     }
+    animation.play();
+    counter = (counter + 1) % 6; // Reset counter after every 6 items
 
-    document.querySelectorAll('.nav__link-wrapper').forEach((item) => {
-      const computedWidth = window.getComputedStyle(item).getPropertyValue('width');
-      item.style.minWidth = computedWidth;
-
-      let animation;
-      if (counter >= 3) {
-        animation = createAnimation(item, '-100%');
-      } else {
-        animation = createAnimation(item, '100%');
-      }
-      animation.play();
-      counter = (counter + 1) % 6; // Reset counter after every 6 items
-
-      const iconAnimation = gsap.to(item.parentElement.querySelectorAll('.nav__icon'), {
-        rotation: 360,
-        duration: 10,
-        ease: 'linear',
-        paused: true,
-        repeat: -1,
-      });
-
-      item.parentElement.addEventListener('mouseenter', () => {
-        iconAnimation.play();
-      });
-
-      item.parentElement.addEventListener('mouseleave', () => {
-        iconAnimation.pause();
-      });
+    const iconAnimation = gsap.to(item.parentElement.querySelectorAll('.nav__icon'), {
+      rotation: 360,
+      duration: 10,
+      ease: 'linear',
+      paused: true,
+      repeat: -1,
     });
 
-    document.querySelectorAll('.nav__link').forEach((item) => {
-      item.style.display = 'flex';
-      item.style.flexDirection = 'row';
+    item.parentElement.addEventListener('mouseenter', () => {
+      iconAnimation.play();
     });
+
+    item.parentElement.addEventListener('mouseleave', () => {
+      iconAnimation.pause();
+    });
+  });
+
+  window.addEventListener('resize', () => {
+    location.reload();
+  });
+
+  document.querySelectorAll('.nav__link').forEach((item) => {
+    item.style.display = 'flex';
+    item.style.flexDirection = 'row';
   });
 
   //change color for navbar if scroll page

@@ -19,98 +19,6 @@
     <link href="images/webclip.png" rel="apple-touch-icon" />
   </head>
   <body>
-    <div class="custome-code w-embed">
-      <style>
-        body.overflow-hidden {
-          overflow: hidden;
-        }
-        html {
-          font-size: calc(100vw / 1640);
-        }
-        /*@media screen and (min-width: 1920px) {
-  html { font-size: calc(100vw / 1920 * 10)!important; }
-}*/
-        @media screen and (max-width: 1440px) {
-          html {
-            font-size: calc(100vw / 1440) !important;
-          }
-        }
-        @media screen and (max-width: 479px) {
-          html {
-            font-size: calc(100vw / 390) !important;
-          }
-        }
-        @media screen and (min-width: 480px) {
-          .gallery__card.yellow:hover .gallery__card-name {
-            color: #0049ff;
-          }
-          .gallery__card.red:hover .gallery__card-name {
-            color: #000;
-          }
-          .gallery__card.red:hover .gallery__divider {
-            background-color: var(--blue);
-          }
-          .nav__link:last-child {
-            border-bottom: 1rem solid black;
-          }
-        }
-        .form__submit:hover .form__submit-text {
-          background-color: var(--blue);
-        }
-        .img.absolute {
-          animation: fade 3s infinite;
-        }
-        @keyframes fade {
-          0% {
-            opacity: 0;
-          }
-          49.99% {
-            opacity: 0;
-          }
-          50% {
-            opacity: 1;
-          }
-          99.99% {
-            opacity: 1;
-          }
-          100% {
-            opacity: 0;
-          }
-        }
-        .scroll-text {
-          animation: scroll-text 30s infinite linear;
-        }
-        @keyframes scroll-text {
-          0% {
-            transform: translateX(0%);
-          }
-          100% {
-            transform: translateX(100%);
-          }
-        }
-        .swiper-pagination-bullet {
-          width: 6rem !important;
-          height: 6rem !important;
-          background: var(--grey);
-          margin: 0 3rem !important;
-          opacity: 1 !important;
-        }
-        .swiper-pagination-bullet-active {
-          background: var(--blue);
-        }
-        .swiper-pagination {
-          bottom: 30rem !important;
-        }
-      </style>
-    </div>
-    <div class="gsap-style w-embed">
-      <style>
-        .overflow-line {
-          display: block;
-          overflow: hidden;
-        }
-      </style>
-    </div>
     <div class="preloader"><img src="images/main-logo.svg" loading="lazy" alt="" class="preloader__img" /></div>
     <div class="main">
       <div
@@ -280,6 +188,7 @@
                 </div>
               </div>
             </div>
+            <img src="images/Exit.svg" loading="lazy" alt="" class="close-icon" />
           </div>
           <div class="nav__container">
             <a href="#" class="brand w-nav-brand"
@@ -342,26 +251,20 @@
               src="images/Artwork-Top-Right_1.webp"
               loading="lazy"
               sizes="(max-width: 479px) 44vw, 18vw"
-              srcset="images/Artwork-Top-Right_1Artwork-Top-Right.webp 500w, images/Artwork-Top-Right_1.webp 550w"
               alt=""
               class="hero__img-1 hero__img"
             /><img src="images/Artwork-Left-Top.webp" loading="lazy" alt="" class="hero__img-2 hero__img" /><img
               src="images/Artwork-Right-Bottom_1.webp"
               loading="lazy"
               sizes="(max-width: 479px) 45vw, 21vw"
-              srcset="
-                images/Artwork-Right-Bottom_1Artwork-Right-Bottom.webp 500w,
-                images/Artwork-Right-Bottom_1.webp                     702w
-              "
               alt=""
               class="hero__img-3 hero__img"
-            /><img src="images/Artwork-Center-Bottom.webp" loading="lazy" alt="" class="hero__img-5 hero__img" />
+            /><img src="images/dress.webp" loading="lazy" alt="" class="hero__img-5 hero__img" />
           </div>
           <img
             src="images/Artwork-Left-Bottom_1.webp"
             loading="lazy"
             sizes="(max-width: 479px) 46vw, 19vw"
-            srcset="images/Artwork-Left-Bottom_1Artwork-Left-Bottom.webp 500w, images/Artwork-Left-Bottom_1.webp 626w"
             alt=""
             class="hero__img-4 hero__img"
           />
@@ -372,12 +275,6 @@
           src="images/Screen-Shot-2024-04-15-at-10.14-1.png"
           loading="lazy"
           sizes="(max-width: 479px) 100vw, 96vw"
-          srcset="
-            images/Screen-Shot-2024-04-15-at-10.14-1-p-500.png   500w,
-            images/Screen-Shot-2024-04-15-at-10.14-1-p-800.png   800w,
-            images/Screen-Shot-2024-04-15-at-10.14-1-p-1080.png 1080w,
-            images/Screen-Shot-2024-04-15-at-10.14-1.png        1440w
-          "
           alt=""
           class="video"
         />
@@ -471,23 +368,17 @@
           src="images/Meet-the-Artist-Section-min.webp"
           loading="lazy"
           sizes="(max-width: 479px) 100vw, (max-width: 2993px) 96vw, 2874px"
-          srcset="
-            images/Meet-the-Artist-Section-min-p-500.png   500w,
-            images/Meet-the-Artist-Section-min-p-800.png   800w,
-            images/Meet-the-Artist-Section-min-p-1080.png 1080w,
-            images/Meet-the-Artist-Section-min.webp       2874w
-          "
           alt=""
           class="meet-artist__bg"
         />
       </section>
       <section class="works rem-adaptive">
-        <div class="container">
-          <div class="works__content">
-            <h2 class="works__title">WiLl DAy’s ArtWOrK</h2>
-          </div>
-        </div>
         <div class="works__container">
+          <div class="container">
+            <div class="works__content">
+              <h2 class="works__title">WiLl DAy’s ArtWOrK</h2>
+            </div>
+          </div>
           <div class="works__wrapper">
             <div class="works__work">
               <img
@@ -496,10 +387,6 @@
                 width="307"
                 sizes="(max-width: 479px) 62vw, 20vw"
                 alt=""
-                srcset="
-                  images/Hope-series---Garden-Walk---48-x-48-7900-1-1_1Hope-series---Garden-Walk---48-x-48-7900-1-1.webp 500w,
-                  images/Hope-series---Garden-Walk---48-x-48-7900-1-1_1.webp                                             614w
-                "
                 class="img"
               />
               <div class="works__detail">
@@ -514,10 +401,6 @@
                 width="307"
                 sizes="(max-width: 479px) 62vw, 20vw"
                 alt=""
-                srcset="
-                  images/Hope-series---Shining-Through---48-x-48-7900-1_1Hope-series---Shining-Through---48-x-48-7900-1.webp 500w,
-                  images/Hope-series---Shining-Through---48-x-48-7900-1_1.webp                                               580w
-                "
                 class="img"
               />
               <div class="works__detail">
@@ -532,10 +415,6 @@
                 width="307"
                 sizes="(max-width: 479px) 62vw, 20vw"
                 alt=""
-                srcset="
-                  images/Its-Personal-series---Love-Letters---54-x-54-10000-1_1Its-Personal-series---Love-Letters---54-x-54-10000-1.webp 500w,
-                  images/Its-Personal-series---Love-Letters---54-x-54-10000-1_1.webp                                                     560w
-                "
                 class="img"
               />
               <div class="works__detail">
@@ -550,10 +429,6 @@
                 width="307"
                 sizes="(max-width: 479px) 62vw, 20vw"
                 alt=""
-                srcset="
-                  images/Untilted-78-x-72-20000-1_1Untilted-78-x-72-20000-1.webp 500w,
-                  images/Untilted-78-x-72-20000-1_1.webp                         580w
-                "
                 class="img"
               />
               <div class="works__detail">
@@ -568,10 +443,6 @@
                 width="307"
                 sizes="(max-width: 479px) 62vw, 20vw"
                 alt=""
-                srcset="
-                  images/Untitled-48-x-48-7900-1-1_1Untitled-48-x-48-7900-1-1.webp 500w,
-                  images/Untitled-48-x-48-7900-1-1_1.webp                          706w
-                "
                 class="img"
               />
               <div class="works__detail">
@@ -586,10 +457,6 @@
                 width="307"
                 sizes="(max-width: 479px) 62vw, 20vw"
                 alt=""
-                srcset="
-                  images/Hope-series---Garden-Walk---48-x-48-7900-1-1_1Hope-series---Garden-Walk---48-x-48-7900-1-1.webp 500w,
-                  images/Hope-series---Garden-Walk---48-x-48-7900-1-1_1.webp                                             614w
-                "
                 class="img"
               />
               <div class="works__detail">
@@ -604,10 +471,6 @@
                 width="307"
                 sizes="(max-width: 479px) 62vw, 20vw"
                 alt=""
-                srcset="
-                  images/Its-Personal-series---Love-Letters---54-x-54-10000-1_1Its-Personal-series---Love-Letters---54-x-54-10000-1.webp 500w,
-                  images/Its-Personal-series---Love-Letters---54-x-54-10000-1_1.webp                                                     560w
-                "
                 class="img"
               />
               <div class="works__detail">
@@ -616,9 +479,9 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="container works-absolute">
-          <a href="#" class="yellow__button">PURCHASE WILL’S ART</a>
+          <div class="container works-absolute">
+            <a href="#" class="yellow__button">PURCHASE WILL’S ART</a>
+          </div>
         </div>
       </section>
       <section class="cs rem-adaptive">
@@ -628,14 +491,12 @@
               src="images/left-artist-bottom.png"
               loading="lazy"
               sizes="(max-width: 479px) 100vw, 48vw"
-              srcset="images/left-artist-bottom-p-500.png 500w, images/left-artist-bottom.png 724w"
               alt=""
               class="img absolute"
             /><img
               src="images/left-artist-top.png"
               loading="lazy"
               sizes="(max-width: 479px) 100vw, 48vw"
-              srcset="images/left-artist-top-p-500.png 500w, images/left-artist-top.png 724w"
               alt=""
               class="img"
             />
@@ -645,14 +506,12 @@
               src="images/right-artist-top.png"
               loading="lazy"
               sizes="(max-width: 479px) 100vw, 48vw"
-              srcset="images/right-artist-top-p-500.png 500w, images/right-artist-top.png 716w"
               alt=""
               class="img"
             /><img
               src="images/right-artist-bottom.png"
               loading="lazy"
               sizes="(max-width: 479px) 100vw, 48vw"
-              srcset="images/right-artist-bottom-p-500.png 500w, images/right-artist-bottom.png 716w"
               alt=""
               class="img absolute"
             />
@@ -662,14 +521,12 @@
               src="images/left-artist-bottom.png"
               loading="lazy"
               sizes="(max-width: 479px) 100vw, 48vw"
-              srcset="images/left-artist-bottom-p-500.png 500w, images/left-artist-bottom.png 724w"
               alt=""
               class="img"
             /><img
               src="images/left-artist-top.png"
               loading="lazy"
               sizes="(max-width: 479px) 100vw, 48vw"
-              srcset="images/left-artist-top-p-500.png 500w, images/left-artist-top.png 724w"
               alt=""
               class="img absolute"
             />
@@ -679,14 +536,12 @@
               src="images/right-artist-bottom.png"
               loading="lazy"
               sizes="(max-width: 479px) 100vw, 48vw"
-              srcset="images/right-artist-bottom-p-500.png 500w, images/right-artist-bottom.png 716w"
               alt=""
               class="img"
             /><img
               src="images/right-artist-top.png"
               loading="lazy"
               sizes="(max-width: 479px) 100vw, 48vw"
-              srcset="images/right-artist-top-p-500.png 500w, images/right-artist-top.png 716w"
               alt=""
               class="img absolute"
             />
@@ -737,15 +592,6 @@
           src="images/foundera.jpg"
           loading="lazy"
           sizes="(max-width: 479px) 100vw, 96vw"
-          srcset="
-            images/foundera-p-500.jpg   500w,
-            images/foundera-p-800.jpg   800w,
-            images/foundera-p-1080.jpg 1080w,
-            images/foundera-p-1600.jpg 1600w,
-            images/foundera-p-2000.jpg 2000w,
-            images/foundera-p-2600.jpg 2600w,
-            images/foundera.jpg        2880w
-          "
           alt=""
           class="img founders__img"
         />
