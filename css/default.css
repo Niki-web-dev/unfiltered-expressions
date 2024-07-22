@@ -1890,10 +1890,10 @@ html {
 }
 @keyframes scroll-text {
   0% {
-    transform: translateX(0%);
+    transform: translateX(100%);
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
 }
 .swiper-pagination-bullet {
@@ -1932,8 +1932,15 @@ html {
   width: 104%;
   z-index: -1;
 }
-
 .overflow-line {
   display: block;
   overflow: hidden;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--grey) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--blue) !important;
 }
