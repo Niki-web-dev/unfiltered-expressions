@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
     keyboardSupport: true,
     arrowScroll: 50,
     pulseAlgorithm: true,
-    pulseScale: 4,
+    pulseScale: 1,
     pulseNormalize: 1,
     touchpadSupport: true,
   });
