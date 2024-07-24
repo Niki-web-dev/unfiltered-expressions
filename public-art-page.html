@@ -9,7 +9,12 @@
     <link href="css/unfiltered-expressions.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div class="preloader"><img src="images/main-logo.svg" loading="lazy" alt="" class="preloader__img" /></div>
+    <div class="preloader">
+      <video id="preloader-video" muted loop class="preloader__video img">
+        <source src="video/preloader.mp4" type="video/mp4" />
+        <img src="images/main-logo.svg" loading="lazy" alt="" class="preloader__img" />
+      </video>
+    </div>
     <div class="main">
       <div role="banner" class="navbar rem-adaptive w-nav">
         <div class="container nav__wrapper">
@@ -622,10 +627,18 @@
           </div>
         </div>
         <div class="video-pop-up">
-          <img src="images/preloader-img.jpg" loading="lazy" sizes="100vw" alt="" class="video-wrapper" />
-          <div class="play-button">
+          <iframe
+            class="video-wrapper"
+            src="https://www.youtube.com/embed/84asdJbKqdM?si=QCbbMXfK79bTisqR"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <!-- <div class="play-button">
             <img src="images/white-play-icon.svg" loading="lazy" alt="" class="play-icon" />
-          </div>
+          </div> -->
           <div class="video-button-open close"></div>
         </div>
       </section>

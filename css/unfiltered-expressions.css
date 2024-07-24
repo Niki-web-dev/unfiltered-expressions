@@ -3143,9 +3143,11 @@ h3 {
 .video-wrapper {
   z-index: 1;
   width: 100%;
+  height: 100%;
   max-width: 1177rem;
   position: relative;
 }
+
 .play-icon {
   width: 100%;
   max-width: 154rem;
@@ -4684,5 +4686,14 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .video-wrapper {
+    z-index: 1;
+    width: 100%;
+    height: 300rem;
+    /* height: 100%; */
+    max-width: 1177rem;
+    position: relative;
   }
 }
