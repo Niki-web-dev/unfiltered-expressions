@@ -114,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function videoStart() {
+		if ()
     ScrollTrigger.create({
       trigger: videoSection,
       start: 'top 95%',

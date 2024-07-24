@@ -1348,7 +1348,7 @@ h3 {
   transform: rotate(-20deg);
 }
 .hero__img-5 {
-  z-index: 10;
+  z-index: 0;
   max-width: 210rem;
   position: absolute;
   top: 800rem;
@@ -1560,7 +1560,7 @@ h3 {
   align-items: flex-start;
   width: 100%;
   padding-left: 80rem;
-  font-size: 20rem;
+  font-size: 18rem;
   font-weight: 500;
   display: flex;
 }
