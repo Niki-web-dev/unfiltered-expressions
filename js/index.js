@@ -107,16 +107,16 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', updateNavbarStyles);
   window.addEventListener('resize', updateNavbarStyles);
 
-  SmoothScroll({
-    animationTime: 2000,
-    stepSize: 65,
-    accelerationDelta: 30,
-    accelerationMax: 1,
-    keyboardSupport: true,
-    arrowScroll: 50,
-    pulseAlgorithm: true,
-    pulseScale: 1,
-    pulseNormalize: 1,
-    touchpadSupport: true,
-  });
+  // SmoothScroll({
+  //   animationTime: 2000,
+  //   stepSize: 65,
+  //   accelerationDelta: 30,
+  //   accelerationMax: 1,
+  //   keyboardSupport: true,
+  //   arrowScroll: 50,
+  //   pulseAlgorithm: true,
+  //   pulseScale: 1,
+  //   pulseNormalize: 1,
+  //   touchpadSupport: true,
+  // });
 });

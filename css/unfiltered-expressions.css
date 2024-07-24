@@ -416,11 +416,7 @@
     width: 90%;
     top: 75%;
   }
-  .meet-artist__content {
-    justify-content: flex-end;
-    align-items: center;
-    min-height: 440rem;
-  }
+
   .meet-artist__card {
     grid-column-gap: 0rem;
     grid-row-gap: 0rem;
@@ -1265,7 +1261,6 @@ h3 {
 .button__login:hover {
   border-color: var(--blue);
   background-color: var(--blue);
-  color: var(--yellow);
 }
 .button__login.footer__button {
   text-transform: none;
@@ -1445,6 +1440,10 @@ h3 {
   text-transform: uppercase;
   padding: 44rem 200rem;
 }
+
+.galery__cards-title h3 {
+  font-weight: 400;
+}
 .gallery__cards {
   border-right: 1rem solid var(--yellow);
   border-left: 1rem solid var(--yellow);
@@ -1453,8 +1452,10 @@ h3 {
 .gallery__card {
   color: var(--white);
   text-align: center;
+  color: var(--sand);
   cursor: pointer;
   width: 100%;
+  font-size: 18rem;
   padding: 60rem 20rem;
   transition: 0.5s;
 }
@@ -1600,6 +1601,7 @@ h3 {
 .meet-artist__content {
   grid-column-gap: 16rem;
   grid-row-gap: 16rem;
+  padding-top: 40rem;
   flex-flow: column;
   justify-content: center;
   align-items: flex-end;
@@ -1681,6 +1683,10 @@ h3 {
 .works__title {
   text-transform: none;
   font-size: 45rem;
+}
+
+.works__title.fs-40 {
+  font-size: 40rem;
 }
 .works__container {
   flex-flow: column;
@@ -2021,7 +2027,7 @@ h3 {
 }
 .cta {
   background-color: var(--sand);
-  padding-top: 200rem;
+  padding-top: 175rem;
   padding-bottom: 80rem;
 }
 .cta.rem-adaptive.about-cta {
@@ -2117,6 +2123,7 @@ h3 {
 }
 .founders__text {
   width: 100%;
+  font-size: 18rem;
   max-width: 420rem;
 }
 .black__button {
@@ -3895,6 +3902,7 @@ h3 {
     justify-content: flex-end;
     align-items: center;
     min-height: 440rem;
+    padding-top: 0;
   }
   .meet-artist__card {
     grid-column-gap: 0rem;
@@ -3929,6 +3937,10 @@ h3 {
   .works__title {
     font-size: 20rem;
     line-height: 110%;
+  }
+
+  .works__title.fs-40 {
+    font-size: 20rem;
   }
   .works__container {
     margin-bottom: 74rem;
@@ -4113,7 +4125,9 @@ h3 {
     font-size: 48rem;
   }
   .process__title {
-    max-width: 360px;
+    padding-left: 16rem;
+    padding-right: 16rem;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding-top: 46rem;

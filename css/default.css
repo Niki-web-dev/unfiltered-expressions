@@ -1868,6 +1868,13 @@ html {
 .img.absolute {
   animation: fade 3s infinite;
 }
+
+.comming-soon.first {
+  animation: fade 3s infinite;
+}
+.comming-soon.second {
+  animation: fadeReverse 3s infinite;
+}
 @keyframes fade {
   0% {
     opacity: 0;
@@ -1883,6 +1890,24 @@ html {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes fadeReverse {
+  0% {
+    opacity: 1;
+  }
+  49.99% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  99.99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 .scroll-text {
