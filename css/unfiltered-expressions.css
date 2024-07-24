@@ -3574,6 +3574,12 @@ h3 {
   height: 100%;
   max-height: 498rem;
 }
+
+@media screen and (min-width: 1640px) {
+  .meet-artist__content {
+    padding-top: 150rem;
+  }
+}
 @media screen and (max-width: 767px) {
   .about-title {
     font-size: 350rem;
@@ -4695,5 +4701,13 @@ h3 {
     /* height: 100%; */
     max-width: 1177rem;
     position: relative;
+  }
+
+  .mobile-top-100 {
+    padding-top: 100rem;
+  }
+
+  .align-left-on-mobile {
+    align-items: flex-start;
   }
 }

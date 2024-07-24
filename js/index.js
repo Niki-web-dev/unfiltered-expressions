@@ -5,9 +5,12 @@ document.addEventListener('DOMContentLoaded', function () {
   // Wait for the page to fully load
   window.addEventListener('load', function () {
     const backgroundPreloader = document.querySelector('.preloader__video');
-    if (backgroundPreloader) {
+    try {
       backgroundPreloader.play();
+    } catch {
+      throw new Error('video play error');
     }
+
     // Remove overflow-hidden from the body
     this.setTimeout(function () {
       document.body.classList.remove('overflow-hidden');
