@@ -114,16 +114,17 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function videoStart() {
-		if ()
-    ScrollTrigger.create({
-      trigger: videoSection,
-      start: 'top 95%',
-      end: 'bottom 5%',
-      onEnter: () => backgroundVideo.play(),
-      onLeave: () => backgroundVideo.pause(),
-      onEnterBack: () => backgroundVideo.play(),
-      onLeaveBack: () => backgroundVideo.pause(),
-    });
+    if (backgroundVideo) {
+      ScrollTrigger.create({
+        trigger: videoSection,
+        start: 'top 95%',
+        end: 'bottom 5%',
+        onEnter: () => backgroundVideo.play(),
+        onLeave: () => backgroundVideo.pause(),
+        onEnterBack: () => backgroundVideo.play(),
+        onLeaveBack: () => backgroundVideo.pause(),
+      });
+    }
   }
 
   function setupAnimation() {
