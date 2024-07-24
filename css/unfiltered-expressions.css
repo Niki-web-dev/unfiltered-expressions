@@ -271,12 +271,6 @@
     top: 54.9rem;
     left: -5rem;
   }
-  .hero__img-3 {
-    max-width: 177rem;
-    bottom: 330rem;
-    left: -100rem;
-    right: auto;
-  }
   .hero__img-4 {
     max-width: 180rem;
     bottom: -40rem;
@@ -287,12 +281,6 @@
   }
   .text-span {
     font-size: 36rem;
-  }
-  .hero__img-5 {
-    max-width: 120rem;
-    bottom: 130.2rem;
-    left: auto;
-    right: -30rem;
   }
   .hero__content {
     height: auto;
@@ -1346,18 +1334,18 @@ h3 {
 }
 .hero__img-3 {
   z-index: 10;
-  max-width: 300rem;
+  max-width: 250rem;
   display: block;
   position: absolute;
-  bottom: 145.1rem;
-  right: -80rem;
+  top: 700rem;
+  right: 0rem;
 }
 .hero__img-4 {
   z-index: 10;
   width: 100%;
   max-width: 280rem;
   position: absolute;
-  bottom: 158.9rem;
+  top: 750rem;
   left: 42.9rem;
 }
 .text-span {
@@ -1368,7 +1356,7 @@ h3 {
   z-index: 10;
   max-width: 210rem;
   position: absolute;
-  bottom: 18rem;
+  top: 800rem;
   left: 680rem;
 }
 .hero__content {
@@ -1401,8 +1389,15 @@ h3 {
 .video {
   width: 100%;
   min-height: 330rem;
+  object-fit: cover;
   display: block;
 }
+
+#video-section {
+  max-height: 330rem;
+  overflow: hidden;
+}
+
 .video.ml-70 {
   min-width: 110%;
   margin-left: -5%;
@@ -2187,15 +2182,16 @@ h3 {
 }
 .process__item.yellow {
   background-color: var(--yellow);
-  top: 120rem;
+  top: 100rem;
 }
 .process__item.red {
   grid-column-gap: 150rem;
-  grid-row-gap: 150rem;
+  grid-row-gap: 60rem;
   background-color: var(--red);
   flex-flow: column;
   display: flex;
-  top: 1000rem;
+  padding-bottom: 85rem;
+  top: 200rem;
 }
 .process__container {
   grid-column-gap: 64rem;
@@ -2210,12 +2206,14 @@ h3 {
   margin-right: auto;
   display: grid;
 }
+
 .process__icon {
   width: 100%;
   max-width: 60rem;
 }
 .process__center {
   grid-column-gap: 16rem;
+  min-width: 350rem;
   grid-row-gap: 16rem;
   justify-content: flex-start;
   align-items: center;
@@ -2232,7 +2230,8 @@ h3 {
   background-color: var(--yellow);
   padding-top: 120rem;
   padding-bottom: 120rem;
-  position: relative;
+  position: sticky;
+  top: 500rem;
 }
 .infinity-text-wrapper {
   z-index: 0;
@@ -2256,6 +2255,8 @@ h3 {
 }
 .footer {
   padding-top: 54rem;
+  background-color: var(--black);
+  position: sticky;
   padding-bottom: 54rem;
 }
 .footer__content {
@@ -2281,20 +2282,42 @@ h3 {
 }
 .preloader {
   z-index: 2000;
-  background-color: var(--blue);
+  background-color: #0253ff;
   width: 100%;
-  transition: background-color 0.7s, opacity 0.7s, transform 0.4s ease-out;
+  transition: background-color 1s, opacity 1s, transform 0.7s ease-out;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
 }
+
+.preloader__video {
+  position: relative;
+  z-index: 1;
+}
+
+.preloader__bg {
+  display: block;
+  width: 1000rem;
+  height: 1000rem;
+  z-index: 0;
+  border-radius: 50%;
+  width: 150%;
+  height: 150%;
+  position: absolute;
+  background-color: #0253ff;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: scale(2, 2) translate(-200rem, -100rem);
+}
 .preloader.active {
   pointer-events: none;
   opacity: 0;
   background-color: rgba(0, 0, 0, 0);
-  transform: translate(2.2%, -42.7%) scale(0.29) translate(0);
+  transform: translate(2.2%, -44.1%) scale(0.29) translate(0);
 }
 .preloader__img {
   width: 100%;
@@ -3741,6 +3764,10 @@ h3 {
     object-fit: cover;
     min-height: 290rem;
   }
+
+  #video-section {
+    max-height: 290rem;
+  }
   .gallery__top {
     grid-column-gap: 24rem;
     grid-row-gap: 24rem;
@@ -4093,6 +4120,7 @@ h3 {
     padding-bottom: 27rem;
   }
   .process__item {
+    top: 75rem;
     padding-top: 30rem;
     padding-bottom: 34rem;
   }
@@ -4106,6 +4134,7 @@ h3 {
     max-width: 46rem;
   }
   .process__center {
+    min-width: 0;
     justify-content: flex-end;
     align-items: center;
   }
@@ -4125,6 +4154,8 @@ h3 {
   .footer {
     padding-top: 37rem;
     padding-bottom: 42rem;
+    position: sticky;
+    top: 0;
   }
   .footer__content {
     grid-column-gap: 40rem;
@@ -4608,5 +4639,36 @@ h3 {
   #w-node-_897e6e73-2523-e0a5-d744-fdacd8b426c1-19a5ee69,
   #w-node-_947fff19-f910-ebe6-fac5-5e5f3c9437c6-19a5ee69 {
     grid-area: 2/1/3/3;
+  }
+
+  .subscribe {
+    top: 550rem;
+  }
+  .hero__content .hero__img-1.hero__img-hidden {
+    top: auto;
+    bottom: 300rem;
+    right: 0;
+    z-index: 0;
+    left: auto;
+  }
+  .hero__content .hero__img-2.hero__img-hidden {
+    bottom: 250rem;
+  }
+
+  .hero__content .hero__img-4.hero__img-hidden {
+    top: auto;
+    bottom: 160rem;
+    right: 0;
+    left: auto;
+    z-index: 0;
+  }
+
+  .preloader__video {
+    height: auto;
+  }
+  .preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

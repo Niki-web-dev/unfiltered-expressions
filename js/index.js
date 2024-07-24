@@ -4,12 +4,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Wait for the page to fully load
   window.addEventListener('load', function () {
+    const backgroundPreloader = document.querySelector('.preloader__video');
+    backgroundPreloader.play();
     // Remove overflow-hidden from the body
     this.setTimeout(function () {
       document.body.classList.remove('overflow-hidden');
       // Add active class to the preloader
       document.querySelector('.preloader').classList.add('active');
-    }, 1000);
+    }, 2000);
 
     //Burger menu function
     const menuButton = document.querySelector('.menu__button');
@@ -74,9 +76,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  window.addEventListener('resize', () => {
-    location.reload();
-  });
+  // window.addEventListener('resize', () => {
+  //   location.reload();
+  // });
 
   document.querySelectorAll('.nav__link').forEach((item) => {
     item.style.display = 'flex';
