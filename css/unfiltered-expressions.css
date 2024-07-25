@@ -1978,7 +1978,7 @@ h3 {
   text-align: center;
   font-family: Futurehistory, sans-serif;
   font-size: 60rem;
-  line-height: 80%;
+  line-height: 70%;
   position: absolute;
   top: 50.6%;
   left: 25%;
@@ -2143,12 +2143,13 @@ h3 {
   background-color: var(--blue);
 }
 .process {
-  background-color: var(--sand);
+  background-color: var(--red);
   color: var(--black);
   text-align: center;
   padding-top: 0;
   padding-bottom: 0;
   position: relative;
+  height: 3000rem;
 }
 .process.rem-adaptive {
   color: var(--black);
@@ -2165,8 +2166,15 @@ h3 {
   text-transform: none;
 }
 .process__title {
+  background-color: var(--sand);
   padding-top: 70rem;
+  border-bottom: 1.5rem solid #000;
   padding-bottom: 70rem;
+}
+
+.process__title h2 {
+  max-width: 1350rem;
+  margin: 0 auto;
 }
 .process__title.process__about-title {
   grid-column-gap: 50rem;
@@ -2176,29 +2184,28 @@ h3 {
   display: flex;
 }
 .process__wrapper {
-  border-top: 1.5rem solid #000;
-  position: relative;
-}
-.process__item {
-  background-color: var(--sand);
-  padding-top: 50rem;
-  padding-bottom: 50rem;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
+
+.process__item {
+  min-height: 450rem;
+  background-color: var(--sand);
+  padding-top: 50rem;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 50rem;
+}
 .process__item.yellow {
   background-color: var(--yellow);
-  top: 100rem;
 }
 .process__item.red {
   grid-column-gap: 150rem;
-  grid-row-gap: 60rem;
+  grid-row-gap: 150rem;
   background-color: var(--red);
   flex-flow: column;
   display: flex;
   padding-bottom: 85rem;
-  top: 200rem;
 }
 .process__container {
   grid-column-gap: 64rem;
@@ -2237,8 +2244,7 @@ h3 {
   background-color: var(--yellow);
   padding-top: 120rem;
   padding-bottom: 120rem;
-  position: sticky;
-  top: 500rem;
+  position: relative;
 }
 .infinity-text-wrapper {
   z-index: 0;
@@ -2263,7 +2269,7 @@ h3 {
 .footer {
   padding-top: 54rem;
   background-color: var(--black);
-  position: sticky;
+  position: relative;
   padding-bottom: 54rem;
 }
 .footer__content {
@@ -4141,6 +4147,7 @@ h3 {
     padding-top: 46rem;
     padding-bottom: 27rem;
   }
+
   .process__item {
     top: 75rem;
     padding-top: 30rem;
@@ -4709,5 +4716,9 @@ h3 {
 
   .align-left-on-mobile {
     align-items: flex-start;
+  }
+
+  .process__item {
+    min-height: 0;
   }
 }

@@ -151,7 +151,61 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Resize listener to reapply the animation on window resize
   window.addEventListener('resize', function () {
-    ScrollTrigger.getAll().forEach((trigger) => trigger.kill()); // Удаляем все триггеры, чтобы не создавать дубликаты
+    ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     setupAnimation();
   });
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const firstProcessItem = document.querySelectorAll('.process__item');
+
+  gsap.set(firstProcessItem[0], { marginTop: '0rem' });
+  gsap.set(firstProcessItem[1], { marginTop: '0rem' });
+  gsap.set(firstProcessItem[2], { marginTop: '0rem' });
+
+  gsap.fromTo(
+    firstProcessItem[0],
+    { marginTop: '0rem' },
+    {
+      marginTop: '-350rem',
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.process',
+        start: 'top top',
+        end: '25% top',
+        scrub: true,
+      },
+    }
+  );
+
+  gsap.fromTo(
+    firstProcessItem[1],
+    { marginTop: '0rem' },
+    {
+      marginTop: '-350rem',
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.process',
+        start: '25% top',
+        end: '50% top',
+        scrub: true,
+      },
+    }
+  );
+
+  gsap.fromTo(
+    firstProcessItem[2],
+    { marginTop: '0rem' },
+    {
+      marginTop: '-350rem',
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.process',
+        start: '50% top',
+        end: '75% top',
+        scrub: true,
+        markers: true,
+      },
+    }
+  );
 });

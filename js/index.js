@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', function () {
-  // Add overflow-hidden to the body
-  document.body.classList.add('overflow-hidden');
+// Add overflow-hidden to the body
+document.body.classList.add('overflow-hidden');
 
+document.addEventListener('DOMContentLoaded', function () {
   // Wait for the page to fully load
   window.addEventListener('load', function () {
     const backgroundPreloader = document.querySelector('.preloader__video');
@@ -81,14 +81,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  setTimeout(function () {
+    document.querySelectorAll('.nav__link').forEach((item) => {
+      item.style.display = 'flex';
+      item.style.flexDirection = 'row';
+    });
+  }, 1100);
+
   // window.addEventListener('resize', () => {
   //   location.reload();
   // });
-
-  document.querySelectorAll('.nav__link').forEach((item) => {
-    item.style.display = 'flex';
-    item.style.flexDirection = 'row';
-  });
 
   //change color for navbar if scroll page
   const navbar = document.querySelector('.nav__container');
