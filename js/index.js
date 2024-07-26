@@ -56,45 +56,47 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  document.querySelectorAll('.nav__link-wrapper').forEach((item) => {
-    const computedWidth = window.getComputedStyle(item).getPropertyValue('width');
-    item.style.minWidth = computedWidth;
-    console.log(computedWidth);
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.nav__link-wrapper').forEach((item) => {
+      const computedWidth = window.getComputedStyle(item).getPropertyValue('width');
+      item.style.minWidth = computedWidth;
+      console.log(computedWidth);
 
-    setTimeout(() => {
-      let animation;
-      if (counter >= 3) {
-        animation = createAnimation(item, '-100%');
-      } else {
-        animation = createAnimation(item, '100%');
-      }
-      animation.play();
-      counter = (counter + 1) % 6; // Reset counter after every 6 items
+      setTimeout(() => {
+        let animation;
+        if (counter >= 3) {
+          animation = createAnimation(item, '-100%');
+        } else {
+          animation = createAnimation(item, '100%');
+        }
+        animation.play();
+        counter = (counter + 1) % 6; // Reset counter after every 6 items
+      }, 1000);
+
+      const iconAnimation = gsap.to(item.parentElement.querySelectorAll('.nav__icon'), {
+        rotation: 360,
+        duration: 10,
+        ease: 'linear',
+        paused: true,
+        repeat: -1,
+      });
+
+      item.parentElement.addEventListener('mouseenter', () => {
+        iconAnimation.play();
+      });
+
+      item.parentElement.addEventListener('mouseleave', () => {
+        iconAnimation.pause();
+      });
+    });
+
+    setTimeout(function () {
+      document.querySelectorAll('.nav__link').forEach((item) => {
+        item.style.display = 'flex';
+        item.style.flexDirection = 'row';
+      });
     }, 1000);
-
-    const iconAnimation = gsap.to(item.parentElement.querySelectorAll('.nav__icon'), {
-      rotation: 360,
-      duration: 10,
-      ease: 'linear',
-      paused: true,
-      repeat: -1,
-    });
-
-    item.parentElement.addEventListener('mouseenter', () => {
-      iconAnimation.play();
-    });
-
-    item.parentElement.addEventListener('mouseleave', () => {
-      iconAnimation.pause();
-    });
   });
-
-  setTimeout(function () {
-    document.querySelectorAll('.nav__link').forEach((item) => {
-      item.style.display = 'flex';
-      item.style.flexDirection = 'row';
-    });
-  }, 1000);
 
   // window.addEventListener('resize', () => {
   //   location.reload();
