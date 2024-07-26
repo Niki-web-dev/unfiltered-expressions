@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   if (window.innerWidth > 480) {
-    desktopProcessAnimation(-350, -40);
+    desktopProcessAnimation(-350);
   } else {
     desktopProcessAnimation(-155);
   }
