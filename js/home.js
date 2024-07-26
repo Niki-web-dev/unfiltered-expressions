@@ -163,12 +163,12 @@ document.addEventListener('DOMContentLoaded', function () {
   gsap.set(firstProcessItem[1], { marginTop: '0rem' });
   gsap.set(firstProcessItem[2], { marginTop: '0rem' });
 
-  function desktopProcessAnimation(margin) {
+  function desktopProcessAnimation(margin, firstMargin = 0) {
     gsap.fromTo(
       firstProcessItem[0],
       { marginTop: '0rem' },
       {
-        marginTop: `${margin}rem`,
+        marginTop: `${margin - firstMargin}rem`,
         ease: 'none',
         scrollTrigger: {
           trigger: '.process',
@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   if (window.innerWidth > 480) {
-    desktopProcessAnimation(-350);
+    desktopProcessAnimation(-350, -40);
   } else {
     desktopProcessAnimation(-155);
   }
