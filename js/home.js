@@ -163,49 +163,56 @@ document.addEventListener('DOMContentLoaded', function () {
   gsap.set(firstProcessItem[1], { marginTop: '0rem' });
   gsap.set(firstProcessItem[2], { marginTop: '0rem' });
 
-  gsap.fromTo(
-    firstProcessItem[0],
-    { marginTop: '0rem' },
-    {
-      marginTop: '-350rem',
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.process',
-        start: 'top top',
-        end: '25% top',
-        scrub: true,
-      },
-    }
-  );
+  function desktopProcessAnimation(margin) {
+    gsap.fromTo(
+      firstProcessItem[0],
+      { marginTop: '0rem' },
+      {
+        marginTop: `${margin}rem`,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.process',
+          start: 'top top',
+          end: '25% top',
+          scrub: true,
+        },
+      }
+    );
 
-  gsap.fromTo(
-    firstProcessItem[1],
-    { marginTop: '0rem' },
-    {
-      marginTop: '-350rem',
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.process',
-        start: '25% top',
-        end: '50% top',
-        scrub: true,
-      },
-    }
-  );
+    gsap.fromTo(
+      firstProcessItem[1],
+      { marginTop: '0rem' },
+      {
+        marginTop: `${margin}rem`,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.process',
+          start: '25% top',
+          end: '50% top',
+          scrub: true,
+        },
+      }
+    );
 
-  gsap.fromTo(
-    firstProcessItem[2],
-    { marginTop: '0rem' },
-    {
-      marginTop: '-350rem',
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.process',
-        start: '50% top',
-        end: '75% top',
-        scrub: true,
-        markers: true,
-      },
-    }
-  );
+    gsap.fromTo(
+      firstProcessItem[2],
+      { marginTop: '0rem' },
+      {
+        marginTop: `${margin}rem`,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.process',
+          start: '50% top',
+          end: '75% top',
+          scrub: true,
+        },
+      }
+    );
+  }
+
+  if (window.innerWidth > 480) {
+    desktopProcessAnimation(-350);
+  } else {
+    desktopProcessAnimation(-155);
+  }
 });
