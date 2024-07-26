@@ -1,5 +1,5 @@
 // Add overflow-hidden to the body
-document.body.classList.add('overflow-hidden');
+// document.body.classList.add('overflow-hidden');
 
 document.addEventListener('DOMContentLoaded', function () {
   // Wait for the page to fully load
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
   setTimeout(function () {
     document.body.classList.remove('overflow-hidden');
     // Add active class to the preloader
-    document.querySelector('.preloader').classList.add('active');
+    // document.querySelector('.preloader').classList.add('active');
   }, 2000);
 
   //Burger menu function
@@ -60,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.nav__link-wrapper').forEach((item) => {
       const computedWidth = window.getComputedStyle(item).getPropertyValue('width');
       item.style.minWidth = computedWidth;
-      console.log(computedWidth);
 
       setTimeout(() => {
         let animation;
@@ -102,7 +101,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.nav__link-wrapper').forEach((item) => {
       const computedWidth = window.getComputedStyle(item).getPropertyValue('width');
       item.style.minWidth = computedWidth;
-      console.log(computedWidth);
     });
   });
 
