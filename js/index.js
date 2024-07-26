@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.nav__link-wrapper').forEach((item) => {
     const computedWidth = window.getComputedStyle(item).getPropertyValue('width');
     item.style.minWidth = computedWidth;
+    console.log(computedWidth);
 
     setTimeout(() => {
       let animation;
@@ -93,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
       item.style.display = 'flex';
       item.style.flexDirection = 'row';
     });
-  }, 1100);
+  }, 2000);
 
   // window.addEventListener('resize', () => {
   //   location.reload();
