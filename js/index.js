@@ -98,6 +98,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 1000);
   });
 
+  const observer = new MutationObserver(() => {
+    document.querySelectorAll('.nav__link-wrapper').forEach((item) => {
+      const computedWidth = window.getComputedStyle(item).getPropertyValue('width');
+      item.style.minWidth = computedWidth;
+      console.log(computedWidth);
+    });
+  });
+
+  document.querySelectorAll('.nav__link-wrapper').forEach((item) => {
+    observer.observe(item, { attributes: true, childList: true, subtree: true });
+  });
+
   // window.addEventListener('resize', () => {
   //   location.reload();
   // });
