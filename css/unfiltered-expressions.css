@@ -4783,4 +4783,38 @@ h3 {
   .comming-soon {
     top: 50.9%;
   }
+
+  .hero__content .hero__img-1.hero__img-hidden {
+    top: auto;
+    bottom: 450rem;
+    right: 0;
+    z-index: 0;
+    left: auto;
+    max-width: 210rem;
+  }
+  .hero__content .hero__img-2.hero__img-hidden {
+    bottom: 500rem;
+    max-width: 150rem;
+    right: auto;
+    left: 0;
+    z-index: 1;
+  }
+
+  .hero__content .hero__img-4.hero__img-hidden {
+    top: auto;
+    bottom: 160rem;
+    right: 0;
+    left: auto;
+    max-width: 200rem;
+
+    z-index: 0;
+  }
+
+  .hero__img-3.hero__img-hidden {
+    top: auto;
+    bottom: 750rem;
+    max-width: 210rem;
+    right: 200rem;
+    z-index: 6;
+  }
 }
