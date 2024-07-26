@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
       item.style.display = 'flex';
       item.style.flexDirection = 'row';
     });
-  }, 2000);
+  }, 1000);
 
   // window.addEventListener('resize', () => {
   //   location.reload();
