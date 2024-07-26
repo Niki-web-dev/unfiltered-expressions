@@ -1860,6 +1860,7 @@ h3 {
 }
 .nav__icon {
   width: 24rem;
+  min-width: 24rem;
   height: 24rem;
   margin-top: -5rem;
 }
@@ -4050,6 +4051,7 @@ h3 {
   }
   .nav__icon {
     width: 12rem;
+    min-width: 12rem;
     height: 12rem;
   }
   .nav__contacts {
