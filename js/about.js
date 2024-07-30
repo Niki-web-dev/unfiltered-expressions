@@ -65,4 +65,30 @@ document.addEventListener('DOMContentLoaded', function () {
   deskAnimation();
 
   window.addEventListener('resize', deskAnimation);
+
+  //Paralax animation
+  gsap.registerPlugin(ScrollTrigger, InertiaPlugin);
+
+  const images = document.querySelectorAll('.process__img');
+  let scrollDistanse = 300;
+
+  if (window.innerWidth < 480) {
+    scrollDistanse = scrollDistanse * -1;
+  }
+
+  images.forEach((img, i) => {
+    gsap.to(img, {
+      y: i % 2 === 0 ? scrollDistanse : scrollDistanse * -1,
+      inertia: {
+        resistance: 500, // scroll resist
+      },
+      scrollTrigger: {
+        trigger: '.process.h-auto',
+        start: 'top 70%',
+        end: 'bottom top',
+        scrub: 1,
+        inertia: true,
+      },
+    });
+  });
 });

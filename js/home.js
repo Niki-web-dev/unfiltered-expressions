@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
   gsap.registerPlugin(ScrollTrigger, InertiaPlugin);
 
   const images = document.querySelectorAll('.hero__img');
-  let scrollDistanse = 200;
+  let scrollDistanse = 100;
 
   if (window.innerWidth < 480) {
     scrollDistanse = scrollDistanse * -1;
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
     gsap.to(img, {
       y: i % 2 === 0 ? scrollDistanse : scrollDistanse * -1,
       inertia: {
-        resistance: 200, // scroll resist
+        resistance: 500, // scroll resist
       },
       scrollTrigger: {
         trigger: '.hero',

@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
   // Wait for the page to fully load
   async function playPauseVideo() {
     const videoElement = document.querySelector('.preloader__video');
-
+    if (!videoElement) {
+      return;
+    }
     if (videoElement.paused) {
       try {
         await videoElement.play();
@@ -130,6 +132,21 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  function ctaHoverInAnimation() {
+    const yellowBg = document.querySelector('.cta');
+    const styleSheet = document.createElement('style');
+    document.head.appendChild(styleSheet);
+    if (!yellowBg) {
+      return;
+    }
+
+    yellowBg.addEventListener('mouseenter', function handler() {
+      styleSheet.sheet.insertRule('.cta__referal-text .yellow-bg::before { width: 100%; }', 0);
+      yellowBg.removeEventListener('mouseenter', handler);
+    });
+  }
+
+  ctaHoverInAnimation();
   window.addEventListener('load', updateNavbarStyles);
   window.addEventListener('scroll', updateNavbarStyles);
   window.addEventListener('resize', updateNavbarStyles);
