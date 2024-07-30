@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
         trigger: '.hero',
         start: 'top top',
         end: 'bottom top',
-        scrub: 1,
+        scrub: 3,
         inertia: true,
       },
     });
