@@ -270,7 +270,7 @@
   .hero__img-4 {
     max-width: 180rem;
     bottom: -40rem;
-    left: -47rem;
+    left: 47rem;
   }
   .hero__img-4.hero__img {
     bottom: 40rem;
@@ -1059,7 +1059,7 @@
   max-width: 280rem;
   position: absolute;
   top: 600rem;
-  left: 42.9rem;
+  left: -42.9rem;
 }
 .text-span {
   display: inline-block;
