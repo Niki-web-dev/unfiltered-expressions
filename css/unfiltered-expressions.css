@@ -270,7 +270,7 @@
   .hero__img-4 {
     max-width: 180rem;
     bottom: -40rem;
-    left: 47rem;
+    left: -47rem;
   }
   .hero__img-4.hero__img {
     bottom: 40rem;
