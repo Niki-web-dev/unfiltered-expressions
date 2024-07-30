@@ -972,6 +972,10 @@
 .hero.rem-adaptive.blue {
   background-color: var(--blue);
 }
+
+.ml-90 {
+  margin-left: 90rem;
+}
 .img.absolute {
   z-index: 2;
   opacity: 0;
@@ -1047,7 +1051,7 @@
 }
 .hero__img-3 {
   z-index: 10;
-  max-width: 238rem;
+  max-width: 178rem;
   display: block;
   position: absolute;
   top: 540rem;
@@ -2613,6 +2617,10 @@
     bottom: auto;
     left: 0;
     right: 0;
+  }
+
+  .ml-90 {
+    margin-left: 0;
   }
   .container {
     padding-left: 30rem;
