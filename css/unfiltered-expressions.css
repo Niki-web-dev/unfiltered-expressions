@@ -34,8 +34,10 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+
 .artwork__grid::-webkit-scrollbar,
-.works__wrapper::-webkit-scrollbar {
+.works__wrapper::-webkit-scrollbar,
+.hero.visible {
   display: none;
 }
 .artwork__grid,
