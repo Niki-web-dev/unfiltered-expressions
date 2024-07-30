@@ -53,9 +53,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   images.forEach((img, i) => {
-    if (i === 3) {
+    if (i === 4) {
       gsap.to(img, {
-        y: scrollDistanse * 1.2,
+        y: scrollDistanse,
         inertia: {
           resistance: 500, // scroll resist
         },
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
           inertia: true,
         },
       });
-    } else if (i === 4) {
+    } else if (i === 5) {
       gsap.to(img, {
         y: scrollDistanse * 2.5,
         inertia: {
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     } else {
       gsap.to(img, {
-        y: i % 2 === 0 ? scrollDistanse : scrollDistanse * -1,
+        y: i % 2 === 0 ? -scrollDistanse : scrollDistanse,
         inertia: {
           resistance: 500, // scroll resist
         },
