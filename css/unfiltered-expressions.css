@@ -2567,6 +2567,11 @@
     padding-top: 150rem;
   }
 }
+@media screen and (min-width: 1441px) {
+  .hero__img-3 {
+    right: -68rem;
+  }
+}
 @media screen and (max-width: 767px) {
   .about-title {
     font-size: 350rem;
