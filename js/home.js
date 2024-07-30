@@ -53,19 +53,63 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   images.forEach((img, i) => {
-    gsap.to(img, {
-      y: i % 2 === 0 ? scrollDistanse : scrollDistanse * -1,
-      inertia: {
-        resistance: 500, // scroll resist
-      },
-      scrollTrigger: {
-        trigger: '.hero',
-        start: 'top top',
-        end: 'bottom top',
-        scrub: 1,
-        inertia: true,
-      },
-    });
+    if (i === 3) {
+      gsap.to(img, {
+        y: scrollDistanse * 1.2,
+        inertia: {
+          resistance: 500, // scroll resist
+        },
+        scrollTrigger: {
+          trigger: '.hero',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: 1,
+          inertia: true,
+        },
+      });
+    } else if (i === 2) {
+      gsap.to(img, {
+        y: scrollDistanse * 2,
+        inertia: {
+          resistance: 500, // scroll resist
+        },
+        scrollTrigger: {
+          trigger: '.hero',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: 1,
+          inertia: true,
+        },
+      });
+    } else if (i === 4) {
+      gsap.to(img, {
+        y: scrollDistanse * 2.5,
+        inertia: {
+          resistance: 500, // scroll resist
+        },
+        scrollTrigger: {
+          trigger: '.hero',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: 1,
+          inertia: true,
+        },
+      });
+    } else {
+      gsap.to(img, {
+        y: i % 2 === 0 ? scrollDistanse : scrollDistanse * -1,
+        inertia: {
+          resistance: 500, // scroll resist
+        },
+        scrollTrigger: {
+          trigger: '.hero',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: 1,
+          inertia: true,
+        },
+      });
+    }
   });
 
   //mobile slider
