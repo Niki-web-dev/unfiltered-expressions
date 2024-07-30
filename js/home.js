@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let distance;
 
     if (i === 4) {
-      distance = scrollDistanse;
+      distance = scrollDistanse * 1.4;
     } else if (i === 2) {
       distance = scrollDistanse * 2;
     } else if (i === 5) {
