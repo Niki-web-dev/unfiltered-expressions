@@ -30,6 +30,10 @@
   flex-flow: column;
   display: flex;
 }
+.hero.visible {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
 .artwork__grid::-webkit-scrollbar,
 .works__wrapper::-webkit-scrollbar {
   display: none;
