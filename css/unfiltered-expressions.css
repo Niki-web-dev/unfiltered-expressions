@@ -37,7 +37,7 @@
 
 .artwork__grid::-webkit-scrollbar,
 .works__wrapper::-webkit-scrollbar,
-.hero.visible {
+.hero.visible::-webkit-scrollbar {
   display: none;
 }
 .artwork__grid,
