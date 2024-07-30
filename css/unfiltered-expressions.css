@@ -1054,7 +1054,7 @@
 }
 .hero__img-3 {
   z-index: 10;
-  max-width: 178rem;
+  max-width: 233rem;
   display: block;
   position: absolute;
   top: 540rem;
@@ -1066,7 +1066,7 @@
   max-width: 280rem;
   position: absolute;
   top: 600rem;
-  left: -42.9rem;
+  left: -92.9rem;
 }
 .text-span {
   display: inline-block;
