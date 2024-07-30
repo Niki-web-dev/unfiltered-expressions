@@ -1076,8 +1076,8 @@
   z-index: 15;
   max-width: 210rem;
   position: absolute;
-  top: 740rem;
-  left: 680rem;
+  top: 730rem;
+  left: 630rem;
 }
 .hero__content.about-hero {
   flex-flow: column;
