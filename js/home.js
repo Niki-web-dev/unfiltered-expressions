@@ -53,63 +53,31 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   images.forEach((img, i) => {
+    let distance;
+
     if (i === 4) {
-      gsap.to(img, {
-        y: scrollDistanse,
-        inertia: {
-          resistance: 500, // scroll resist
-        },
-        scrollTrigger: {
-          trigger: '.hero',
-          start: 'top top',
-          end: 'bottom top',
-          scrub: 1,
-          inertia: true,
-        },
-      });
+      distance = scrollDistanse;
     } else if (i === 2) {
-      gsap.to(img, {
-        y: scrollDistanse * 2,
-        inertia: {
-          resistance: 500, // scroll resist
-        },
-        scrollTrigger: {
-          trigger: '.hero',
-          start: 'top top',
-          end: 'bottom top',
-          scrub: 1,
-          inertia: true,
-        },
-      });
+      distance = scrollDistanse * 2;
     } else if (i === 5) {
-      gsap.to(img, {
-        y: scrollDistanse * 2.5,
-        inertia: {
-          resistance: 500, // scroll resist
-        },
-        scrollTrigger: {
-          trigger: '.hero',
-          start: 'top top',
-          end: 'bottom top',
-          scrub: 1,
-          inertia: true,
-        },
-      });
+      distance = scrollDistanse * 2.5;
     } else {
-      gsap.to(img, {
-        y: i % 2 === 0 ? -scrollDistanse : scrollDistanse,
-        inertia: {
-          resistance: 500, // scroll resist
-        },
-        scrollTrigger: {
-          trigger: '.hero',
-          start: 'top top',
-          end: 'bottom top',
-          scrub: 1,
-          inertia: true,
-        },
-      });
+      distance = i % 2 === 0 ? -scrollDistanse : scrollDistanse;
     }
+
+    gsap.to(img, {
+      y: distance,
+      inertia: {
+        resistance: 500, // scroll resist
+      },
+      scrollTrigger: {
+        trigger: '.hero',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 1,
+        inertia: true,
+      },
+    });
   });
 
   //mobile slider
