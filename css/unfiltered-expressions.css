@@ -5788,6 +5788,16 @@ h3 {
   }
   .works__container {
     margin-bottom: 0;
+    height: auto;
+    min-height: 0;
+  }
+
+  .works__container.detail {
+    top: 19%;
+  }
+
+  .artwork__row-left.py-24.px-27.mobile-pl-50 {
+    padding-left: 50rem;
   }
 
   .works__container.mobile-h-60vh {
