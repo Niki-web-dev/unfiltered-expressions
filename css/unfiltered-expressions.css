@@ -300,6 +300,7 @@
     object-fit: cover;
     min-height: 290rem;
   }
+
   .gallery__top {
     grid-column-gap: 24rem;
     grid-row-gap: 24rem;
@@ -361,6 +362,7 @@
   .gallery__card-name {
     font-size: 36rem;
   }
+
   .gallery__divider {
     margin-top: 20rem;
     margin-bottom: 27rem;
@@ -1149,6 +1151,10 @@
   object-fit: cover;
   display: block;
 }
+.video.mh-294 {
+  max-height: 294rem;
+  min-height: 294rem;
+}
 #video-section {
   max-height: 330rem;
   overflow: hidden;
@@ -1159,8 +1165,8 @@
   padding-left: 0;
 }
 .gallery__top {
-  grid-column-gap: 30rem;
-  grid-row-gap: 30rem;
+  grid-column-gap: 46rem;
+  grid-row-gap: 31rem;
   color: var(--sand);
   text-align: center;
   flex-flow: column;
@@ -1244,6 +1250,10 @@
   font-size: 35rem;
   line-height: 105%;
 }
+
+.gallery__card-name.fs-25 {
+  font-size: 25rem;
+}
 .gallery__divider.grant__divider {
   background-color: var(--blue);
   max-width: 260rem;
@@ -1311,7 +1321,8 @@
   color: var(--black);
   text-align: center;
   text-transform: uppercase;
-  font-size: 70rem;
+  font-size: 65rem;
+  line-height: 92%;
 }
 .goal__subtitle {
   z-index: 1;
@@ -1748,7 +1759,6 @@
 }
 .hero__slider {
   height: 100%;
-  margin-left: auto;
   margin-right: auto;
   display: flex;
   overflow: hidden;
@@ -1788,7 +1798,7 @@
   font-size: 400rem;
   line-height: 77%;
   position: absolute;
-  top: 60%;
+  top: 57%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -1897,7 +1907,7 @@
 }
 .advantages__right-bottom:hover {
   background-color: var(--red);
-  color: var(--white);
+  color: var(--sand);
 }
 .advantages__right-top {
   flex-flow: column;
@@ -1965,6 +1975,7 @@
   padding-top: 0;
   padding-bottom: 0;
   font-size: 20rem;
+  line-height: 120%;
 }
 .galley__bottom.white-border {
   border-top-color: var(--sand);
@@ -2881,11 +2892,6 @@
     padding-left: 0;
     font-size: 14rem;
     line-height: 120%;
-  }
-  .goal__title {
-    padding-left: 20rem;
-    padding-right: 20rem;
-    font-size: 36rem;
   }
   .goal__wrapper {
     width: 80%;
@@ -5043,6 +5049,10 @@ h3 {
   background-attachment: fixed;
   height: 270rem;
 }
+
+.paralax.mh-240 {
+  height: 240rem;
+}
 .paralax.public-art-paralax {
   background-image: url('../images/111_1111.webp');
   background-repeat: no-repeat;
@@ -5918,7 +5928,7 @@ h3 {
 .yellow__button.big {
   border: 1.5rem solid #000;
   padding-top: 17rem;
-  padding-bottom: 14rem;
+  padding-bottom: 17rem;
   font-size: 18rem;
 }
 .yellow__button.big:hover {
