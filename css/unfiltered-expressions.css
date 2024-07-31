@@ -131,6 +131,14 @@
   margin-right: auto;
   font-size: 20rem;
 }
+
+.goal__title {
+  color: var(--black);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 65rem;
+  line-height: 92%;
+}
 @media screen and (max-width: 479px) {
   h1 {
     font-size: 36rem;
@@ -1324,13 +1332,6 @@
   font-size: 18rem;
   font-weight: 500;
   display: flex;
-}
-.goal__title {
-  color: var(--black);
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 65rem;
-  line-height: 92%;
 }
 .goal__subtitle {
   z-index: 1;
@@ -5789,9 +5790,10 @@ h3 {
   align-items: center;
   height: 100vh;
   min-height: 900rem;
-  padding: 52rem 46rem;
+  padding: 40rem 40rem;
   display: flex;
-  overflow: auto;
+  overflow-y: auto;
+  position: static;
 }
 .hero.info-page.bg-white {
   background-color: var(--sand);
@@ -6155,10 +6157,8 @@ h3 {
 .info__container {
   background-color: var(--sand);
   width: 100%;
-  height: 100%;
-  min-height: 837rem;
-  padding-left: 125rem;
-  padding-right: 125rem;
+  padding-left: 120rem;
+  padding-right: 120rem;
   position: relative;
 }
 .info__bordered-container {
@@ -6176,15 +6176,15 @@ h3 {
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 42rem;
-  padding-bottom: 42rem;
+  padding-top: 32rem;
+  padding-bottom: 32rem;
   font-family: Futurehistory, sans-serif;
   font-size: 25rem;
   display: flex;
 }
 .info__logo {
   width: 100%;
-  max-width: 307rem;
+  max-width: 260rem;
 }
 .info__middle {
   border-bottom: 1rem solid var(--black);
@@ -6193,7 +6193,7 @@ h3 {
   justify-content: center;
   align-items: center;
   height: 100%;
-  padding: 65rem 173rem 50rem;
+  padding: 45rem 173rem 45rem;
   font-size: 18rem;
   display: flex;
 }
@@ -6225,7 +6225,7 @@ h3 {
   margin-bottom: 30rem;
 }
 .info__text {
-  margin-bottom: 50rem;
+  margin-bottom: 30rem;
 }
 .info__choise {
   font-size: 25rem;
@@ -6246,7 +6246,9 @@ h3 {
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 140rem;
+  min-height: 100rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
   cursor: pointer;
   padding-left: 60rem;
   padding-right: 60rem;
@@ -6318,8 +6320,8 @@ h3 {
   color: var(--black);
   text-align: center;
   text-transform: uppercase;
-  font-size: 70rem;
-  line-height: 115%;
+  font-size: 68rem;
+  line-height: 110%;
 }
 .info-referal__text {
   background-color: var(--blue);
