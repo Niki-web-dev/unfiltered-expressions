@@ -2166,14 +2166,14 @@
   width: 100%;
   max-width: 235rem;
   position: absolute;
-  top: 10%;
+  top: -62%;
   bottom: auto;
   left: auto;
   right: 0;
 }
 .process__img._2 {
   max-width: 250rem;
-  top: 24rem;
+  top: 444rem;
   left: -27rem;
   right: auto;
 }
@@ -2622,6 +2622,12 @@
   grid-area: 3/2/5/3;
 }
 @media screen and (max-width: 479px) {
+  .process__img._2 {
+    max-width: 250rem;
+    top: 24rem;
+    left: -27rem;
+    right: auto;
+  }
   h1 {
     font-size: 36rem;
   }
@@ -3437,7 +3443,7 @@
   }
 
   .process__img {
-    top: 250rem;
+    top: 210rem;
   }
   .grant__mobile-decor {
     grid-column-gap: 10rem;
