@@ -3433,7 +3433,7 @@
   .process__img,
   .process__img._2 {
     max-width: 100rem;
-    top: -94rem;
+    top: -30rem;
   }
 
   .process__img {
@@ -6590,6 +6590,10 @@ h3 {
     margin-right: auto;
     padding: 4.5rem 10rem 2.5rem;
     font-size: 14rem;
+  }
+
+  .yellow__button.big.mobile-mw-240 {
+    max-width: 240rem;
   }
   .yellow__button.big.min-w-455 {
     min-width: 0;
