@@ -881,6 +881,14 @@
   .gallery__middle {
     padding-left: 20rem;
     padding-right: 20rem;
+    position: sticky;
+    top: 70rem;
+  }
+
+  .container.mobile-background-add {
+    position: relative;
+    background-color: var(--black);
+    z-index: 10;
   }
   .gallery__cta {
     padding-top: 42rem;
@@ -2158,15 +2166,15 @@
   width: 100%;
   max-width: 235rem;
   position: absolute;
-  top: -25%;
+  top: 10%;
   bottom: auto;
   left: auto;
   right: 0;
 }
 .process__img._2 {
   max-width: 250rem;
-  top: 200rem;
-  left: -40rem;
+  top: 24rem;
+  left: -27rem;
   right: auto;
 }
 .grant__mobile-divider {
@@ -3425,6 +3433,11 @@
   .process__img,
   .process__img._2 {
     max-width: 100rem;
+    top: -94rem;
+  }
+
+  .process__img {
+    top: 250rem;
   }
   .grant__mobile-decor {
     grid-column-gap: 10rem;
