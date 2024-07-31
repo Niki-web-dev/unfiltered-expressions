@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
   gsap.registerPlugin(ScrollTrigger, InertiaPlugin);
 
   const images = document.querySelectorAll('.process__img');
-  let scrollDistanse = 300;
+  let scrollDistanse = 100;
 
   if (window.innerWidth < 480) {
     scrollDistanse = scrollDistanse * -1;
