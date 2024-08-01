@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   window.scrollTo(0, 0);
 });
+
 const worksWrapper = document.querySelector('.works__wrapper');
 const works = document.querySelector('.detail-works');
 
