@@ -1,3 +1,6 @@
+* {
+  scroll-behavior: smooth;
+}
 .navbar {
   border-right: 1rem solid var(--yellow);
   background-color: var(--black);
@@ -3796,7 +3799,7 @@
   justify-content: flex-start;
   align-items: stretch;
   max-width: 100%;
-  min-height: 977rem;
+  min-height: 850rem;
   max-height: none;
   display: flex;
 }
@@ -3848,6 +3851,8 @@
 .meet-artist__card.artist__card.blue {
   background-color: var(--blue);
   left: auto;
+  padding-left: 27rem;
+  padding-right: 27rem;
   right: 48rem;
 }
 .meet-artist__title {
@@ -4003,7 +4008,7 @@
   align-items: center;
   min-width: 360rem;
   min-height: 51rem;
-  padding: 8rem 50rem 4rem;
+  padding: 8rem 50rem 8rem;
   font-size: 24rem;
   line-height: 110%;
   text-decoration: none;
@@ -4054,6 +4059,11 @@
   padding-left: 40rem;
   padding-right: 40rem;
   display: grid;
+}
+.artwork__grid._1 {
+  padding-left: 6rem;
+  padding-right: 6rem;
+  max-width: 100%;
 }
 .artwork__work {
   grid-column-gap: 10rem;
