@@ -6308,12 +6308,13 @@ h3 {
 }
 .info-referal__container {
   flex-flow: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   height: 100%;
   padding-top: 28rem;
   display: flex;
+  overflow: auto;
 }
 .info-referal__title-wrapper {
   margin-bottom: 25rem;
