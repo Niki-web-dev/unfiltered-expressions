@@ -1,4 +1,3 @@
-
 .navbar {
   border-right: 1rem solid var(--yellow);
   background-color: var(--black);
@@ -6848,5 +6847,11 @@ h3 {
 
   .paralax {
     background-size: 120vh;
+  }
+}
+
+@media screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2) {
+  .paralax {
+    background-attachment: scroll;
   }
 }
