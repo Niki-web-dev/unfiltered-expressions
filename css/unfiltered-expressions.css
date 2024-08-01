@@ -2575,6 +2575,10 @@
   .meet-artist__content {
     padding-top: 150rem;
   }
+
+  /* .main .hero.info-page {
+    padding: 0;
+  } */
 }
 @media screen and (min-width: 1441px) {
   .hero__img-3 {
@@ -6214,8 +6218,8 @@ h3 {
   padding: 30rem 45rem;
 }
 .info__middle.px-120 {
-  padding-left: 120rem;
-  padding-right: 120rem;
+  padding-left: 80rem;
+  padding-right: 80rem;
 }
 .info__title {
   color: var(--blue);
