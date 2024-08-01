@@ -1190,6 +1190,11 @@
   padding-bottom: 34rem;
   display: flex;
 }
+
+.gallery__top.py-46-31 {
+  padding-top: 46rem;
+  padding-bottom: 31rem;
+}
 .gallery__top.gap-24 {
   grid-column-gap: 24rem;
   grid-row-gap: 24rem;
@@ -3440,11 +3445,11 @@
   .process__img,
   .process__img._2 {
     max-width: 100rem;
-    top: -30rem;
+    top: 80rem;
   }
 
   .process__img {
-    top: 210rem;
+    top: 20rem;
   }
   .grant__mobile-decor {
     grid-column-gap: 10rem;
