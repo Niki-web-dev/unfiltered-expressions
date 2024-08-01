@@ -6249,6 +6249,9 @@ h3 {
 .info__text {
   margin-bottom: 30rem;
 }
+.info__text.fs-20 {
+  font-size: 16rem !important;
+}
 .info__choise {
   font-size: 25rem;
   line-height: 120%;
