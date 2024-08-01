@@ -1,6 +1,9 @@
 //work galley scroll while scroll page
+document.addEventListener('DOMContentLoaded', function () {
+  window.scrollTo(0, 0);
+});
 const worksWrapper = document.querySelector('.works__wrapper');
-const works = document.querySelector('.works');
+const works = document.querySelector('.detail-works');
 
 const wrapperWidth = worksWrapper.scrollWidth;
 const containerWidth = works.clientWidth;
@@ -18,8 +21,8 @@ gsap.to(worksWrapper, {
   ease: 'none',
   scrollTrigger: {
     trigger: works,
-    start: 'top top',
+    start: 'top',
     end: `+=${works.clientHeight * 0.5}`,
-    scrub: true,
+    scrub: 1.5,
   },
 });

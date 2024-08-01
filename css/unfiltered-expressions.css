@@ -4851,8 +4851,12 @@ h3 {
   flex-flow: row;
   padding-bottom: 0;
   position: sticky;
-  top: 21%;
+  top: 23%;
+  height: auto;
+  justify-content: flex-start;
+  min-height: 0;
 }
+
 .works__wrapper {
   grid-column-gap: 50rem;
   grid-row-gap: 50rem;
@@ -5154,6 +5158,8 @@ h3 {
   max-height: none;
   margin-top: 36rem;
   padding-top: 50rem;
+  display: flex;
+  align-items: center;
   padding-bottom: 50rem;
   font-size: 20rem;
 }
