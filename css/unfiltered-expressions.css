@@ -6186,7 +6186,7 @@ h3 {
   border-right: 1rem solid var(--black);
   border-left: 1rem solid var(--black);
   flex-flow: column;
-  overflow: scroll;
+  overflow: auto;
   height: 100%;
   display: flex;
 }
