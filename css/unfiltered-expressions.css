@@ -2320,8 +2320,8 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0;
-  right: auto;
+  left: auto;
+  right: 15%;
 }
 .partners__texts {
   flex-flow: column;
@@ -2331,10 +2331,8 @@
   max-width: 500rem;
   margin-left: -120rem;
   padding: 85rem 60rem 80rem 0;
-  padding-left: 40rem;
   display: flex;
   position: relative;
-  background-color: var(--sand);
 }
 .parners__top-title {
   color: var(--blue);
@@ -3975,7 +3973,7 @@
 }
 .artwork__tag {
   border: 1rem solid var(--grey);
-  color: var(--white);
+  color: var(--grey);
   text-align: center;
   border-radius: 50rem;
   min-width: 107rem;
@@ -6172,6 +6170,7 @@ h3 {
   height: 100%;
   display: flex;
 }
+
 .info__top {
   grid-column-gap: 16rem;
   grid-row-gap: 16rem;
