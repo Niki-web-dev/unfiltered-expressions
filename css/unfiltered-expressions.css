@@ -1,6 +1,3 @@
-body {
-  overscroll-behavior: none;
-}
 .navbar {
   border-right: 1rem solid var(--yellow);
   background-color: var(--black);
