@@ -942,19 +942,11 @@
   --black: black;
   --yellow: #e5ff02;
   --blue: #0049ff;
-  --sand: #feffe1;
   --white: white;
   --transparent: transparent;
   --red: #fe6033;
   --grey: #d9d9d9;
-  --black: black;
-  --yellow: #e5ff02;
-  --blue: #0049ff;
   --sand: #feffe1;
-  --grey: #d9d9d9;
-  --white: white;
-  --red: #fe6033;
-  --transparent: transparent;
 }
 .container.fixed {
   position: -webkit-sticky;
@@ -2330,7 +2322,6 @@
   bottom: 0;
   left: 0;
   right: auto;
-  transform: rotateX(0) rotateY(180deg) rotateZ(0);
 }
 .partners__texts {
   flex-flow: column;
@@ -2340,8 +2331,10 @@
   max-width: 500rem;
   margin-left: -120rem;
   padding: 85rem 60rem 80rem 0;
+  padding-left: 40rem;
   display: flex;
   position: relative;
+  background-color: var(--sand);
 }
 .parners__top-title {
   color: var(--blue);
@@ -2628,6 +2621,10 @@
   grid-area: 3/2/5/3;
 }
 @media screen and (max-width: 479px) {
+  .hero__content.public-art-page {
+    min-height: 0;
+    padding-top: 105rem;
+  }
   .process__img._2 {
     max-width: 250rem;
     top: 24rem;
@@ -3977,7 +3974,7 @@
   display: flex;
 }
 .artwork__tag {
-  border: 1px solid var(--white);
+  border: 1rem solid var(--grey);
   color: var(--white);
   text-align: center;
   border-radius: 50rem;
@@ -4086,6 +4083,7 @@
   color: var(--sand);
   font-size: 20rem;
   line-height: 110%;
+  text-transform: uppercase;
 }
 .artwork__name.new {
   color: var(--yellow);
@@ -4743,7 +4741,7 @@ h3 {
   cursor: pointer;
   text-transform: uppercase;
   border-radius: 50rem;
-  padding: 11rem 24rem 8rem;
+  padding: 11rem 24rem 11rem;
   font-size: 20rem;
   line-height: 110%;
   text-decoration: none;
@@ -5197,6 +5195,7 @@ h3 {
   color: var(--yellow);
   margin-bottom: -10rem;
   font-size: 40rem;
+  text-transform: none;
 }
 .artwork__row-name {
   color: var(--red);
