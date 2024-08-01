@@ -6858,6 +6858,10 @@ h3 {
   .paralax {
     background-size: 120vh;
   }
+
+  .info__button-wrapper {
+    padding: 10rem;
+  }
 }
 
 @media screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2) {
