@@ -5095,6 +5095,10 @@ h3 {
   width: 100%;
   height: auto;
 }
+
+.paralax.about-1 {
+  background-image: url('../images/about-paralax-1-min.jpeg');
+}
 .paralax__content {
   grid-column-gap: 40rem;
   grid-row-gap: 40rem;
@@ -6842,5 +6846,9 @@ h3 {
   .hero__container.referal__hero {
     height: 100vh;
     padding-top: 250rem;
+  }
+
+  .paralax {
+    background-size: 120vh;
   }
 }
