@@ -6888,5 +6888,6 @@ h3 {
 
   .hero__container.product-page {
     grid-column-gap: 0;
+    padding-left: 0;
   }
 }
