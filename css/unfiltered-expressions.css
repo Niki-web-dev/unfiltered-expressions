@@ -5798,7 +5798,6 @@ h3 {
   height: 100vh;
   padding: 40rem 40rem;
   display: flex;
-  overflow-y: auto;
   position: static;
 }
 .hero.info-page.bg-white {
