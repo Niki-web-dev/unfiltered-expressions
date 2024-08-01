@@ -1,6 +1,4 @@
-* {
-  scroll-behavior: smooth;
-}
+
 .navbar {
   border-right: 1rem solid var(--yellow);
   background-color: var(--black);
