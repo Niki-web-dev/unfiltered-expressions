@@ -6832,4 +6832,9 @@ h3 {
   .login__divider {
     margin-bottom: 20rem;
   }
+
+  .hero__container.referal__hero {
+    height: 100vh;
+    padding-top: 250rem;
+  }
 }
