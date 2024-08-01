@@ -2576,9 +2576,14 @@
     padding-top: 150rem;
   }
 
-  .main .hero.info-page {
-    padding: 0;
+  .info__container {
+    padding-left: 100rem;
+    padding-right: 100rem;
   }
+
+  /* .main .hero.info-page {
+    padding: 0;
+  } */
 }
 @media screen and (min-width: 1441px) {
   .hero__img-3 {
