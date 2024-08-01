@@ -2597,6 +2597,14 @@
   .hero__img-3 {
     right: -64rem;
   }
+
+  .product__img-wrapper {
+    margin-right: auto;
+  }
+
+  .hero__container.product-page {
+    grid-column-gap: 0;
+  }
 }
 @media screen and (max-width: 767px) {
   .about-title {
