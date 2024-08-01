@@ -3871,9 +3871,9 @@
   color: var(--blue);
 }
 .color-white.will-day__scroll {
-  grid-column-gap: 50rem;
-  grid-row-gap: 50rem;
-  padding-left: 50rem;
+  grid-column-gap: 30rem;
+  grid-row-gap: 30rem;
+  padding-left: 30rem;
   display: flex;
 }
 .subscribe {
