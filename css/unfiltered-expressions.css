@@ -2582,7 +2582,11 @@
   }
 
   .info__title {
-    font-size: 20rem;
+    font-size: 29rem !important;
+  }
+
+  .info__choise.mw-620 {
+    font-size: 20rem !important;
   }
 
   /* .main .hero.info-page {
