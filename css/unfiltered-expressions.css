@@ -810,13 +810,6 @@
   .grand__text-wrapper {
     padding-bottom: 42rem;
   }
-  .grant__smal-img {
-    max-width: 200rem;
-    margin-left: 0;
-    position: absolute;
-    top: 500rem;
-    right: 0;
-  }
   .grant__title {
     text-align: center;
   }
@@ -3353,7 +3346,7 @@
     max-width: 200rem;
     margin-left: 0;
     position: absolute;
-    top: 500rem;
+    top: 400rem;
     right: 0;
   }
   .grant__title {
