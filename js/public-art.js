@@ -36,6 +36,7 @@ function videoPopUp() {
 document.addEventListener('DOMContentLoaded', function () {
   const icon = document.querySelector('.cta__icon');
   const section = document.querySelector('.public-art__cta');
+  const artworkItems = document.querySelectorAll('.artwork__work.w-inline-block');
 
   function deskAnimation() {
     if (!isMobile()) {
@@ -84,61 +85,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
   createSlider();
 
-  function openArtWorkDetail(numOfContainer) {
-    const artworks = document.querySelectorAll(`.artwork__grid._${numOfContainer} .artwork__work`);
-    const emptyImgBlock = '<div style="background: #fff; width: 100%; height: 100%;"></div>';
+  //art work detail div.clone().append()
 
-    if (artworks) {
-      artworks.forEach((artwork) => {
-        artwork.addEventListener('click', function () {
-          const artworkName = artwork.querySelector('.artwork__name:not(.new)')?.textContent || 'UNTITLED';
-          const artworkImg = artwork.querySelector('img')?.cloneNode(true) || emptyImgBlock;
-          const artworkSize = artwork.querySelector('.artwork__size')?.textContent || 'UNTITLED';
-          const artworkPrice = artwork.querySelector('.artwork__price')?.textContent || 'UNTITLED';
-          const donor = document.querySelector(`.artwork__deatil._${numOfContainer}`);
+  function openArtWorkDetail() {
+    artworkItems.forEach((artowk) => {
+      artowk.addEventListener('click', function () {
+        const detailContainer = artowk.closest('.artwork__grid').nextElementSibling;
+        if (detailContainer.classList.contains('artwork__deatil')) {
+          detailContainer.innerHTML = '';
+          const detail = artowk.querySelector('.artwork__container').cloneNode(true);
+          detailContainer.append(detail);
 
-          const isOpen = donor.clientHeight > 0;
+          const isOpen = detailContainer.clientHeight > 0;
           if (!isOpen) {
-            donor.style.display = 'flex';
-            gsap.fromTo(donor, { height: 0, opacity: 0 }, { height: 'auto', opacity: 1, duration: 0.5 });
+            detailContainer.style.display = 'flex';
+            gsap.fromTo(detailContainer, { height: 0, opacity: 0 }, { height: 'auto', opacity: 1, duration: 0.5 });
           }
 
-          if (!donor) return;
-
           if (isMobile()) {
-            donor.scrollIntoView({
+            detailContainer.scrollIntoView({
               behavior: 'smooth',
               block: 'start',
             });
           }
-
-          const detailName = donor.querySelector('.artwork__title-name');
-          const detailImg = donor.querySelector('.artwork__detail-img');
-          const detailSize = donor.querySelector('.artwork__descr-size');
-          const detailPriceNum = donor.querySelector('.artwork__descr-price-num');
-
-          if (detailName) {
-            detailName.textContent = artworkName;
-          }
-
-          if (detailImg) {
-            detailImg.innerHTML = '';
-            detailImg.appendChild(artworkImg);
-            detailImg.querySelector('img').setAttribute('alt', artworkName);
-          }
-
-          if (detailSize) {
-            detailSize.textContent = artworkSize;
-          }
-
-          if (detailPriceNum) {
-            detailPriceNum.textContent = artworkPrice;
-          }
-        });
+        }
       });
-    }
+    });
   }
 
-  openArtWorkDetail('1');
-  openArtWorkDetail('2');
+  openArtWorkDetail();
 });

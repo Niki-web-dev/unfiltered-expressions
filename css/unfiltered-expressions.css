@@ -87,7 +87,8 @@
   grid-auto-columns: 1fr;
   display: grid;
 }
-.artwork__work {
+
+.artwork__grid .artwork__work {
   grid-column-gap: 10rem;
   grid-row-gap: 10rem;
   flex-flow: column;
@@ -2528,6 +2529,11 @@
   padding-right: 54rem;
   display: flex;
 }
+
+.artwork__grid .artwork__container {
+  display: none;
+}
+
 .artwork__detail-img {
   border-right: 1rem solid var(--sand);
   width: 100%;
@@ -4053,6 +4059,7 @@
   flex-flow: column;
   text-decoration: none;
   display: flex;
+  cursor: pointer;
 }
 .artwork__img {
   object-fit: cover;
