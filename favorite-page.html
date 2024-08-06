@@ -11,7 +11,12 @@
     <link href="css/favorit.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div class="preloader active"><img src="images/main-logo.svg" loading="lazy" alt="" class="preloader__img" /></div>
+    <div class="preloader">
+      <video id="preloader-video" muted loop class="preloader__video img">
+        <source src="video/preloader.mp4" type="video/mp4" />
+        <img src="images/main-logo.svg" loading="lazy" alt="" class="preloader__img" />
+      </video>
+    </div>
     <div class="main relative">
       <div role="banner" class="navbar rem-adaptive w-nav">
         <div class="container nav__wrapper">
