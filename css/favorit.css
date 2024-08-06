@@ -1,0 +1,24 @@
+.favorit {
+  padding-left: 7rem;
+  padding-right: 0;
+}
+.artwork__grid._1,
+.artwork__grid._2 {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.account__title-wrapper,
+.account__tabs {
+  max-width: 1211rem;
+  margin-left: auto;
+  margin-right: 50rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 479px) {
+  .favorit {
+    padding-left: 30rem;
+    padding-right: 30rem;
+  }
+}

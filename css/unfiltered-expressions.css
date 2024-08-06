@@ -4759,6 +4759,7 @@ h3 {
   border-color: var(--yellow);
 }
 .button__bucket {
+  cursor: pointer;
   width: 100%;
   max-width: 32rem;
   transition: transform 0.5s;
