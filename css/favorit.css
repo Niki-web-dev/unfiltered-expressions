@@ -22,3 +22,10 @@
     padding-right: 30rem;
   }
 }
+@media screen and (min-width: 1441px) {
+  .account__title-wrapper,
+  .account__tabs {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

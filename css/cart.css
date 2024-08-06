@@ -249,3 +249,10 @@
     margin-bottom: 40rem;
   }
 }
+
+@media screen and (min-width: 1441px) {
+  .cart {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
