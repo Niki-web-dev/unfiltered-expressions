@@ -25,9 +25,6 @@
   display: flex;
 }
 
-#preloader-video {
-  height: auto;
-}
 .works {
   flex-flow: column;
   justify-content: flex-start;
@@ -145,6 +142,9 @@
   line-height: 92%;
 }
 @media screen and (max-width: 479px) {
+  #preloader-video {
+    height: auto;
+  }
   h1 {
     font-size: 36rem;
   }
