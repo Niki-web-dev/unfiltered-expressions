@@ -6875,6 +6875,13 @@ h3 {
   .mobile-padding-75 {
     padding-top: 75rem;
   }
+
+  .product__img-container {
+    height: 300rem;
+  }
+  .product__img {
+    min-height: 300rem;
+  }
 }
 
 @media screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2) {
