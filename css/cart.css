@@ -117,6 +117,7 @@
 
 .total__delete {
   width: 18rem;
+  cursor: pointer;
 }
 
 .total__price-wrapper {

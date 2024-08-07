@@ -13,6 +13,13 @@
   top: 30rem;
   right: 30rem;
 }
+.pointer-event-none {
+  pointer-events: none;
+}
+
+.hide {
+  display: none !important;
+}
 .container.works-absolute {
   justify-content: center;
   align-items: center;
@@ -2980,11 +2987,6 @@
     min-width: 240rem;
     max-width: 280rem;
   }
-  .yellow__button {
-    max-width: 222rem;
-    padding-top: 6rem;
-    padding-bottom: 3rem;
-  }
   .yellow__button.big {
     border-width: 1rem;
     max-width: 153rem;
@@ -4750,7 +4752,7 @@ h3 {
   cursor: pointer;
   text-transform: uppercase;
   border-radius: 50rem;
-  padding: 11rem 24rem 11rem;
+  padding: 11rem 24rem 9rem;
   font-size: 20rem;
   line-height: 110%;
   text-decoration: none;
@@ -5964,7 +5966,7 @@ h3 {
   max-width: 360rem;
   margin-left: auto;
   margin-right: auto;
-  padding: 15rem 34rem;
+  padding: 17rem 34rem 13rem;
   font-size: 14rem;
   text-decoration: none;
   transition: color 0.5s, background-color 0.5s, border-color 0.5s;

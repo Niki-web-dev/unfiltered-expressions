@@ -8,6 +8,7 @@
     <link href="css/default.css" rel="stylesheet" type="text/css" />
     <link href="css/unfiltered-expressions.css" rel="stylesheet" type="text/css" />
     <link href="css/account.css" rel="stylesheet" type="text/css" />
+    <link href="css/cart.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <div class="preloader">
@@ -354,14 +355,15 @@
                       </div>
                       <div class="information__inputs-checkboxes">
                         <label class="w-checkbox checkbox-field">
-                          <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox"></div>
                           <input
                             type="checkbox"
                             id="checkbox"
                             name="checkbox"
                             data-name="Checkbox"
                             style="opacity: 0; position: absolute; z-index: -1"
-                          /><span class="checkbox-label w-form-label" for="checkbox">Enable Push Notifications</span>
+                          />
+                          <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox"></div>
+                          <span class="checkbox-label w-form-label" for="checkbox">Enable Push Notifications</span>
                         </label>
                       </div>
                       <div class="information__submit-wrapper">
@@ -485,7 +487,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="information__wrapper">
+                <div class="information__wrapper deliver-pane">
                   <div class="information___label">deLiverY AddRESs</div>
                   <div class="form-block w-form">
                     <form
@@ -591,7 +593,7 @@
                           />
                         </div>
                         <div class="information__inputs-wrapper">
-                          <label for="name" class="information__type">PREFERRED CURRENCY</label>
+                          <label for="name" class="information__type">COUNTRY</label>
                           <div class="select__wrapper _w-100">
                             <div class="select__button full-width">
                               <img
@@ -621,15 +623,16 @@
                         </div>
                       </div>
                       <div class="information__inputs-checkboxes">
-                        <label class="w-checkbox checkbox-field">
-                          <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox"></div>
+                        <label class="w-checkbox checkbox-field freeze-paymant">
                           <input
                             type="checkbox"
                             id="checkbox-2"
                             name="checkbox-2"
                             data-name="Checkbox 2"
                             style="opacity: 0; position: absolute; z-index: -1"
-                          /><span class="checkbox-label w-form-label" for="checkbox-2"
+                          />
+                          <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox"></div>
+                          <span class="checkbox-label w-form-label" for="checkbox-2"
                             >The billing address is the same as the delivery address.</span
                           >
                         </label>
@@ -648,39 +651,207 @@
                 </div>
               </div>
               <div class="account__tab-pane">
-                <div class="information__wrapper">
-                  <div class="information___label">ReFErrAl ParTNeR COde</div>
+                <div class="information__wrapper payment-pane">
+                  <div class="information___label">pAYment AddRESs</div>
                   <div class="form-block w-form">
                     <form
                       id="wf-form-account-info"
                       name="wf-form-account-info"
                       data-name="account info"
                       method="get"
-                      class="information__form gap-30"
+                      class="information__form"
                       data-wf-page-id="66acb5231b5ad7516553fb29"
-                      data-wf-element-id="19818327-b1f0-0361-277a-8d4f6d12d000"
+                      data-wf-element-id="1357fb1f-6278-64a5-0223-f732274e84d4"
                     >
-                      <div class="information__referal-text">
-                        As a referral partner, you have access to our entire artwork inventory and early access to new
-                        artists. Purchase directly for clients or share your code with clients &amp; friends. When
-                        purchases are made through your code, you’ll receive a 15% COMMISSION.
-                      </div>
                       <div class="information__inputs">
-                        <div class="information__inputs-wrapper mw-372">
-                          <input
+                        <div class="information__inputs-wrapper">
+                          <label for="full-name-2" class="information__type">FULL NAME</label
+                          ><input
                             class="information__field w-input"
                             maxlength="256"
-                            name="Current-Password-2"
-                            data-name="Current Password 2"
-                            placeholder="XXXXX"
+                            name="full-name-2"
+                            data-name="full-name-2"
+                            placeholder="RECIPIENT NAME FOR DELIVERY"
                             type="text"
-                            id="Current-Password-2"
+                            id="full-name-2"
                             required=""
                           />
                         </div>
                       </div>
-                      <div class="information__referal-subscr">
-                        Want to become a referral partner?<a href="#" class="text-blue">click here</a> to learn more.
+                      <div class="information__inputs">
+                        <div class="information__inputs-wrapper">
+                          <label for="ADDRESS-LINE-2" class="information__type">ADDRESS</label
+                          ><input
+                            class="information__field w-input"
+                            maxlength="256"
+                            name="ADDRESS-LINE-2"
+                            data-name="ADDRESS LINE 1"
+                            placeholder="ADDRESS LINE 1"
+                            type="text"
+                            id="ADDRESS-LINE-2"
+                            required=""
+                          />
+                        </div>
+                        <div class="information__inputs-wrapper">
+                          <input
+                            class="information__field w-input"
+                            maxlength="256"
+                            name="ADDRESS-LINE-3"
+                            data-name="ADDRESS LINE 2"
+                            placeholder="ADDRESS LINE 2"
+                            type="text"
+                            id="ADDRESS-LINE-3"
+                          />
+                        </div>
+                      </div>
+                      <div class="information__inputs">
+                        <div class="information__inputs-wrapper">
+                          <label for="APARTMENT-BUILDING-2" class="information__type">APARTMENT/BUILDING/...</label
+                          ><input
+                            class="information__field w-input"
+                            maxlength="256"
+                            name="APARTMENT-BUILDING-2"
+                            data-name="APARTMENT/BUILDING/..."
+                            placeholder="APARTMENT/BUILDING/..."
+                            type="text"
+                            id="APARTMENT-BUILDING-2"
+                          />
+                        </div>
+                        <div class="information__inputs-wrapper">
+                          <label for="Zip-Code-2" class="information__type">ZIP CODE/POSTCODE</label
+                          ><input
+                            class="information__field w-input"
+                            maxlength="256"
+                            name="Zip-Code-2"
+                            data-name="Zip Code-2"
+                            placeholder="XXXXX"
+                            type="text"
+                            id="Zip-Code-2"
+                          />
+                        </div>
+                        <div class="information__inputs-wrapper">
+                          <label for="CITY-2" class="information__type">CITY</label
+                          ><input
+                            class="information__field w-input"
+                            maxlength="256"
+                            name="CITY-2"
+                            data-name="CITY-2"
+                            placeholder="XXXXX"
+                            type="text"
+                            id="CITY-2"
+                          />
+                        </div>
+                      </div>
+                      <div class="information__inputs">
+                        <div class="information__inputs-wrapper">
+                          <label for="First-Name-2" class="information__type">STATE/COUNTY</label
+                          ><input
+                            class="information__field w-input"
+                            maxlength="256"
+                            name="First-Name-2"
+                            data-name="First Name 2"
+                            placeholder="STATE/COUNTY"
+                            type="text"
+                            id="First-Name-2"
+                            required=""
+                          />
+                        </div>
+                        <div class="information__inputs-wrapper">
+                          <label for="name" class="information__type">COUNTRY</label>
+                          <div class="select__wrapper _w-100">
+                            <div class="select__button full-width">
+                              <img
+                                src="images/Down-Arrow-Selector.svg"
+                                loading="lazy"
+                                alt=""
+                                class="dropdown-arrow invert-color mr-15"
+                              />
+                              <div class="select__list default">
+                                <div class="select__list-item">EUR</div>
+                                <div class="select__list-item">UAN</div>
+                                <div class="select__list-item">UAH</div>
+                                <div class="select__list-item">CZH</div>
+                              </div>
+                            </div>
+                            <input
+                              class="information__field select__field rounded hiden-field visible w-input"
+                              maxlength="256"
+                              name="PLEASE-SELECT-A-COUNTRY-2"
+                              data-name="PLEASE SELECT A COUNTRY"
+                              placeholder="PLEASE SELECT A COUNTRY"
+                              type="text"
+                              id="PLEASE-SELECT-A-COUNTRY-2"
+                              required=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="information__submit-wrapper">
+                        <div class="yellow__button submit">update</div>
+                      </div>
+                    </form>
+                    <div class="w-form-done">
+                      <div>Thank you! Your submission has been received!</div>
+                    </div>
+                    <div class="w-form-fail">
+                      <div>Oops! Something went wrong while submitting the form.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="information__wrapper">
+                  <div class="information___label">Card Info</div>
+                  <div class="form-block w-form">
+                    <form
+                      id="wf-form-account-info"
+                      name="wf-form-account-info"
+                      data-name="account info"
+                      method="get"
+                      class="information__form"
+                      data-wf-page-id="66acb5231b5ad7516553fb29"
+                      data-wf-element-id="1357fb1f-6278-64a5-0223-f732274e84d4"
+                    >
+                      <div class="information__inputs">
+                        <div class="information__inputs-wrapper">
+                          <label for="card-number" class="information__type">CARD NUMBER</label
+                          ><input
+                            class="information__field w-input"
+                            maxlength="256"
+                            name="card-number"
+                            placeholder="Enter Card Number"
+                            type="text"
+                            id="target-card-number"
+                            required=""
+                          />
+                        </div>
+                      </div>
+                      <div class="information__inputs">
+                        <div class="information__inputs-wrapper">
+                          <label for="card-date" class="information__type">EXPIRATION DATE</label
+                          ><input
+                            class="information__field w-input"
+                            maxlength="256"
+                            name="card-date"
+                            placeholder="MM/YY"
+                            type="text"
+                            id="target-expiry-date"
+                            required=""
+                          />
+                        </div>
+                        <div class="information__inputs-wrapper">
+                          <label for="card-cvv" class="information__type">CVV</label
+                          ><input
+                            class="information__field w-input"
+                            maxlength="256"
+                            name="card-cvv"
+                            placeholder="CVV"
+                            type="text"
+                            id="target-cvv"
+                            required=""
+                          />
+                        </div>
+                      </div>
+                      <div class="information__submit-wrapper">
+                        <div class="yellow__button submit">update</div>
                       </div>
                     </form>
                     <div class="w-form-done">
@@ -694,111 +865,85 @@
               </div>
               <div class="account__tab-pane">
                 <div class="information__wrapper">
-                  <div class="information___label">chAnGE PaSSworD</div>
-                  <div class="form-block w-form">
-                    <form
-                      id="wf-form-account-info"
-                      name="wf-form-account-info"
-                      data-name="account info"
-                      method="get"
-                      class="information__form"
-                      data-wf-page-id="66acb5231b5ad7516553fb29"
-                      data-wf-element-id="25301d24-88b9-f69c-3d8d-22b14b564cff"
-                    >
-                      <div class="information__inputs">
-                        <div class="information__inputs-wrapper">
-                          <label for="Current-Password-3" class="information__type">CURRENT PASSWORD</label
-                          ><input
-                            class="information__field w-input"
-                            maxlength="256"
-                            name="Current-Password-3"
-                            data-name="Current Password 3"
-                            placeholder="XXXXX"
-                            type="text"
-                            id="Current-Password-3"
-                            required=""
-                          />
-                        </div>
-                        <div class="information__inputs-wrapper">
-                          <label for="New-Password-2" class="information__type">NEW PASSWORD</label
-                          ><input
-                            class="information__field w-input"
-                            maxlength="256"
-                            name="New-Password-2"
-                            data-name="New Password 2"
-                            placeholder="XXXXX"
-                            type="text"
-                            id="New-Password-2"
-                            required=""
-                          />
-                        </div>
-                        <div class="information__inputs-wrapper">
-                          <label for="REPEAT-NEW-PASSWORD-2" class="information__type">REPEAT NEW PASSWORD</label
-                          ><input
-                            class="information__field w-input"
-                            maxlength="256"
-                            name="REPEAT-NEW-PASSWORD-2"
-                            data-name="REPEAT NEW PASSWORD 2"
-                            placeholder="XXXXX"
-                            type="text"
-                            id="REPEAT-NEW-PASSWORD-2"
-                            required=""
-                          />
+                  <div class="information___label">My Orders</div>
+                  <div class="cart__content">
+                    <div class="cart__total">
+                      <div class="total__top">
+                        <div>Artwork</div>
+                        <div>Total</div>
+                      </div>
+                      <div class="total__card">
+                        <img
+                          src="images/art-1_1.webp"
+                          loading="lazy"
+                          sizes="(max-width: 767px) 100vw, (max-width: 991px) 31px, 33vw"
+                          srcset="
+                            images/art-1_1art-1.webp 500w,
+                            images/art-1_1art-1.webp 800w,
+                            images/art-1_1.webp      902w
+                          "
+                          alt=""
+                          class="total__img"
+                        />
+                        <div class="total__info-container">
+                          <div class="total__info-wrapper">
+                            <div class="total__title">Garden Walk</div>
+                            <div class="total__art-info">Will Day, Colorado (USA), 2023</div>
+                            <div class="total__art-info mb-15">Media: Acrylic on Canvas</div>
+                            <div class="total__art-info">Size: 48x48</div>
+                          </div>
+                          <div class="total__price-wrapper">
+                            <div class="total__title total__price">$7900</div>
+                          </div>
                         </div>
                       </div>
-                      <div class="information__inputs-checkboxes"></div>
-                      <div class="information__submit-wrapper pt-0">
-                        <div class="yellow__button submit">update</div>
+                      <div class="total__card">
+                        <img
+                          src="images/art-1_1.webp"
+                          loading="lazy"
+                          sizes="(max-width: 767px) 100vw, (max-width: 991px) 31px, 33vw"
+                          srcset="
+                            images/art-1_1art-1.webp 500w,
+                            images/art-1_1art-1.webp 800w,
+                            images/art-1_1.webp      902w
+                          "
+                          alt=""
+                          class="total__img"
+                        />
+                        <div class="total__info-container">
+                          <div class="total__info-wrapper">
+                            <div class="total__title">Garden Walk</div>
+                            <div class="total__art-info">Will Day, Colorado (USA), 2023</div>
+                            <div class="total__art-info mb-15">Media: Acrylic on Canvas</div>
+                            <div class="total__art-info">Size: 48x48</div>
+                          </div>
+                          <div class="total__price-wrapper">
+                            <div class="total__title total__price">$7900</div>
+                          </div>
+                        </div>
                       </div>
-                    </form>
-                    <div class="w-form-done">
-                      <div>Thank you! Your submission has been received!</div>
                     </div>
-                    <div class="w-form-fail">
-                      <div>Oops! Something went wrong while submitting the form.</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="information__wrapper">
-                  <div class="information___label">ReFErrAl ParTNeR COde</div>
-                  <div class="form-block w-form">
-                    <form
-                      id="wf-form-account-info"
-                      name="wf-form-account-info"
-                      data-name="account info"
-                      method="get"
-                      class="information__form gap-30"
-                      data-wf-page-id="66acb5231b5ad7516553fb29"
-                      data-wf-element-id="25301d24-88b9-f69c-3d8d-22b14b564d1b"
-                    >
-                      <div class="information__referal-text">
-                        As a referral partner, you have access to our entire artwork inventory and early access to new
-                        artists. Purchase directly for clients or share your code with clients &amp; friends. When
-                        purchases are made through your code, you’ll receive a 15% COMMISSION.
+                    <div class="cart__total-subtotal">
+                      <div class="total__top right-side">
+                        <div>Orders Total</div>
                       </div>
-                      <div class="information__inputs">
-                        <div class="information__inputs-wrapper mw-372">
-                          <input
-                            class="information__field w-input"
-                            maxlength="256"
-                            name="Current-Password-2"
-                            data-name="Current Password 2"
-                            placeholder="XXXXX"
-                            type="text"
-                            id="Current-Password-2"
-                            required=""
-                          />
+                      <div class="cart__subtotal">
+                        <div>Subtotal</div>
+                        <div>$15,800</div>
+                      </div>
+
+                      <div class="cart__subtotal">
+                        <div class="total__shiping">
+                          <div>Sales Tax</div>
                         </div>
+                        <div>$--</div>
                       </div>
-                      <div class="information__referal-subscr">
-                        Want to become a referral partner?<a href="#" class="text-blue">click here</a> to learn more.
+                      <div class="cart__subtotal cemter">
+                        <div class="total__shiping">
+                          <div class="total__title">TOTAL</div>
+                        </div>
+                        <div>$15,800</div>
                       </div>
-                    </form>
-                    <div class="w-form-done">
-                      <div>Thank you! Your submission has been received!</div>
-                    </div>
-                    <div class="w-form-fail">
-                      <div>Oops! Something went wrong while submitting the form.</div>
                     </div>
                   </div>
                 </div>

@@ -46,13 +46,13 @@
   height: 12px;
 }
 
-.w-checkbox-input--inputType-custom.w--redirected-checked {
-  background-color: #3898ec;
-  background-image: url('https://d3e54v103j8qbb.cloudfront.net/static/custom-checkbox-checkmark.589d534424.svg');
+.w-checkbox.checkbox-field input:checked + div {
+  background-color: var(--transparent);
+  background-image: url('../images/checkbox-Vector.svg');
+  border-style: none;
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  border-color: #3898ec;
 }
 
 .yellow__button.submit {
@@ -169,6 +169,7 @@
   border-radius: 50rem;
   height: 50rem;
   margin-bottom: 0;
+  padding-top: 17rem;
   padding-left: 30rem;
   padding-right: 30rem;
   font-family: Futurehistory, sans-serif;
