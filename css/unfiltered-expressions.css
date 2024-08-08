@@ -278,7 +278,7 @@
   .button__login.footer__button {
     text-align: center;
     min-width: 197rem;
-    padding: 6rem 10rem 3rem;
+    padding: 6rem 10rem 6rem;
   }
   .hero__container {
     height: auto;
@@ -2462,6 +2462,7 @@
 .diferent__slider.swiper-wrapper {
   flex-flow: row;
   padding-left: 0;
+  box-sizing: border-box;
   padding-right: 0;
   display: flex;
 }
@@ -2500,8 +2501,12 @@
   line-height: 110%;
 }
 .different__slide.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-left: 165rem;
   padding-right: 165rem;
+  justify-content: center;
 }
 .different__slide-top {
   grid-column-gap: 10rem;
@@ -2511,8 +2516,7 @@
   display: flex;
 }
 .blue-gear {
-  width: 100%;
-  max-width: 28rem;
+  min-width: 28rem;
   margin-top: -7rem;
 }
 .diferent__carousel {
@@ -2747,7 +2751,7 @@
   .button__login.footer__button {
     text-align: center;
     min-width: 197rem;
-    padding: 6rem 10rem 3rem;
+    padding: 6rem 10rem 6rem;
   }
   .hero__container {
     height: auto;
@@ -4209,6 +4213,8 @@
 .faq__list {
   display: none;
   overflow: hidden;
+  padding-left: 9rem;
+  padding-right: 52rem;
 }
 .faq__plus-wrapper {
   border: 1rem solid #000;
@@ -4339,7 +4345,7 @@
   .button__login.footer__button {
     text-align: center;
     min-width: 197rem;
-    padding: 6rem 10rem 3rem;
+    padding: 6rem 10rem 6rem;
   }
   .hero__container {
     height: auto;
@@ -4752,7 +4758,7 @@ h3 {
   cursor: pointer;
   text-transform: uppercase;
   border-radius: 50rem;
-  padding: 11rem 24rem 9rem;
+  padding: 11rem 24rem 11rem;
   font-size: 20rem;
   line-height: 110%;
   text-decoration: none;
@@ -5489,7 +5495,7 @@ h3 {
   .button__login.footer__button {
     text-align: center;
     min-width: 197rem;
-    padding: 6rem 10rem 3rem;
+    padding: 6rem 10rem 6rem;
   }
   .hero__container {
     height: auto;
@@ -6218,7 +6224,7 @@ h3 {
 }
 .info__logo {
   width: 100%;
-  max-width: 260rem;
+  max-width: 306rem;
 }
 .info__middle {
   border-bottom: 1rem solid var(--black);
@@ -6534,6 +6540,18 @@ h3 {
   .hero__login-container {
     justify-content: space-between;
     align-items: stretch;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .preloader .preloader__video {
+    height: auto;
   }
 }
 @media screen and (max-width: 479px) {
@@ -6908,10 +6926,6 @@ h3 {
   .info__choise.mw-620 {
     font-size: 20rem !important;
   }
-
-  /* .main .hero.info-page {
-    padding: 0;
-  } */
 }
 @media screen and (min-width: 1441px) {
   .hero__img-3 {
@@ -6929,5 +6943,18 @@ h3 {
 
   .nav__links {
     height: auto;
+  }
+}
+
+@media only screen and (max-height: 810px) {
+  .nav__menu {
+    overflow-y: auto;
+  }
+  .nav__menu::-webkit-scrollbar {
+    display: none;
+  }
+  .nav__menu {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
 }

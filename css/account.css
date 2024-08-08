@@ -9,6 +9,9 @@
   transition: opacity 0.5s ease;
   background: var(--yellow);
 }
+.hero__top.border {
+  border-color: var(--white);
+}
 
 .account__tab.active:before {
   opacity: 1;
@@ -154,11 +157,16 @@
 .information__inputs-wrapper.mw-372 {
   max-width: 372rem;
 }
-
+.mw-800 {
+  max-width: 800rem;
+}
 .information__type {
   margin-bottom: 0;
+  letter-spacing: 0.5px;
   padding-left: 30rem;
+  font-family: Atypdisplay, sans-serif;
   font-size: 24rem;
+  font-weight: 500;
   line-height: 140%;
 }
 

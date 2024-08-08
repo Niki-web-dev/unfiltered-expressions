@@ -20,6 +20,14 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function selectImitation() {
+    document.addEventListener('click', function (event) {
+      selectWrappers.forEach((wrapper) => {
+        const selectList = wrapper.querySelector('.select__list');
+        if (!wrapper.contains(event.target)) {
+          selectList.classList.remove('active');
+        }
+      });
+    });
     selectWrappers.forEach((wrapper) => {
       const buttonText = wrapper.querySelector('.select__main-text');
       const selectList = wrapper.querySelector('.select__list');
@@ -58,45 +66,27 @@ document.addEventListener('DOMContentLoaded', function () {
       paymantPane.querySelector('.information__submit-wrapper').classList.toggle('hide', isDisabled);
     }
 
-    freezePayInfo.addEventListener('click', function () {
-      bilingAddressIsChecked = freezePayInfo.querySelector('input')?.checked || false;
+    freezePayInfoLabel.addEventListener('click', function () {
+      bilingAddressIsChecked = freezePayInfoLabel.querySelector('input')?.checked || false;
       toggleFormState(bilingAddressIsChecked);
 
       if (bilingAddressIsChecked) {
-        sourceInputs.forEach((sourceInput, index) => {
-          if (targetInputs[index]) {
-            targetInputs[index].value = sourceInput.value;
+        deliveryInputs.forEach((sourceInput, index) => {
+          if (paymentInputs[index]) {
+            paymentInputs[index].value = sourceInput.value;
           }
         });
       }
     });
 
-    sourceInputs.forEach((input, index) => {
+    deliveryInputs.forEach((input, index) => {
       input.addEventListener('input', () => {
-        if (bilingAddressIsChecked && targetInputs[index]) {
-          targetInputs[index].value = input.value;
+        if (bilingAddressIsChecked && paymentInputs[index]) {
+          paymentInputs[index].value = input.value;
         }
       });
     });
   }
-
-  const accountTabs = document.querySelectorAll('.account__tab');
-  const tabPanes = document.querySelectorAll('.account__tab-pane');
-  const selectWrappers = document.querySelectorAll('.select__wrapper');
-  const freezePayInfo = document.querySelector('.freeze-paymant');
-  const paymantPane = document.querySelector('.payment-pane');
-  const deliverPane = document.querySelector('.deliver-pane');
-  const sourceInputs = deliverPane.querySelectorAll('input'); // give delivery inputs for copy value and them paste value to payments field if checked button is true
-  const targetInputs = paymantPane.querySelectorAll('input'); // give payment inputs for paste value for inputs
-  const bilingAddressIsChecked = freezePayInfo.querySelector('input')?.checked || false;
-  const deliveryPaneSelects = deliverPane.querySelectorAll('.select__wrapper');
-  //card info
-  const targetCardNumberInput = document.getElementById('target-card-number');
-  const targetExpiryDateInput = document.getElementById('target-expiry-date');
-  const targetCvvInput = document.getElementById('target-cvv');
-  selectImitation();
-  tabFunction();
-  freezePaymant();
 
   function formatCardNumber(event) {
     let input = event.target.value.replace(/\D/g, '').substring(0, 16);
@@ -121,6 +111,25 @@ document.addEventListener('DOMContentLoaded', function () {
     event.target.value = input;
   }
 
+  const accountTabs = document.querySelectorAll('.account__tab');
+  const tabPanes = document.querySelectorAll('.account__tab-pane');
+  const selectWrappers = document.querySelectorAll('.select__wrapper');
+  const freezePayInfoLabel = document.querySelector('.freeze-paymant');
+  const paymantPane = document.querySelector('.payment-pane');
+  const deliverPane = document.querySelector('.deliver-pane');
+  const deliveryInputs = deliverPane.querySelectorAll('input'); // give delivery inputs for copy value and them paste value to payments field if checked button is true
+  const paymentInputs = paymantPane.querySelectorAll('input'); // give payment inputs for paste value for inputs
+  const bilingAddressIsChecked = freezePayInfoLabel.querySelector('input')?.checked || false;
+  //card info
+  const targetCardNumberInput = document.getElementById('target-card-number');
+  const targetExpiryDateInput = document.getElementById('target-expiry-date');
+  const targetCvvInput = document.getElementById('target-cvv');
+
+  selectImitation();
+  tabFunction();
+  freezePaymant();
+
+  //card info script
   targetCardNumberInput.addEventListener('input', formatCardNumber);
   targetExpiryDateInput.addEventListener('input', formatExpiryDate);
   targetCvvInput.addEventListener('input', formatCvv);

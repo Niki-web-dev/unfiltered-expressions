@@ -7,6 +7,9 @@
   font-size: 20rem;
   display: flex;
 }
+.hero__top.border {
+  border-color: var(--white);
+}
 
 .cart {
   color: var(--white);
@@ -34,7 +37,7 @@
   color: var(--white);
   border-radius: 50%;
   font-size: 24rem;
-  margin-top: -5rem;
+  margin-top: -13rem;
 }
 
 .cart__content {
@@ -159,6 +162,10 @@
   display: flex;
 }
 
+.car__referal div {
+  color: inherit;
+}
+
 .total__change-address {
   font-size: 20rem;
 }
@@ -217,7 +224,7 @@
   }
 
   .total__price-wrapper {
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: center;
   }
 

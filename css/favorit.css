@@ -2,6 +2,14 @@
   padding-left: 7rem;
   padding-right: 0;
 }
+
+.cursor-auto {
+  cursor: auto;
+}
+
+.hero__top.border {
+  border-color: var(--white);
+}
 .artwork__grid._1,
 .artwork__grid._2 {
   padding-right: 0;
