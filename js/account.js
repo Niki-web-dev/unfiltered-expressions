@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const deliverPane = document.querySelector('.deliver-pane');
   const deliveryInputs = deliverPane.querySelectorAll('input'); // give delivery inputs for copy value and them paste value to payments field if checked button is true
   const paymentInputs = paymantPane.querySelectorAll('input'); // give payment inputs for paste value for inputs
-  const bilingAddressIsChecked = freezePayInfoLabel.querySelector('input')?.checked || false;
+  let bilingAddressIsChecked = freezePayInfoLabel.querySelector('input')?.checked || false;
   //card info
   const targetCardNumberInput = document.getElementById('target-card-number');
   const targetExpiryDateInput = document.getElementById('target-expiry-date');

@@ -5393,6 +5393,7 @@ h3 {
   height: 100%;
 }
 .works__gallery-button {
+  padding-right: 85rem;
   padding-top: 50rem;
   margin-bottom: 50rem;
   border-top: 1rem solid var(--white);
@@ -5804,7 +5805,7 @@ h3 {
     flex-flow: column;
   }
   .works__gallery-button {
-    padding-right: 50rem;
+    padding-right: 47rem;
   }
   .cta__referal-text .yellow-bg:before {
     content: '';
@@ -6949,14 +6950,16 @@ h3 {
 }
 
 @media only screen and (max-height: 810px) {
-  .nav__menu {
-    overflow-y: auto;
+  .nav__contacts {
+    padding-top: 30rem;
   }
-  .nav__menu::-webkit-scrollbar {
-    display: none;
+
+  .nav__link {
+    font-size: 30rem;
   }
-  .nav__menu {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+
+  .nav__menu,
+  .nav__contact-form {
+    padding-top: 30rem;
   }
 }
