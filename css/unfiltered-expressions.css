@@ -4137,6 +4137,9 @@
   white-space: normal;
   max-width: 150rem;
 }
+.mw-707 {
+  max-width: 707rem;
+}
 .div-block {
   max-width: 840rem;
   margin-left: auto;
