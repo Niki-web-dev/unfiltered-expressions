@@ -140,13 +140,6 @@ document.addEventListener('DOMContentLoaded', function () {
   targetExpiryDateInput.addEventListener('input', formatExpiryDate);
   targetCvvInput.addEventListener('input', formatCvv);
 
-  //intlTelInput plugin
-  // const input = document.querySelector('#pseudo-phone');
-  // window.intlTelInput(input, {
-  //   utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@23.8.1/build/js/utils.js',
-  //   separateDialCode: true,
-  // });
-
   const input = document.querySelector('#pseudo-phone');
   const hiddenField = document.querySelector('#Phone-Number');
 
@@ -159,8 +152,8 @@ document.addEventListener('DOMContentLoaded', function () {
         .catch(() => callback('us'));
     },
     utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js',
-    customContainer: 'select__wrapper', // Класс для кастомного контейнера
-    separateDialCode: true, // Показывает код страны отдельно
+    customContainer: 'select__wrapper',
+    separateDialCode: true,
     useFullscreenPopup: false,
   });
 
