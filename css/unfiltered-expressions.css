@@ -1858,6 +1858,8 @@
 }
 .advantages__logo {
   margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 22rem;
 }
 .advantages-rotate-span {
