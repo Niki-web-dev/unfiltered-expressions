@@ -4,6 +4,26 @@
   display: flex;
 }
 
+.wpcf7 form .wpcf7-response-output {
+  top: -100%;
+  right: 0;
+  position: absolute;
+  border: none;
+}
+
+.wpcf7-not-valid-tip {
+  display: block;
+  position: absolute;
+  bottom: -66%;
+}
+
+.w-form-fail {
+  padding: 20rem;
+  border-radius: 20rem;
+  background-color: var(--red);
+  color: var(--sand);
+  text-align: center;
+}
 .navbar.border-black {
   border-right-color: var(--black);
 }
@@ -3952,6 +3972,14 @@
   height: 27rem;
   position: absolute;
   right: 40rem;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-icon img {
+  max-width: 21rem;
 }
 .search-form__wrapper {
   border-top: 1rem solid var(--grey);
@@ -5992,7 +6020,10 @@ h3 {
   border: 1.5rem solid #000;
   padding-top: 17rem;
   padding-bottom: 17rem;
+  text-align: center;
   font-size: 18rem;
+  display: flex;
+  align-items: center;
 }
 .yellow__button.big:hover {
   border-color: var(--yellow);
@@ -6306,6 +6337,12 @@ h3 {
   transition: color 0.5s, background-color 0.5s;
   display: flex;
 }
+
+.info__button a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .info__button:hover {
   background-color: var(--red);
   color: var(--sand);
