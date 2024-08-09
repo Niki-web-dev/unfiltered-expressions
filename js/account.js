@@ -94,6 +94,12 @@ document.addEventListener('DOMContentLoaded', function () {
     event.target.value = input;
   }
 
+  function formatTelephone(event) {
+    let input = event.target.value.replace(/\D/g, '').substring(0, 10);
+    input = input !== '' ? input.match(/.{1,3}/g).join('') : '';
+    event.target.value = input;
+  }
+
   function formatExpiryDate(event) {
     let input = event.target.value.replace(/\D/g, '').substring(0, 4);
     if (input.length >= 2) {
@@ -125,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const targetExpiryDateInput = document.getElementById('target-expiry-date');
   const targetCvvInput = document.getElementById('target-cvv');
 
-  selectImitation();
+  // selectImitation();
   tabFunction();
   freezePaymant();
 
@@ -133,4 +139,42 @@ document.addEventListener('DOMContentLoaded', function () {
   targetCardNumberInput.addEventListener('input', formatCardNumber);
   targetExpiryDateInput.addEventListener('input', formatExpiryDate);
   targetCvvInput.addEventListener('input', formatCvv);
+
+  //intlTelInput plugin
+  // const input = document.querySelector('#pseudo-phone');
+  // window.intlTelInput(input, {
+  //   utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@23.8.1/build/js/utils.js',
+  //   separateDialCode: true,
+  // });
+
+  const input = document.querySelector('#pseudo-phone');
+  const hiddenField = document.querySelector('#Phone-Number');
+
+  const iti = window.intlTelInput(input, {
+    initialCountry: 'auto',
+    geoIpLookup: function (callback) {
+      fetch('https://ipinfo.io/json')
+        .then((response) => response.json())
+        .then((data) => callback(data.country))
+        .catch(() => callback('us'));
+    },
+    utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js',
+    customContainer: 'select__wrapper', // Класс для кастомного контейнера
+    separateDialCode: true, // Показывает код страны отдельно
+    useFullscreenPopup: false,
+  });
+
+  input.addEventListener('input', function (event) {
+    formatTelephone(event);
+
+    const countryCode = iti.getSelectedCountryData().dialCode;
+    const number = input.value;
+    hiddenField.value = `+${countryCode}${number}`;
+  });
+
+  input.addEventListener('countrychange', function () {
+    const countryCode = iti.getSelectedCountryData().dialCode;
+    const number = input.value;
+    hiddenField.value = `+${countryCode}${number}`;
+  });
 });

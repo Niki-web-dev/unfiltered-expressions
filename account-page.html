@@ -10,6 +10,7 @@
     <link href="css/account.css" rel="stylesheet" type="text/css" />
     <link href="css/cart.css" rel="stylesheet" type="text/css" />
     <link rel="preload" href="../images/checkbox-Vector.svg" as="image" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.8.1/build/css/intlTelInput.css" />
   </head>
   <body>
     <div class="preloader">
@@ -22,7 +23,7 @@
       <div role="banner" class="navbar rem-adaptive w-nav">
         <div class="container nav__wrapper">
           <div class="nav__menu">
-            <a href="/" class="nav__logo"><img src="images/black-logo.png" loading="lazy" alt="" class="img" /></a>
+            <a href="/" class="nav__logo"><img src="images/black-logo.svg" loading="lazy" alt="" class="img" /></a>
             <div class="nav__links">
               <a href="/unfiltered-expressions/about.html" class="nav__link w-inline-block">
                 <div class="nav__link-wrapper">
@@ -275,8 +276,8 @@
                           />
                         </div>
                         <div class="information__inputs-wrapper">
-                          <label for="name-2" class="information__type">PHONE NUMBER</label>
-                          <div class="select__wrapper">
+                          <label class="information__type">PHONE NUMBER</label>
+                          <!-- <div class="select__wrapper">
                             <div class="select__button">
                               <div class="select__button-text">
                                 <div class="select__main-text">+1</div>
@@ -307,6 +308,26 @@
                               type="text"
                               id="Phone-Number"
                               required=""
+                            />
+                          </div> -->
+                          <div class="select__wrapper">
+                            <input
+                              class="information__field select__field w-input"
+                              maxlength="256"
+                              name="pseudo-phone"
+                              data-name="pseudo phone"
+                              placeholder="000.000.000"
+                              type="tel"
+                              id="pseudo-phone"
+                            />
+                            <input
+                              class="information__field hiden-field w-input"
+                              maxlength="256"
+                              name="Phone-Number"
+                              data-name="Phone Number"
+                              type="hidden"
+                              id="Phone-Number"
+                              required
                             />
                           </div>
                         </div>
@@ -1008,6 +1029,7 @@
         </div>
       </section>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.8.1/build/js/intlTelInput.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/timothydesign/script/split-type.js"></script>

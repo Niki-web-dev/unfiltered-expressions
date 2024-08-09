@@ -1,3 +1,38 @@
+.iti__country-container {
+  background-color: var(--blue);
+  z-index: 5;
+  border-radius: 50rem 0 0 50rem;
+}
+.select__wrapper .iti__selected-country {
+  padding-right: 20rem;
+}
+.select__wrapper .iti .iti__selected-dial-code {
+  font-family: Futurehistory, sans-serif;
+  margin-top: 4rem;
+  font-size: 20rem;
+}
+.select__wrapper .iti__arrow {
+  margin-left: 6rem;
+  border-left: 6rem solid transparent;
+  border-right: 6rem solid transparent;
+  border-top: 6rem solid var(--white);
+}
+
+.iti--inline-dropdown .iti__dropdown-content,
+.iti__search-input {
+  color: var(--black);
+  background-color: var(--sand);
+  padding: 10rem;
+  border-radius: 20rem;
+  outline: none;
+}
+
+.iti__country.iti__highlight {
+  border-radius: 20rem;
+}
+.select__wrapper .iti--inline-dropdown .iti__dropdown-content {
+  margin-top: 15rem;
+}
 .account__tab:before {
   content: '';
   position: absolute;
@@ -177,7 +212,7 @@
   border-radius: 50rem;
   height: 50rem;
   margin-bottom: 0;
-  padding-top: 17rem;
+  padding-top: 14rem;
   padding-left: 30rem;
   padding-right: 30rem;
   font-family: Futurehistory, sans-serif;
@@ -190,8 +225,7 @@
 }
 
 .information__field.select__field {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-radius: 50rem;
 }
 
 .information__field.select__field.rounded {
