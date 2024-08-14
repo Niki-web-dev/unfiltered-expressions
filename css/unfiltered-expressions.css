@@ -3349,6 +3349,7 @@
     white-space: nowrap;
     font-size: 12rem;
     top: 90rem;
+    z-index: 10;
   }
   .advantages__container {
     flex-flow: column;
