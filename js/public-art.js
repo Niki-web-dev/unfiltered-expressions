@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
       let isActive = false;
 
       artowk.addEventListener('click', function () {
-        const detailContainer = artowk.closest('.artwork__grid').nextElementSibling;
+        const detailContainer = document.querySelector('.artwork__deatil');
         if (detailContainer.classList.contains('artwork__deatil')) {
           detailContainer.innerHTML = '';
           const detail = artowk.querySelector('.artwork__container').cloneNode(true);
