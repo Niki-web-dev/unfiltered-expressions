@@ -33,6 +33,25 @@ function videoPopUp() {
   });
 }
 
+function hoverCommingSoon() {
+  const buttons = document.querySelectorAll('.artwork__comming-soon');
+
+  buttons.forEach((button) => {
+    const authorName = button.textContent;
+
+    button.addEventListener('mouseenter', function () {
+      if (isMobile) {
+        button.textContent = 'COMMING SOON';
+      }
+    });
+    button.addEventListener('mouseleave', function () {
+      if (isMobile) {
+        button.textContent = authorName;
+      }
+    });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   const icon = document.querySelector('.cta__icon');
   const section = document.querySelector('.public-art__cta');
@@ -84,22 +103,29 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   createSlider();
+  hoverCommingSoon();
 
   //art work detail div.clone().append()
 
   function openArtWorkDetail() {
     artworkItems.forEach((artowk) => {
+      let isActive = false;
+
       artowk.addEventListener('click', function () {
         const detailContainer = artowk.closest('.artwork__grid').nextElementSibling;
         if (detailContainer.classList.contains('artwork__deatil')) {
           detailContainer.innerHTML = '';
           const detail = artowk.querySelector('.artwork__container').cloneNode(true);
+          const allArtDetail = document.querySelectorAll('.artwork__deatil');
           detailContainer.append(detail);
 
-          const isOpen = detailContainer.clientHeight > 0;
-          if (!isOpen) {
+          if (!isActive) {
+            isActive = true;
             detailContainer.style.display = 'flex';
-            gsap.fromTo(detailContainer, { height: 0, opacity: 0 }, { height: 'auto', opacity: 1, duration: 0.5 });
+          } else {
+            isActive = false;
+            detailContainer.style.display = 'none';
+            allArtDetail.forEach((el) => (el.style.display = 'none'));
           }
 
           if (isMobile()) {

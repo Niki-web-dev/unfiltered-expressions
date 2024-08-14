@@ -4,6 +4,10 @@
   display: flex;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 .wpcf7 form .wpcf7-response-output {
   top: -100%;
   right: 0;
@@ -56,6 +60,9 @@
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
+  display: flex;
+}
+.works__flex {
   display: flex;
 }
 .works__container {
@@ -2359,7 +2366,7 @@
   width: 100%;
   max-width: 500rem;
   margin-left: -120rem;
-  padding: 85rem 60rem 80rem 0;
+  padding: 85rem 20rem 80rem 0;
   display: flex;
   position: relative;
 }
@@ -3778,7 +3785,12 @@
     z-index: 6;
   }
 }
-.faq__wrapper .faq__button-text:before {
+
+.faq__wrapper .faq__button-text span {
+  position: relative;
+  z-index: 1;
+}
+.faq__wrapper .faq__button-text span:before {
   content: '';
   position: absolute;
   top: 15%;
@@ -3790,7 +3802,7 @@
   background-color: var(--yellow);
   z-index: -1;
 }
-.faq__wrapper.open .faq__button-text:before {
+.faq__wrapper.open .faq__button-text span:before {
   width: 102%;
 }
 .faq__wrapper.open .faq__line.vertical {
@@ -4017,7 +4029,7 @@
   text-align: center;
   border-radius: 50rem;
   min-width: 107rem;
-  padding: 4.5rem 15rem 1.5rem;
+  padding: 4.5rem 15rem 4.5rem;
   font-size: 20rem;
   line-height: 110%;
   text-decoration: none;
@@ -4049,6 +4061,7 @@
   text-decoration: none;
   display: flex;
   position: relative;
+  cursor: pointer;
 }
 .artowk__text-bg {
   z-index: 0;
@@ -4582,7 +4595,7 @@
     flex-flow: wrap;
     margin-bottom: 100rem;
     padding-left: 24rem;
-    padding-right: 24px;
+    padding-right: 24rem;
   }
   .artwork__artists {
     grid-column-gap: 24rem;
@@ -4766,6 +4779,18 @@ h3 {
   display: grid;
   position: relative;
 }
+
+.hero__top.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  right: 0;
+  left: 0;
+}
+
+.pt-38 {
+  padding-top: 38rem;
+}
 .hero__top.border {
   border-bottom: 1rem solid var(--sand);
 }
@@ -4890,12 +4915,11 @@ h3 {
   overflow: hidden;
 }
 .works__container.detail {
-  flex-flow: row;
+  flex-flow: column;
   padding-bottom: 0;
   position: sticky;
-  top: 23%;
   height: auto;
-  justify-content: flex-start;
+  justify-content: center;
   min-height: 0;
 }
 
@@ -5864,11 +5888,13 @@ h3 {
   padding: 40rem 40rem;
   display: flex;
   position: static;
+  overflow-y: auto;
 }
 .hero.info-page.bg-white {
   background-color: var(--sand);
   padding: 0;
 }
+
 .navbar__link {
   color: var(--yellow);
   text-orientation: sideways;
@@ -6024,6 +6050,7 @@ h3 {
   font-size: 18rem;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .yellow__button.big:hover {
   border-color: var(--yellow);
@@ -6230,7 +6257,6 @@ h3 {
 .info__container {
   background-color: var(--sand);
   width: 100%;
-  height: 100%;
   padding-left: 120rem;
   padding-right: 120rem;
   position: relative;
@@ -6239,7 +6265,6 @@ h3 {
   border-right: 1rem solid var(--black);
   border-left: 1rem solid var(--black);
   flex-flow: column;
-  overflow: auto;
   height: 100%;
   display: flex;
 }

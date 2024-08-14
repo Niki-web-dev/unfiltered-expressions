@@ -23,7 +23,7 @@ function heroAnimation() {
   }
 
   showSlide(currentSlide);
-  setInterval(nextSlide, 3000);
+  setInterval(nextSlide, 1500);
 }
 
 function advantegHoverAnimation(hoverSection, rotateIcon) {

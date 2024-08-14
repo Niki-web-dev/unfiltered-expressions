@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
   //Burger menu function
   const menuButton = document.querySelector('.menu__button');
   const closeButton = document.querySelector('.close-icon');
+  const navMenu = document.querySelector('.nav__menu');
   menuButton.addEventListener('click', function () {
     document.querySelector('.nav__menu').classList.toggle('active');
     document.querySelectorAll('.burger__dot').forEach((el) => {
@@ -38,6 +39,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   closeButton.addEventListener('click', function () {
     document.querySelector('.nav__menu').classList.toggle('active');
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!navMenu.contains(event.target) && !menuButton.contains(event.target)) {
+      navMenu.classList.remove('active');
+    }
   });
 });
 
@@ -108,16 +115,13 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(item, { attributes: true, childList: true, subtree: true });
   });
 
-  // window.addEventListener('resize', () => {
-  //   location.reload();
-  // });
-
   //change color for navbar if scroll page
   const navbar = document.querySelector('.nav__container');
+  const navbarIsFixed = document.querySelector('.hero__top.fixed');
   let isNavbarDark = false;
 
   function updateNavbarStyles() {
-    if (window.innerWidth < 480 && navbar) {
+    if ((!!navbarIsFixed || window.innerWidth < 480) && navbar) {
       const shouldMakeNavbarDark = window.scrollY > 220;
 
       if (shouldMakeNavbarDark) {
