@@ -7029,6 +7029,9 @@ h3 {
   }
 }
 @media screen and (min-width: 1441px) {
+  .partners__texts {
+    margin-left: -60rem;
+  }
   .hero__img-3 {
     right: -60.5rem;
   }
