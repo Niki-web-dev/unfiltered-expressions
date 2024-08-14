@@ -108,32 +108,33 @@ document.addEventListener('DOMContentLoaded', function () {
   //art work detail div.clone().append()
 
   function openArtWorkDetail() {
-    artworkItems.forEach((artowk) => {
-      let isActive = false;
+    let activeArtWork = null;
 
-      artowk.addEventListener('click', function () {
+    artworkItems.forEach((artwork) => {
+      artwork.addEventListener('click', function () {
         const detailContainer = document.querySelector('.artwork__deatil');
-        if (detailContainer.classList.contains('artwork__deatil')) {
+        const detail = artwork.querySelector('.artwork__container').cloneNode(true);
+
+        if (activeArtWork !== artwork) {
           detailContainer.innerHTML = '';
-          const detail = artowk.querySelector('.artwork__container').cloneNode(true);
-          const allArtDetail = document.querySelectorAll('.artwork__deatil');
           detailContainer.append(detail);
-
-          if (!isActive) {
-            isActive = true;
-            detailContainer.style.display = 'flex';
-          } else {
-            isActive = false;
+          detailContainer.style.display = 'flex';
+          activeArtWork = artwork;
+        } else {
+          if (detailContainer.style.display === 'flex') {
             detailContainer.style.display = 'none';
-            allArtDetail.forEach((el) => (el.style.display = 'none'));
+            activeArtWork = null;
+          } else {
+            detailContainer.style.display = 'flex';
+            activeArtWork = artwork;
           }
+        }
 
-          if (isMobile()) {
-            detailContainer.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start',
-            });
-          }
+        if (isMobile()) {
+          detailContainer.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
         }
       });
     });
