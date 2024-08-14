@@ -126,8 +126,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (shouldMakeNavbarDark) {
         navbar.classList.add('active');
+        navbarIsFixed?.classList.add('active');
       } else {
         navbar.classList.remove('active');
+        navbarIsFixed?.classList.remove('active');
       }
 
       isNavbarDark = shouldMakeNavbarDark;

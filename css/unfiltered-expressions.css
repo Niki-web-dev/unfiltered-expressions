@@ -49,6 +49,10 @@
   align-items: center;
   display: flex;
 }
+
+.container.works-absolute.mt-50 {
+  margin-top: 50rem;
+}
 .menu__button {
   cursor: pointer;
   justify-content: center;
@@ -1435,6 +1439,10 @@
   margin-bottom: 108rem;
   display: flex;
 }
+
+.works__content.mb-55 {
+  margin-bottom: 55rem;
+}
 .works__title {
   text-transform: none;
   font-size: 45rem;
@@ -1698,7 +1706,7 @@
 }
 .process__wrapper {
   position: sticky;
-  top: 0;
+  top: 120rem;
 }
 .process__item {
   min-height: 450rem;
@@ -3929,6 +3937,10 @@
 .behind-line.artist.yellow {
   background-color: var(--yellow);
 }
+
+.bg-black {
+  background-color: var(--black);
+}
 .hero__bg-img {
   object-fit: cover;
   width: 100%;
@@ -4784,12 +4796,21 @@ h3 {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 100;
+  transition: background-color 1s ease;
   right: 0;
   left: 0;
 }
 
+.hero__top.fixed.active {
+  background-color: var(--black);
+}
+
 .pt-38 {
   padding-top: 38rem;
+}
+.pt-126 {
+  padding-top: 126rem;
 }
 .hero__top.border {
   border-bottom: 1rem solid var(--sand);
@@ -4914,6 +4935,10 @@ h3 {
   top: 0;
   overflow: hidden;
 }
+
+.works__container.pt-100 {
+  padding-top: 100rem;
+}
 .works__container.detail {
   flex-flow: column;
   padding-bottom: 0;
@@ -4921,6 +4946,7 @@ h3 {
   height: auto;
   justify-content: center;
   min-height: 0;
+  top: 127rem;
 }
 
 .works__wrapper {
@@ -5358,7 +5384,7 @@ h3 {
   padding-bottom: 50rem;
   position: -webkit-sticky;
   position: sticky;
-  top: 50rem;
+  top: 120rem;
 }
 
 .product__img-container {
@@ -5500,11 +5526,11 @@ h3 {
     padding-top: 0;
     transition: background-color 0.5s;
   }
-  .hero.rem-adaptive {
-    z-index: 2;
-    overflow: visible;
+  .hero.pt-126 {
+    padding-top: 0;
   }
-  .navbar__link {
+
+  .hero.rem-adaptiv .navbar__link {
     display: none;
   }
   .brand {
@@ -5585,7 +5611,7 @@ h3 {
     min-height: 0;
   }
   .works__container.detail {
-    top: 19%;
+    top: 75rem;
   }
   .artwork__row-left.py-24.px-27.mobile-pl-50 {
     padding-left: 50rem;
@@ -5595,6 +5621,13 @@ h3 {
     height: 60vh;
     min-height: 580rem;
     padding-bottom: 0;
+  }
+  .works__container .yellow__button {
+    max-width: 360rem;
+    padding-bottom: 6rem;
+  }
+  .works__container.pt-100 {
+    padding-top: 0;
   }
   .works__wrapper {
     grid-column-gap: 30rem;
