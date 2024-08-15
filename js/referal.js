@@ -88,8 +88,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       el.innerHTML = lines.map((line) => `<span>${line}</span>`).join('<br>');
-
-      el.style.lineHeight = lineHeight + 'px';
     });
   }
   setTimeout(wrapTextInSpans, 300);
