@@ -1,3 +1,108 @@
+/* woocomerce start */
+.form-row .information__inputs-wrapper {
+  width: auto;
+}
+
+.woocommerce-input-wrapper {
+  width: 100%;
+}
+
+.form-row.information__inputs-wrapper {
+  width: 45%;
+}
+
+.woocommerce-address-fields__field-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+abbr[title] {
+  border-bottom: none;
+}
+
+.required {
+  display: none;
+}
+.woocommerce .select2-container--default .select2-selection--single .select2-selection__rendered {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50rem !important;
+  border-radius: 50rem !important;
+  padding-left: 30rem;
+  padding-right: 30rem;
+  background-color: var(--sand);
+  color: var(--black);
+  font-size: 20rem;
+}
+.woocommerce .select2-selection__placeholder {
+  font-family: Futurehistory, sans-serif !important;
+  color: var(--grey) !important;
+}
+
+.woocommerce .select2-container--default .select2-selection--single {
+  height: auto;
+  background-color: transparent;
+  border: none;
+}
+
+.woocommerce .select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 28rem;
+  background-image: url('https://stage-ju24.hallwil.com/wp-content/themes/expressions/assets/front/images/Down-Arrow-Selector.svg');
+  background-position: center;
+  background-size: cover;
+  filter: invert();
+  background-repeat: no-repeat;
+  height: 9rem;
+  width: 15rem;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  display: none;
+}
+
+.select2-container--open .select2-dropdown--below {
+  margin-top: 20rem;
+  padding: 20rem 20rem;
+  border-radius: 30rem !important;
+  background-color: var(--sand);
+  border: none;
+}
+
+.select2-results,
+.select2-search.select2-search--dropdown {
+  background-color: var(--sand);
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  background-color: transparent;
+  border-radius: 30rem;
+  padding: 10rem 20rem;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected],
+.select2-container--default .select2-results__option--highlighted[data-selected] {
+  background-color: var(--blue);
+  border-radius: 30rem;
+  padding: 10rem 20rem;
+}
+
+.select2-container--default .select2-results__option[data-selected='true'] {
+  background-color: var(--grey);
+}
+
+.select2-results__option[aria-selected],
+.select2-results__option[data-selected] {
+  border-radius: 30rem;
+  padding: 10rem 20rem;
+  font-size: 20rem;
+}
+
+/* woocomerce end */
+
 .iti__country-container {
   background-color: var(--blue);
   z-index: 5;
@@ -563,5 +668,12 @@
 
   .information__referal-text {
     font-size: 16rem;
+  }
+
+  .form-row.information__inputs-wrapper {
+    width: 100%;
+  }
+  .select__wrapper {
+    width: 100%;
   }
 }
