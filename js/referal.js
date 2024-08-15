@@ -64,10 +64,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function wrapTextInSpans() {
     const elements = document.querySelectorAll('.faq__button-text');
-
+    const faqButton = document.querySelector('.faq__button');
     elements.forEach((el) => {
       const font = getComputedStyle(el).font;
-      const maxWidth = el.clientWidth;
+      const maxWidth = faqButton.clientWidth * 0.82;
       const lineHeight = parseFloat(getComputedStyle(el).lineHeight);
       const originalText = el.innerText;
       let lines = [];
@@ -87,12 +87,16 @@ document.addEventListener('DOMContentLoaded', function () {
         lines.push(line);
       }
 
-      // Обновляем HTML элемента
       el.innerHTML = lines.map((line) => `<span>${line}</span>`).join('<br>');
 
-      // Применяем высоту для корректного отображения
       el.style.lineHeight = lineHeight + 'px';
     });
   }
   setTimeout(wrapTextInSpans, 300);
+
+  let resizeTimeout;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(wrapTextInSpans, 300);
+  });
 });
