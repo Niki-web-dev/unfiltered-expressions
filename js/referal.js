@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
-
+  //FAQ ANIMATION ON OPEN
   function measureText(text, font) {
     const canvas = document.createElement('canvas');
     const context = canvas.getContext('2d');
@@ -62,35 +62,37 @@ document.addEventListener('DOMContentLoaded', function () {
     return context.measureText(text).width;
   }
 
-  const elements = document.querySelectorAll('.faq__button-text');
+  function wrapTextInSpans() {
+    const elements = document.querySelectorAll('.faq__button-text');
 
-  elements.forEach((el) => {
-    const font = getComputedStyle(el).font;
-    const maxWidth = el.clientWidth;
-    const lineHeight = parseFloat(getComputedStyle(el).lineHeight);
-    const originalText = el.innerText;
-    let lines = [];
-    let line = '';
+    elements.forEach((el) => {
+      const font = getComputedStyle(el).font;
+      const maxWidth = el.clientWidth;
+      const lineHeight = parseFloat(getComputedStyle(el).lineHeight);
+      const originalText = el.innerText;
+      let lines = [];
+      let line = '';
 
-    // Разбиваем текст на строки
-    originalText.split(' ').forEach((word) => {
-      const testLine = line + (line ? ' ' : '') + word;
-      if (measureText(testLine, font) > maxWidth) {
+      originalText.split(' ').forEach((word) => {
+        const testLine = line + (line ? ' ' : '') + word;
+        if (measureText(testLine, font) > maxWidth) {
+          lines.push(line);
+          line = word;
+        } else {
+          line = testLine;
+        }
+      });
+
+      if (line) {
         lines.push(line);
-        line = word;
-      } else {
-        line = testLine;
       }
+
+      // Обновляем HTML элемента
+      el.innerHTML = lines.map((line) => `<span>${line}</span>`).join('<br>');
+
+      // Применяем высоту для корректного отображения
+      el.style.lineHeight = lineHeight + 'px';
     });
-
-    if (line) {
-      lines.push(line);
-    }
-
-    // Обновляем HTML элемента
-    el.innerHTML = lines.map((line) => `<span>${line}</span>`).join('<br>');
-
-    // Применяем высоту для корректного отображения
-    el.style.lineHeight = lineHeight + 'px';
-  });
+  }
+  setTimeout(wrapTextInSpans, 300);
 });
