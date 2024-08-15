@@ -5167,6 +5167,10 @@ h3 {
   display: flex;
   overflow: hidden;
 }
+
+.behind-line .scroll-text {
+  text-transform: uppercase;
+}
 .behind-line.partership {
   background-color: var(--yellow);
 }
