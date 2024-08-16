@@ -1,3 +1,6 @@
+.w-form-fail {
+  display: none !important;
+}
 .navbar {
   border-right: 1rem solid var(--yellow);
   background-color: var(--black);

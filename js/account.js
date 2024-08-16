@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
       selectWrappers.forEach((wrapper) => {
         const selectList = wrapper.querySelector('.select__list');
         if (!wrapper.contains(event.target)) {
-          selectList.classList.remove('active');
+          selectList?.classList.remove('active');
         }
       });
     });
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
         hiddenField.value = buttonText.textContent;
       }
 
-      button.addEventListener('click', function () {
+      button?.addEventListener('click', function () {
         selectList.classList.toggle('active');
         if (wrapper.closest('.deliver-pane') && bilingAddressIsChecked) {
           paymantPane.querySelector('.information__field.select__field').value = hiddenField.value;
@@ -60,6 +60,10 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 
       paymantPane.querySelectorAll('.select__wrapper').forEach((select) => {
+        select.classList.toggle('pointer-event-none', isDisabled);
+      });
+
+      paymantPane.querySelectorAll('.state_select').forEach((select) => {
         select.classList.toggle('pointer-event-none', isDisabled);
       });
 
@@ -88,35 +92,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  function formatCardNumber(event) {
-    let input = event.target.value.replace(/\D/g, '').substring(0, 16);
-    input = input !== '' ? input.match(/.{1,4}/g).join(' ') : '';
-    event.target.value = input;
-  }
-
-  function formatTelephone(event) {
-    let input = event.target.value.replace(/\D/g, '').substring(0, 10);
-    input = input !== '' ? input.match(/.{1,3}/g).join('') : '';
-    event.target.value = input;
-  }
-
-  function formatExpiryDate(event) {
-    let input = event.target.value.replace(/\D/g, '').substring(0, 4);
-    if (input.length >= 2) {
-      let month = parseInt(input.substring(0, 2), 10);
-      if (month > 12) {
-        input = '12' + input.substring(2);
-      }
-      input = input.match(/.{1,2}/g).join('/');
-    }
-    event.target.value = input;
-  }
-
-  function formatCvv(event) {
-    let input = event.target.value.replace(/\D/g, '').substring(0, 3);
-    event.target.value = input;
-  }
-
   const accountTabs = document.querySelectorAll('.account__tab');
   const tabPanes = document.querySelectorAll('.account__tab-pane');
   const selectWrappers = document.querySelectorAll('.select__wrapper');
@@ -126,48 +101,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const deliveryInputs = deliverPane.querySelectorAll('input'); // give delivery inputs for copy value and them paste value to payments field if checked button is true
   const paymentInputs = paymantPane.querySelectorAll('input'); // give payment inputs for paste value for inputs
   let bilingAddressIsChecked = freezePayInfoLabel.querySelector('input')?.checked || false;
-  //card info
-  const targetCardNumberInput = document.getElementById('target-card-number');
-  const targetExpiryDateInput = document.getElementById('target-expiry-date');
-  const targetCvvInput = document.getElementById('target-cvv');
 
-  // selectImitation();
+  selectImitation();
   tabFunction();
   freezePaymant();
-
-  //card info script
-  targetCardNumberInput.addEventListener('input', formatCardNumber);
-  targetExpiryDateInput.addEventListener('input', formatExpiryDate);
-  targetCvvInput.addEventListener('input', formatCvv);
-
-  const input = document.querySelector('#pseudo-phone');
-  const hiddenField = document.querySelector('#Phone-Number');
-
-  const iti = window.intlTelInput(input, {
-    initialCountry: 'auto',
-    geoIpLookup: function (callback) {
-      fetch('https://ipinfo.io/json')
-        .then((response) => response.json())
-        .then((data) => callback(data.country))
-        .catch(() => callback('us'));
-    },
-    utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js',
-    customContainer: 'select__wrapper',
-    separateDialCode: true,
-    useFullscreenPopup: false,
-  });
-
-  input.addEventListener('input', function (event) {
-    formatTelephone(event);
-
-    const countryCode = iti.getSelectedCountryData().dialCode;
-    const number = input.value;
-    hiddenField.value = `+${countryCode}${number}`;
-  });
-
-  input.addEventListener('countrychange', function () {
-    const countryCode = iti.getSelectedCountryData().dialCode;
-    const number = input.value;
-    hiddenField.value = `+${countryCode}${number}`;
-  });
 });

@@ -3,12 +3,16 @@
   width: auto;
 }
 
+.deliver-pane .information__inputs-checkboxes {
+  margin: 42rem 0;
+}
 .woocommerce-input-wrapper {
   width: 100%;
+  height: 50rem;
 }
 
 .form-row.information__inputs-wrapper {
-  width: 45%;
+  width: 48%;
 }
 
 .woocommerce-address-fields__field-wrapper {
@@ -39,6 +43,7 @@ abbr[title] {
 .woocommerce .select2-selection__placeholder {
   font-family: Futurehistory, sans-serif !important;
   color: var(--grey) !important;
+  padding-top: 5rem;
 }
 
 .woocommerce .select2-container--default .select2-selection--single {
@@ -49,7 +54,6 @@ abbr[title] {
 
 .woocommerce .select2-container--default .select2-selection--single .select2-selection__arrow {
   top: 50%;
-  transform: translateY(-50%);
   right: 28rem;
   background-image: url('https://stage-ju24.hallwil.com/wp-content/themes/expressions/assets/front/images/Down-Arrow-Selector.svg');
   background-position: center;
@@ -63,13 +67,20 @@ abbr[title] {
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
   display: none;
 }
-
-.select2-container--open .select2-dropdown--below {
+.select2-container .select2-dropdown {
   margin-top: 20rem;
   padding: 20rem 20rem;
   border-radius: 30rem !important;
   background-color: var(--sand);
   border: none;
+}
+
+.select2-container--open .select2-dropdown--above {
+  transform: translateY(117%);
+}
+
+.select2-dropdown--above .select2-results__options {
+  max-height: 135rem !important;
 }
 
 .select2-results,
@@ -317,7 +328,7 @@ abbr[title] {
   border-radius: 50rem;
   height: 50rem;
   margin-bottom: 0;
-  padding-top: 14rem;
+  padding-top: 15rem;
   padding-left: 30rem;
   padding-right: 30rem;
   font-family: Futurehistory, sans-serif;
@@ -440,18 +451,17 @@ abbr[title] {
 .select__list.default {
   background-color: var(--sand);
   color: var(--black);
-  border-radius: 20px;
+  border-radius: 20rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
-  display: none;
-  top: auto;
-  bottom: -220rem;
+  top: 128%;
+  bottom: auto;
 }
 
 .select__list-item {
   text-align: left;
   padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-bottom: 6rem;
   padding-left: 24rem;
 }
 
