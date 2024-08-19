@@ -4987,6 +4987,7 @@ h3 {
 .works__work.detail {
   min-width: 248rem;
   max-width: 248rem;
+  text-decoration: none;
 }
 .works__detail {
   color: var(--sand);
@@ -5439,6 +5440,7 @@ h3 {
   text-transform: capitalize;
   justify-content: center;
   align-items: center;
+  width: 100%;
   min-height: 97rem;
   transition: color 0.5s, background-color 0.5s;
   display: flex;
