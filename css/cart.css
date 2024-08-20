@@ -1,3 +1,65 @@
+.woocommerce-notices-wrapper,
+.wc-empty-cart-message,
+.return-to-shop {
+  max-width: 1200rem;
+  margin: 0 60rem 0 auto;
+  padding: 30rem 0;
+  font-size: 24rem;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+}
+
+.woocommerce .button.wc-backward {
+  font-size: 16rem;
+  color: var(--white);
+  position: static;
+  max-width: 300rem;
+}
+
+.woocommerce-notices-wrapper a {
+  color: var(--red);
+  text-decoration: none;
+}
+.woocommerce-notices-wrapper ul {
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+.shop_table.shop_table_responsive {
+  margin-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+}
+
+.wc-empty-cart-message {
+  height: 75vh;
+}
+
+.woocommerce p {
+  margin-bottom: 0 !important;
+}
+.shop_table.shop_table_responsive button[name='update_cart'],
+.button.wc-backward {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 55rem;
+  padding-left: 20rem;
+  text-decoration: none;
+  padding-right: 20rem;
+  border-radius: 50rem;
+  background-color: var(--yellow);
+  color: var(--black) !important;
+  font-family: Futurehistory, sans-serif;
+  text-transform: uppercase;
+}
 .yellow__button.big.checkout {
   justify-content: center;
   align-items: center;
@@ -189,6 +251,7 @@
 }
 .works__container.detail {
   border-top: 1rem solid var(--white);
+  flex-direction: row;
 }
 
 .works__wrapper.works__galery.gap-42 {
@@ -221,10 +284,11 @@
     padding-right: 30rem;
     margin: 0;
     padding-bottom: 60rem;
+    padding-top: 60rem;
   }
 
   .total__price-wrapper {
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: center;
   }
 
@@ -255,6 +319,52 @@
 
   .cart__titl-wrapper {
     margin-bottom: 40rem;
+  }
+
+  .woocommerce-notices-wrapper,
+  .wc-empty-cart-message,
+  .return-to-shop {
+    padding-left: 30rem;
+    padding-right: 30rem;
+    font-size: 16rem;
+    margin-right: 0;
+    padding-top: 120rem;
+  }
+
+  .shop_table.shop_table_responsive {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .total__card img {
+    width: 100%;
+  }
+
+  .shop_table.shop_table_responsive button[name='update_cart'] {
+    font-size: 10rem;
+    height: 26rem;
+    padding-top: 3rem;
+    top: auto;
+    right: 30rem;
+    bottom: 34rem;
+    transform: translateY(0);
+  }
+  .total__title.total__price {
+    margin-right: auto;
+    width: 45%;
+    font-size: 30rem;
+    line-height: 141%;
+  }
+
+  .button.wc-backward {
+    font-size: 10rem;
+    height: 30rem;
+    max-width: 100% !important;
+    padding-top: 5rem;
+  }
+
+  .wc-empty-cart-message {
+    height: 40vh;
   }
 }
 

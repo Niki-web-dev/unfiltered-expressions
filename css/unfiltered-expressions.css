@@ -4866,6 +4866,26 @@ h3 {
   width: 100%;
   max-width: 32rem;
   transition: transform 0.5s;
+  position: relative;
+}
+
+.button__bucket:last-child::before {
+  content: '1';
+  position: absolute;
+  top: -12rem;
+  right: -21rem;
+  font-size: 20rem;
+  color: var(--yellow);
+  min-width: 30rem;
+  min-height: 30rem;
+  border-radius: 50rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  background-color: var(--blue);
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 .button__bucket:hover {
   transform: rotate(10deg);
