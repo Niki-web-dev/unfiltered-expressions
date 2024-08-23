@@ -16,6 +16,7 @@
   color: var(--white);
   position: static;
   max-width: 300rem;
+  padding-top: 5rem;
 }
 
 .woocommerce-notices-wrapper a {
@@ -30,6 +31,7 @@
 .shop_table.shop_table_responsive {
   margin-right: 0;
   padding-top: 0;
+  margin-left: 0;
   padding-bottom: 0;
   position: relative;
 }
@@ -48,6 +50,7 @@
   align-items: center;
   position: absolute;
   right: 0;
+  padding-top: 5rem;
   top: 50%;
   transform: translateY(-50%);
   height: 55rem;
@@ -68,6 +71,7 @@
   font-family: Futurehistory, sans-serif;
   font-size: 20rem;
   display: flex;
+  padding-top: 22rem;
 }
 .hero__top.border {
   border-color: var(--white);
@@ -242,6 +246,18 @@
   flex-flow: column;
   display: flex;
 }
+.cart .total__shiping ul {
+  list-style: none;
+  padding-left: 20rem;
+  margin-bottom: 16rem;
+}
+
+.cart .total__shiping li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16rem;
+}
 
 .total__button {
   justify-content: center;
@@ -312,6 +328,10 @@
     font-size: 20rem;
   }
 
+  .yellow__button.big.checkout {
+    padding-top: 11rem;
+  }
+
   .cart__count {
     width: 35rem;
     height: 35rem;
@@ -345,8 +365,8 @@
     height: 26rem;
     padding-top: 3rem;
     top: auto;
-    right: 30rem;
-    bottom: 34rem;
+    right: 40rem;
+    bottom: 22rem;
     transform: translateY(0);
   }
   .total__title.total__price {

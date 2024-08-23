@@ -383,7 +383,15 @@ abbr[title] {
   .wc-block-components-combobox-control
   label.components-base-control__label {
   margin-left: 20rem;
-  margin-top: -6rem;
+  margin-top: 0rem;
+  transition: 0.5s all;
+}
+
+.wc-block-components-form .wc-block-components-text-input input:-webkit-autofill + label,
+.wc-block-components-form .wc-block-components-text-input.is-active label,
+.wc-block-components-text-input input:-webkit-autofill + label,
+.wc-block-components-text-input.is-active label {
+  opacity: 0;
 }
 
 .wp-block-woocommerce-checkout .wc-block-components-form .wc-block-components-text-input.has-error label,
@@ -391,6 +399,12 @@ abbr[title] {
 .wp-block-woocommerce-checkout .wc-block-components-validation-error {
   color: var(--red);
   margin-top: 0;
+}
+
+.wc-block-checkout__shipping-option .wc-block-components-radio-control__option input {
+  height: 5rem;
+  width: 5rem;
+  padding: 0;
 }
 
 .wp-block-woocommerce-checkout .wc-block-components-notice-banner.is-error {
@@ -438,6 +452,19 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
   box-sizing: border-box;
   font-size: 1em;
   height: 1.5em;
+}
+
+.wc-block-components-form {
+  color: var(--white);
+}
+
+.wc-block-components-radio-control-accordion-content {
+  padding: 16rem !important;
+}
+
+.wc-block-components-checkbox .wc-block-components-checkbox__label,
+.wc-block-components-checkbox > span {
+  font-family: Atypdisplay, sans-serif;
 }
 
 .information__field::placeholder {
@@ -601,6 +628,21 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
 }
 .woocommerce-address-fields .information__inputs-checkboxes {
   margin: 45rem 0;
+}
+
+.woocommerce-no-products-found {
+  color: var(--white);
+  padding: 40rem;
+  font-size: 24rem;
+}
+
+.wp-block-woocommerce-checkout {
+  max-width: 1200rem !important;
+  margin: 0 auto !important;
+}
+
+.wp-block-woocommerce-checkout .wc-blocks-components-select .wc-blocks-components-select__select {
+  background-color: var(--sand);
 }
 .information__inputs-checkboxes {
   padding-left: 33rem;
@@ -834,6 +876,14 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
     flex-direction: column-reverse;
   }
 
+  .wc-block-components-sidebar-layout {
+    margin-bottom: 0 !important;
+  }
+
+  .wc-block-components-totals-coupon__form .wc-block-components-totals-coupon__input input {
+    background-color: var(--sand) !important;
+  }
+
   .wp-block-woocommerce-checkout
     .is-medium
     .wp-block-woocommerce-checkout-order-summary-block
@@ -845,5 +895,9 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
   .is-large .wc-block-components-sidebar .wc-block-components-totals-item {
     padding-left: 0 !important;
     padding-right: 0 !important;
+  }
+
+  .wp-block-woocommerce-checkout {
+    padding: 24rem !important;
   }
 }
