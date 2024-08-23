@@ -6,11 +6,52 @@
   background-color: var(--black);
   display: flex;
 }
+.wc-block-components-sidebar-layout {
+  margin-bottom: 0 !important;
+}
 
 * {
   scroll-behavior: smooth;
 }
 
+.woocommerce .woocommerce-order {
+  max-width: 400rem;
+  margin: 0 auto;
+  padding: 60rem 0 60rem 50rem;
+  color: var(--white);
+  display: flex;
+  gap: 40rem;
+  flex-direction: column;
+}
+
+.woocommerce .woocommerce-order a {
+  color: var(--blue);
+}
+.woocommerce .woocommerce-order table {
+  text-align: left;
+}
+.woocommerce .woocommerce-order tr {
+  margin-bottom: 16rem;
+}
+
+.woocommerce-notice.woocommerce-notice--success.woocommerce-thankyou-order-received {
+  font-size: 24rem;
+}
+
+.woocommerce ul {
+  padding-left: 16rem;
+}
+
+.woocommerce-order-details__title,
+.woocommerce-column__title {
+  color: var(--red);
+  margin: 16rem 0;
+}
+
+.woocommerce-table th,
+.woocommerce-table td {
+  padding: 4rem 16rem 4rem 0;
+}
 .wpcf7 form .wpcf7-response-output {
   top: -100%;
   right: 0;
@@ -257,6 +298,11 @@
   .navbar__link {
     display: none;
   }
+
+  .woocommerce .woocommerce-order {
+    padding: 120rem 24rem 60rem;
+  }
+
   .brand {
     width: 232rem;
     margin-right: 5rem;
@@ -4853,11 +4899,6 @@ h3 {
   transition: 0.5s;
 }
 
-.post-463.page.type-page.status-publish.hentry {
-  min-height: 50vh;
-  padding-top: 120rem;
-  color: var(--white);
-}
 .post-edit-link {
   font-size: 16rem;
   color: var(--white);
@@ -5444,6 +5485,19 @@ h3 {
   margin-bottom: 22rem;
   overflow: auto;
 }
+
+.post-465.page.type-page.status-publish.hentry,
+.post-463.page.type-page.status-publish.hentry {
+  min-heihgt: 60vh;
+  padding: 100rem;
+  color: var(--white);
+}
+
+.post-465.page.type-page.status-publish.hentry h1,
+.post-463.page.type-page.status-publish.hentry h1 {
+  text-align: center;
+  font-size: 64rem;
+}
 .product__content {
   border-left: 1px solid var(--sand);
   width: 100%;
@@ -5465,6 +5519,11 @@ h3 {
   max-width: 546rem;
   margin: 0 auto;
 }
+
+.product__social a {
+  text-decoration: none;
+  color: var(--yellow);
+}
 .product__social-icon {
   cursor: pointer;
   height: 34rem;
@@ -5481,7 +5540,7 @@ h3 {
 .artwork__button {
   background-color: var(--sand);
   color: var(--black);
-  text-transform: capitalize;
+  text-transform: uppercase;
   justify-content: center;
   align-items: center;
   width: 100%;

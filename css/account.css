@@ -2,6 +2,70 @@
 .form-row .information__inputs-wrapper {
   width: auto;
 }
+.information__wrapper.payment-pane .information__submit-wrapper {
+  padding-top: 50rem;
+}
+
+.shop_table.cart.wishlist_table.wishlist_view.responsive.mobile {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.product-name {
+  font-size: 20rem;
+  color: var(--sand);
+  text-decoration: none;
+  text-align: left;
+  display: flex;
+}
+
+.wishlist_table .product-add-to-cart a,
+.product-remove a {
+  border: 1px solid var(--yellow);
+  color: var(--sand);
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 50rem;
+  padding: 11rem 24rem 11rem;
+  font-size: 20rem;
+  line-height: 110%;
+  text-decoration: none;
+  transition: 0.5s;
+  width: 100%;
+}
+.item-details {
+  color: var(--sand);
+}
+
+.label,
+.value {
+  font-size: 16rem;
+}
+
+.product-remove a {
+  display: flex;
+  justify-content: center;
+  border: none;
+}
+
+.wishlist_table.mobile li .item-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10rem;
+}
+.wishlist_table.mobile li .item-wrapper .product-thumbnail {
+  margin-right: 0 !important;
+}
+
+.product-thumbnail img {
+  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
+  height: 498rem;
+  vertical-align: middle;
+  display: inline-block;
+}
 
 .deliver-pane .information__inputs-checkboxes {
   margin: 42rem 0;
@@ -402,9 +466,14 @@ abbr[title] {
 }
 
 .wc-block-checkout__shipping-option .wc-block-components-radio-control__option input {
-  height: 5rem;
-  width: 5rem;
-  padding: 0;
+  height: 5rem !important;
+  width: 5rem !important;
+  padding: 0 !important;
+}
+
+.wc-block-components-address-card__edit {
+  color: var(--white);
+  text-decoration: none;
 }
 
 .wp-block-woocommerce-checkout .wc-block-components-notice-banner.is-error {
@@ -874,10 +943,6 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
 
   .wp-block-woocommerce-checkout .wc-block-components-sidebar-layout {
     flex-direction: column-reverse;
-  }
-
-  .wc-block-components-sidebar-layout {
-    margin-bottom: 0 !important;
   }
 
   .wc-block-components-totals-coupon__form .wc-block-components-totals-coupon__input input {
