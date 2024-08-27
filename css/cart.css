@@ -11,6 +11,14 @@
   gap: 20rem;
 }
 
+.cart .total__shiping ul input {
+  height: 5rem !important;
+  width: 5rem !important;
+  padding: 0 !important;
+  border-radius: 50rem;
+  background-color: var(--sand);
+}
+
 .woocommerce .button.wc-backward {
   font-size: 16rem;
   color: var(--white);

@@ -24,6 +24,20 @@
   flex-direction: column;
 }
 
+.cross-sells.works__container.detail {
+  justify-content: left;
+}
+
+.woocommerce-cart-form__cart-item.cart_item.total__card img {
+  object-fit: cover;
+}
+
+.woocommerce-no-products-found {
+  color: var(--white);
+  padding: 40rem;
+  font-size: 24rem;
+}
+
 .woocommerce .woocommerce-order a {
   color: var(--blue);
 }
@@ -223,7 +237,7 @@
   text-align: center;
   text-transform: uppercase;
   font-size: 65rem;
-  line-height: 92%;
+  line-height: 114%;
 }
 @media screen and (max-width: 479px) {
   #preloader-video {
@@ -679,6 +693,10 @@
   .cta__descr {
     font-size: 14rem;
     line-height: 115%;
+  }
+
+  .cta__descr p {
+    margin-bottom: 0;
   }
   .cta__descr.cta__about-descr {
     margin-bottom: 30rem;
@@ -1315,10 +1333,8 @@
   display: flex;
 }
 .gallery__card {
-  color: var(--white);
   text-align: center;
   color: var(--sand);
-  cursor: pointer;
   width: 100%;
   font-size: 18rem;
   padding: 60rem 20rem;
@@ -5488,7 +5504,7 @@ h3 {
 
 .post-465.page.type-page.status-publish.hentry,
 .post-463.page.type-page.status-publish.hentry {
-  min-heihgt: 60vh;
+  min-height: 60vh;
   padding: 100rem;
   color: var(--white);
 }
