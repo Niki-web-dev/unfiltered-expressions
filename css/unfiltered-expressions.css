@@ -4959,7 +4959,7 @@ h3 {
   transform: translateX(-50%);
 }
 
-.hero__logo.footer__logo .webcreator a {
+.hero__logo.footer__logo .webcreator {
   color: var(--white);
 }
 .button__login {
