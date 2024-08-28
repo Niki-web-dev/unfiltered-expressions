@@ -4948,7 +4948,7 @@ h3 {
   text-decoration: none;
 }
 
-.hero__logo.footer__logo div {
+.hero__logo.footer__logo .webcreator {
   position: absolute;
   font-size: 10rem;
   color: var(--white);
@@ -4959,7 +4959,7 @@ h3 {
   transform: translateX(-50%);
 }
 
-.hero__logo.footer__logo div a {
+.hero__logo.footer__logo .webcreator a {
   color: var(--white);
 }
 .button__login {
@@ -5721,7 +5721,7 @@ h3 {
     bottom: auto;
     top: -145%;
   }
-  .hero__logo.footer__logo div {
+  .hero__logo.footer__logo .webcreator {
     bottom: -116rem;
   }
   .container {
