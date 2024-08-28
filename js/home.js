@@ -1,3 +1,6 @@
+window.addEventListener('load', function () {
+  ScrollTrigger.refresh();
+});
 document.addEventListener('DOMContentLoaded', function () {
   const words = document.querySelectorAll('[data-words-slide-up]');
   words.forEach((item) => {

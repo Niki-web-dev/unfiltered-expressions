@@ -353,7 +353,8 @@
     z-index: 11;
     padding-top: 32rem;
     left: 0;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     transform: translate(-150%);
   }
   .nav__menu.active {
@@ -521,6 +522,7 @@
     padding-left: 20rem;
     padding-right: 20rem;
     font-size: 36rem;
+    line-height: 108%;
   }
   .goal__wrapper {
     width: 80%;
@@ -645,6 +647,11 @@
   .nav__contact-form {
     padding: 28rem 25rem;
   }
+
+  .nav__contact-form .form {
+    align-items: flex-start;
+  }
+
   .form {
     grid-column-gap: 15rem;
     grid-row-gap: 15rem;
@@ -728,7 +735,7 @@
     border-width: 1rem;
     min-width: 236rem;
     padding-top: 4rem;
-    padding-bottom: 1rem;
+    padding-bottom: 4rem;
     line-height: 138%;
   }
   .h1.no-capitalize.mobile-fs-36 {
@@ -3122,6 +3129,10 @@
   }
   .nav__link {
     font-size: 18rem;
+  }
+
+  .nav__link:last-child {
+    border-bottom: 1rem solid var(--black);
   }
   .nav__icon {
     width: 12rem;
@@ -5695,6 +5706,7 @@ h3 {
     left: 0;
     overflow: auto;
     transform: translate(-150%);
+    bottom: auto;
   }
   .hero__top {
     display: none;

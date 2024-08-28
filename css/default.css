@@ -1859,9 +1859,6 @@ html {
   .gallery__card.red:hover .gallery__divider {
     background-color: var(--blue);
   }
-  .nav__link:last-child {
-    border-bottom: 1rem solid black;
-  }
 }
 .form__submit:hover .form__submit-text {
   background-color: var(--blue);

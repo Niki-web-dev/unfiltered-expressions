@@ -12,8 +12,8 @@
 }
 
 .cart .total__shiping ul input {
-  height: 5rem !important;
-  width: 5rem !important;
+  height: 24rem !important;
+  width: 24rem !important;
   padding: 0 !important;
   border-radius: 50rem;
   background-color: var(--sand);
