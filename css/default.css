@@ -1932,18 +1932,6 @@ html {
 .swiper-pagination {
   bottom: 30rem !important;
 }
-.cta__elips::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: -20%;
-  left: -5%;
-  width: 110%;
-  height: 130%;
-  border: 1rem solid black;
-  border-radius: 50%;
-  background-color: transparent;
-}
 .yellow-decoration::before {
   content: '';
   position: absolute;
