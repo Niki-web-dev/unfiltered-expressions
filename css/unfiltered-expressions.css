@@ -938,10 +938,6 @@
     margin-left: 0;
     position: relative;
   }
-  .grand__text-wrapper {
-    padding-top: 42rem;
-    padding-bottom: 42rem;
-  }
   .grant__title {
     text-align: center;
   }
@@ -949,9 +945,6 @@
     text-align: center;
     padding-left: 20rem;
     padding-right: 20rem;
-  }
-  .grand__text.grand__float-text-wrapper {
-    text-align: center;
   }
   .gallery__title-big {
     font-size: 36rem;
@@ -1081,7 +1074,7 @@
 .container.works-absolute {
   justify-content: center;
   align-items: center;
-  margin-top: 100rem;
+  margin-top: 60rem;
   padding-left: 50rem;
   display: flex;
   position: relative;
@@ -1112,6 +1105,10 @@
 .hero.rem-adaptive.blue,
 .nav__container.blue {
   background-color: var(--blue);
+}
+
+.hero.rem-adaptive.blue .button__bucket span {
+  border: 1rem solid var(--yellow);
 }
 .ml-90 {
   margin-left: 90rem;
@@ -1369,9 +1366,6 @@
 .gallery__card.blue:hover {
   background-color: var(--blue);
 }
-.gallery__card.yellow {
-  cursor: pointer;
-}
 .gallery__card.yellow:hover {
   background-color: var(--yellow);
   color: var(--black);
@@ -1521,7 +1515,7 @@
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 108rem;
+  margin-bottom: 60rem;
   display: flex;
 }
 
@@ -1536,6 +1530,7 @@
   font-size: 40rem;
 }
 .works__container {
+  padding-top: 60rem;
   flex-flow: column;
   display: flex;
   position: -webkit-sticky;
@@ -1629,7 +1624,7 @@
   right: auto;
 }
 .comming-soon.center {
-  top: 50.7%;
+  top: 50.4%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -1674,6 +1669,9 @@
 }
 .cta__title.cta__about-title {
   margin-bottom: 30rem;
+}
+.cta__descr p {
+  margin-bottom: 0;
 }
 .cta__descr.cta__about-descr {
   max-width: 630rem;
@@ -2257,6 +2255,10 @@
   padding-top: 34rem;
   padding-bottom: 34rem;
 }
+.gallery__middle-container .gallery__card-name,
+.galley__bottom.white-border.border-bottom-none .gallery__card-name {
+  font-size: 25rem;
+}
 .gallery__middle-container {
   grid-column-gap: 24rem;
   grid-row-gap: 24rem;
@@ -2653,8 +2655,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 165rem;
-  padding-right: 165rem;
+  padding-left: 155rem;
+  padding-right: 155rem;
   justify-content: center;
 }
 .different__slide-top {
@@ -2673,6 +2675,11 @@
   justify-content: space-between;
   align-items: stretch;
   display: flex;
+}
+
+.artwork__comming-soon:hover {
+  background-color: var(--blue);
+  color: var(--yellow);
 }
 .artwork__deatil {
   border-top: 1rem solid var(--sand);
@@ -3500,6 +3507,7 @@
   }
   .grand__text-wrapper {
     padding-bottom: 42rem;
+    padding-top: 71rem;
   }
   .grant__smal-img {
     max-width: 200rem;
@@ -3516,8 +3524,12 @@
     padding-left: 20rem;
     padding-right: 20rem;
   }
-  .grand__text.grand__float-text-wrapper {
+  .grand__text.grand__float-text-wrapper,
+  .gallery__bottom-card,
+  .gallery .container {
     text-align: center;
+    padding-left: 20rem;
+    padding-right: 20rem;
   }
   .gallery__title-big {
     font-size: 36rem;
@@ -4515,7 +4527,7 @@
   .button__login.footer__button {
     text-align: center;
     min-width: 197rem;
-    padding: 6rem 10rem 6rem;
+    padding: 6rem 30rem 6rem;
   }
   .hero__container {
     height: auto;
@@ -4948,6 +4960,9 @@ h3 {
   text-decoration: none;
 }
 
+.hero__logo.footer__logo .textwidget {
+  width: 100%;
+}
 .hero__logo.footer__logo .webcreator {
   position: absolute;
   font-size: 10rem;
@@ -4959,7 +4974,7 @@ h3 {
   transform: translateX(-50%);
 }
 
-.hero__logo.footer__logo .webcreator {
+.hero__logo.footer__logo .webcreator a {
   color: var(--white);
 }
 .button__login {
@@ -4990,7 +5005,6 @@ h3 {
   text-transform: none;
   padding-left: 100rem;
   padding-right: 100rem;
-  text-transform: uppercase;
 }
 
 .button__login.footer__button:hover {
@@ -5722,7 +5736,7 @@ h3 {
     top: -145%;
   }
   .hero__logo.footer__logo .webcreator {
-    bottom: -116rem;
+    bottom: -208rem;
   }
   .container {
     padding-left: 30rem;
@@ -5966,7 +5980,7 @@ h3 {
   }
   .footer {
     padding-top: 37rem;
-    padding-bottom: 42rem;
+    padding-bottom: 64rem;
   }
   .footer__content {
     grid-column-gap: 40rem;
@@ -6959,6 +6973,7 @@ h3 {
     padding-top: 32rem;
     left: 0;
     overflow: auto;
+    bottom: auto;
     transform: translate(-150%);
   }
   .hero__logo.info-referal__logo {
@@ -7235,6 +7250,10 @@ h3 {
 @media screen and (min-width: 1600px) {
   .meet-artist__content {
     padding-top: 150rem;
+  }
+
+  .fs-150 {
+    font-size: 130rem;
   }
 
   .main .info__container {

@@ -1,3 +1,6 @@
+window.addEventListener('load', function () {
+  ScrollTrigger.refresh();
+});
 function heroAnimation() {
   const slides = document.querySelectorAll('.hero__slide');
   Array.from(slides)
