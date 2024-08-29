@@ -120,6 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
           detailContainer.append(detail);
           detailContainer.style.display = 'flex';
           activeArtWork = artwork;
+          detailContainer.scrollIntoView({ behavior: 'smooth' });
         } else {
           if (detailContainer.style.display === 'flex') {
             detailContainer.style.display = 'none';
