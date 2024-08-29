@@ -14,6 +14,19 @@
   scroll-behavior: smooth;
 }
 
+.wc-block-components-order-summary .wc-block-components-order-summary-item__quantity {
+  display: none;
+}
+
+.w-checkbox.checkbox-field input:checked + div {
+  background-color: var(--transparent);
+  background-image: url(../images/checkbox-Vector.svg);
+  border-style: none;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .woocommerce .woocommerce-order {
   max-width: 400rem;
   margin: 0 auto;
