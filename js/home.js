@@ -1,6 +1,9 @@
 window.addEventListener('load', function () {
   ScrollTrigger.refresh();
 });
+
+const preloaderShown = localStorage.getItem('preloaderShown');
+
 document.addEventListener('DOMContentLoaded', function () {
   const words = document.querySelectorAll('[data-words-slide-up]');
   words.forEach((item) => {
@@ -14,7 +17,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  setTimeout(() => {
+  if (!preloaderShown) {
+    setTimeout(() => {
+      gsap.from('.hidden-span', {
+        y: '100%',
+        opacity: 0,
+        duration: 1,
+        stagger: 0.2,
+        ease: 'power2.out',
+      });
+    }, 1000);
+  } else {
     gsap.from('.hidden-span', {
       y: '100%',
       opacity: 0,
@@ -22,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
       stagger: 0.2,
       ease: 'power2.out',
     });
-  }, 1000);
+  }
 
   //work galley scroll while scroll page
   const worksWrapper = document.querySelector('.works__wrapper');

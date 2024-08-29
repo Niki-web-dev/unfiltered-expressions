@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     artworkItems.forEach((artwork) => {
       artwork.addEventListener('click', function () {
-        const detailContainer = document.querySelector('.artwork__deatil');
+        const detailContainer = artwork.closest('.artwork__grid').nextElementSibling;
         const detail = artwork.querySelector('.artwork__container').cloneNode(true);
 
         if (activeArtWork !== artwork) {

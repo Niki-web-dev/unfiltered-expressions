@@ -1,48 +1,52 @@
-document.body.classList.add('overflow-hidden');
-
 document.addEventListener('DOMContentLoaded', function () {
-  // Wait for the page to fully load
-  async function playPauseVideo() {
-    const videoElement = document.querySelector('.preloader__video');
+  // Check if the preloader has been shown before
+  const preloaderShown = localStorage.getItem('preloaderShown');
 
-    if (!videoElement) {
-      console.error('No video element found');
-      return;
-    }
+  if (!preloaderShown) {
+    // If the preloader hasn't been shown, lock the page scroll
+    document.body.classList.add('overflow-hidden');
+    document.querySelector('.preloader').classList.add('show');
 
-    try {
-      // Wait for the video to be ready to play
-      if (videoElement.readyState >= 3) {
-        // HAVE_FUTURE_DATA or more
-        if (videoElement.paused) {
-          await videoElement.play();
-        } else {
-          videoElement.pause();
-        }
-      } else {
-        // Optional: Handle the case when the video isn't ready
-        console.warn('Video is not ready to play');
+    // Function to play or pause the preloader video
+    async function playPauseVideo() {
+      const videoElement = document.querySelector('.preloader__video');
+
+      if (!videoElement) {
+        console.error('No video element found');
+        return;
       }
-    } catch (error) {
-      console.error('Error attempting to play or pause the video:', error);
+
+      try {
+        // Wait for the video to be ready to play
+        if (videoElement.readyState >= 3) {
+          // HAVE_FUTURE_DATA or more
+          if (videoElement.paused) {
+            await videoElement.play();
+          } else {
+            videoElement.pause();
+          }
+        } else {
+          console.warn('Video is not ready to play');
+        }
+      } catch (error) {
+        console.error('Error attempting to play or pause the video:', error);
+      }
     }
-  }
 
-  // Optionally add a debounce mechanism
-  let debounceTimeout;
-  function debouncePlayPauseVideo() {
-    clearTimeout(debounceTimeout);
-    debounceTimeout = setTimeout(playPauseVideo, 300); // 300ms debounce time
-  }
+    // Call the play/pause function with a delay
+    setTimeout(playPauseVideo, 300);
 
-  // Call the debounced function
-  debouncePlayPauseVideo();
-
-  // Remove overflow-hidden from the body
-  setTimeout(function () {
+    // Remove the preloader and unlock the scroll after 2 seconds
+    setTimeout(function () {
+      document.body.classList.remove('overflow-hidden');
+      document.querySelector('.preloader').classList.add('active');
+      localStorage.setItem('preloaderShown', 'true'); // Save to localStorage that the preloader has been shown
+    }, 2000);
+  } else {
+    // If the preloader has already been shown, hide it immediately
     document.body.classList.remove('overflow-hidden');
-    document.querySelector('.preloader').classList.add('active');
-  }, 2000);
+    document.querySelector('.preloader').remove();
+  }
 
   //Burger menu function
   const menuButton = document.querySelector('.menu__button');
@@ -95,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         animation.play();
         counter = (counter + 1) % 6; // Reset counter after every 6 items
-      }, 1000);
+      }, 200);
 
       const iconAnimation = gsap.to(item.parentElement.querySelectorAll('.nav__icon'), {
         rotation: 360,
