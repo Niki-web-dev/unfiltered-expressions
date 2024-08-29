@@ -24,6 +24,9 @@
   flex-direction: column;
 }
 
+.woocommerce .works__container {
+  padding-top: 0;
+}
 .cross-sells.works__container.detail {
   justify-content: left;
 }
@@ -2680,6 +2683,7 @@
 .artwork__comming-soon:hover {
   background-color: var(--blue);
   color: var(--yellow);
+  border-color: var(--yellow);
 }
 .artwork__deatil {
   border-top: 1rem solid var(--sand);
@@ -3303,7 +3307,7 @@
     border-width: 1rem;
     min-width: 236rem;
     padding-top: 4rem;
-    padding-bottom: 1rem;
+    padding-bottom: 4rem;
     line-height: 138%;
   }
   .h1.no-capitalize.mobile-fs-36 {
@@ -5005,6 +5009,7 @@ h3 {
   text-transform: none;
   padding-left: 100rem;
   padding-right: 100rem;
+  font-family: Futurehistory, sans-serif;
 }
 
 .button__login.footer__button:hover {
@@ -5466,7 +5471,7 @@ h3 {
   display: flex;
 }
 .artwork__row-left.py-24 {
-  padding-top: 24rem;
+  padding-top: 22rem;
   padding-bottom: 24rem;
 }
 .artwork__row-left.py-24.border-none {
@@ -5630,6 +5635,15 @@ h3 {
   flex-flow: column;
   display: flex;
 }
+
+.artwork__detail-top-wrapper span {
+  color: var(--blue);
+  text-decoration: underline;
+}
+.artwork__detail-top-wrapper .artwork__state {
+  color: var(--white);
+  text-decoration: none;
+}
 .artwork__author {
   color: var(--blue);
 }
@@ -5683,7 +5697,7 @@ h3 {
   height: 100%;
 }
 .works__gallery-button {
-  padding-right: 85rem;
+  padding-right: 165rem;
   padding-top: 50rem;
   margin-bottom: 50rem;
   border-top: 1rem solid var(--white);
@@ -5794,11 +5808,6 @@ h3 {
   }
   .hero__top {
     display: none;
-  }
-  .button__login.footer__button {
-    text-align: center;
-    min-width: 197rem;
-    padding: 6rem 10rem 6rem;
   }
   .hero__container {
     height: auto;
@@ -6079,6 +6088,7 @@ h3 {
     padding-top: 16rem;
     padding-bottom: 16rem;
     font-size: 16rem;
+    border-right: none;
   }
   .artwork__descr-cell.last {
     border-top: 1px solid var(--sand);
@@ -7288,6 +7298,21 @@ h3 {
 
   .nav__links {
     height: auto;
+  }
+}
+
+@media only screen and (max-height: 900px) {
+  .works__right-side {
+    width: 100%;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .works__flex {
+    display: flex;
+    height: 900rem;
   }
 }
 

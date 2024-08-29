@@ -11,12 +11,20 @@
   gap: 20rem;
 }
 
+.woocommerce-notices-wrapper {
+  display: none !important;
+}
+
 .cart .total__shiping ul input {
   height: 24rem !important;
   width: 24rem !important;
   padding: 0 !important;
   border-radius: 50rem;
   background-color: var(--sand);
+}
+
+.total__shiping small {
+  color: var(--red);
 }
 
 .woocommerce .button.wc-backward {
@@ -50,6 +58,10 @@
 
 .woocommerce p {
   margin-bottom: 0 !important;
+}
+
+.shop_table.shop_table_responsive button[name='update_cart'] {
+  display: none !important;
 }
 .shop_table.shop_table_responsive button[name='update_cart'],
 .button.wc-backward {

@@ -67,7 +67,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const faqButton = document.querySelector('.faq__button');
     elements.forEach((el) => {
       const font = getComputedStyle(el).font;
-      const maxWidth = faqButton.clientWidth * 0.82;
+      let maxWidth;
+      if (window.innerWidth > 479) {
+        maxWidth = faqButton.clientWidth * 0.82;
+      } else {
+        maxWidth = faqButton.clientWidth * 0.75;
+      }
       const lineHeight = parseFloat(getComputedStyle(el).lineHeight);
       const originalText = el.innerText;
       let lines = [];

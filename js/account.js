@@ -105,4 +105,35 @@ document.addEventListener('DOMContentLoaded', function () {
   selectImitation();
   tabFunction();
   freezePaymant();
+
+  const input = document.querySelector('#pseudo-phone');
+  const hiddenField = document.querySelector('#Phone-Number');
+
+  const iti = window.intlTelInput(input, {
+    initialCountry: 'auto',
+    geoIpLookup: function (callback) {
+      fetch('https://ipinfo.io/json')
+        .then((response) => response.json())
+        .then((data) => callback(data.country))
+        .catch(() => callback('us'));
+    },
+    utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js',
+    customContainer: 'select__wrapper', // Класс для кастомного контейнера
+    separateDialCode: true, // Показывает код страны отдельно
+    useFullscreenPopup: false,
+  });
+
+  input.addEventListener('input', function (event) {
+    formatTelephone(event);
+
+    const countryCode = iti.getSelectedCountryData().dialCode;
+    const number = input.value;
+    hiddenField.value = `+${countryCode}${number}`;
+  });
+
+  input.addEventListener('countrychange', function () {
+    const countryCode = iti.getSelectedCountryData().dialCode;
+    const number = input.value;
+    hiddenField.value = `+${countryCode}${number}`;
+  });
 });

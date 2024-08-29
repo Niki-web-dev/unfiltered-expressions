@@ -4,21 +4,39 @@ document.addEventListener('DOMContentLoaded', function () {
   // Wait for the page to fully load
   async function playPauseVideo() {
     const videoElement = document.querySelector('.preloader__video');
+
     if (!videoElement) {
+      console.error('No video element found');
       return;
     }
-    if (videoElement.paused) {
-      try {
-        await videoElement.play();
-      } catch (error) {
-        console.error('Error attempting to play:', error);
+
+    try {
+      // Wait for the video to be ready to play
+      if (videoElement.readyState >= 3) {
+        // HAVE_FUTURE_DATA or more
+        if (videoElement.paused) {
+          await videoElement.play();
+        } else {
+          videoElement.pause();
+        }
+      } else {
+        // Optional: Handle the case when the video isn't ready
+        console.warn('Video is not ready to play');
       }
-    } else {
-      videoElement.pause();
+    } catch (error) {
+      console.error('Error attempting to play or pause the video:', error);
     }
   }
 
-  playPauseVideo();
+  // Optionally add a debounce mechanism
+  let debounceTimeout;
+  function debouncePlayPauseVideo() {
+    clearTimeout(debounceTimeout);
+    debounceTimeout = setTimeout(playPauseVideo, 300); // 300ms debounce time
+  }
+
+  // Call the debounced function
+  debouncePlayPauseVideo();
 
   // Remove overflow-hidden from the body
   setTimeout(function () {
