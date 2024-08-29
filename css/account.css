@@ -6,6 +6,38 @@
   padding-top: 50rem;
 }
 
+.wc-block-components-totals-coupon .wc-block-components-panel__button,
+.wp-block-woocommerce-checkout span,
+.wc-block-components-checkout-return-to-cart-button,
+.wc-block-components-totals-item__value,
+.wc-block-components-panel__button {
+  font-family: Atypdisplay, sans-serif;
+}
+.wc-block-checkout__sidebar .wc-block-components-product-name {
+  font-family: Futurehistory, sans-serif;
+}
+
+.is-large .wp-block-woocommerce-checkout-order-summary-block .wc-block-components-totals-wrapper:first-of-type,
+.wp-block-woocommerce-checkout-order-summary-totals-block .wc-block-components-totals-wrapper,
+.wc-block-components-totals-wrapper {
+  border-top: 1rem solid var(--white);
+}
+
+.wp-block-woocommerce-checkout-order-summary-block {
+  color: var(--white);
+}
+
+.is-large.wp-block-woocommerce-checkout-order-summary-block .wc-block-components-totals-wrapper:first-child {
+  border: none !important;
+}
+.wp-block-woocommerce-checkout-order-summary-totals-block .wc-block-components-totals-wrapper {
+  padding-top: 16rem !important;
+  padding-bottom: 16rem !important;
+}
+
+.wc-block-components-order-summary .wc-block-components-order-summary-item__image {
+  margin-top: 0;
+}
 .css-106zala input {
   background-color: var(--sand) !important;
   border-radius: 30rem !important;
@@ -471,9 +503,9 @@ abbr[title] {
   border-radius: 50rem;
   height: 50rem;
   margin-bottom: 0;
-  padding-top: 15rem;
-  padding-left: 30rem;
-  padding-right: 30rem;
+  padding-top: 15rem !important;
+  padding-left: 30rem !important;
+  padding-right: 30rem !important;
   font-family: Futurehistory, sans-serif;
   font-size: 20rem;
 }

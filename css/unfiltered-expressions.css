@@ -17,6 +17,17 @@
 .wc-block-components-order-summary .wc-block-components-order-summary-item__quantity {
   display: none;
 }
+body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button:not(.is-link) {
+  transition: 0.5s all ease;
+}
+body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button:not(.is-link):hover {
+  color: var(--black);
+  background-color: var(--yellow);
+}
+
+.wc-block-checkout__add-note .wc-block-components-textarea {
+  background-color: var(--sand);
+}
 
 .w-checkbox.checkbox-field input:checked + div {
   background-color: var(--transparent);
@@ -27,6 +38,12 @@
   background-size: cover;
 }
 
+.wc-block-components-checkbox__input[type='checkbox']:checked {
+  background-color: var(--blue);
+}
+.wc-block-components-checkbox__input[type='checkbox']:checked + svg {
+  fill: var(--white) !important;
+}
 .woocommerce .woocommerce-order {
   max-width: 400rem;
   margin: 0 auto;

@@ -173,16 +173,43 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', updateNavbarStyles);
   window.addEventListener('resize', updateNavbarStyles);
 
-  // SmoothScroll({
-  //   animationTime: 2000,
-  //   stepSize: 65,
-  //   accelerationDelta: 30,
-  //   accelerationMax: 1,
-  //   keyboardSupport: true,
-  //   arrowScroll: 50,
-  //   pulseAlgorithm: true,
-  //   pulseScale: 1,
-  //   pulseNormalize: 1,
-  //   touchpadSupport: true,
-  // });
+  // checkout selects
+  document.addEventListener('DOMContentLoaded', function () {
+    const inputElements = document.querySelectorAll('input.components-combobox-control__input');
+
+    if (inputElements.length === 0) {
+      console.warn('No input elements found with class .components-combobox-control__input');
+      return;
+    }
+
+    function checkAndSetLabelOpacity(inputElement) {
+      const container = inputElement.closest('.components-base-control__field');
+      if (!container) {
+        console.warn('Container not found for input:', inputElement);
+        return;
+      }
+      s;
+      const label = container.querySelector('.components-base-control__label');
+      if (!label) {
+        console.warn('Label not found for input:', inputElement);
+        return;
+      }
+
+      if (inputElement.value.trim() !== '') {
+        label.style.opacity = '0';
+        console.log('Label hidden for input:', inputElement);
+      } else {
+        label.style.opacity = '1';
+        console.log('Label shown for input:', inputElement);
+      }
+    }
+
+    inputElements.forEach(function (inputElement) {
+      checkAndSetLabelOpacity(inputElement);
+
+      inputElement.addEventListener('input', function () {
+        checkAndSetLabelOpacity(inputElement);
+      });
+    });
+  });
 });
