@@ -2948,10 +2948,16 @@ h3 {
   max-width: 353rem;
   display: flex;
 }
+
 .works__work.detail {
   min-width: 248rem;
   max-width: 248rem;
   text-decoration: none;
+}
+
+.works__work.detail img {
+  width: 100%;
+  object-fit: cover;
 }
 .works__detail {
   color: var(--sand);
@@ -2970,6 +2976,7 @@ h3 {
 }
 .works__available.lh-100 {
   line-height: 100%;
+  text-align: right;
 }
 .works__available.price {
   font-size: 12rem;
@@ -4078,6 +4085,10 @@ body:not(.woocommerce-block-theme-has-button-styles)
   font-family: Atypdisplay, sans-serif;
   font-size: 18rem;
   text-decoration: none;
+}
+
+.info__button.type-2:last-child {
+  cursor: auto;
 }
 .info__titlr-wrapper {
   grid-column-gap: 24rem;

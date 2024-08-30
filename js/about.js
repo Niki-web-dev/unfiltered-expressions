@@ -1,6 +1,7 @@
 window.addEventListener('load', function () {
-  ScrollTrigger.refresh();
+  // ScrollTrigger.refresh();
 });
+
 function heroAnimation() {
   const slides = document.querySelectorAll('.hero__slide');
   Array.from(slides)
@@ -52,8 +53,6 @@ function isMobile() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  ScrollTrigger.refresh();
-
   const icon = document.querySelector('.advantages__icon');
   const icon2 = document.querySelector('.gallery__icon');
   const section = document.querySelector('.advantages__right-texts');

@@ -1,12 +1,10 @@
 window.addEventListener('load', function () {
-  ScrollTrigger.refresh();
+  // ScrollTrigger.refresh();
 });
 
 const preloaderShown = localStorage.getItem('preloaderShown');
 
 document.addEventListener('DOMContentLoaded', function () {
-  ScrollTrigger.refresh();
-
   const words = document.querySelectorAll('[data-words-slide-up]');
   words.forEach((item) => {
     const spans = item.querySelectorAll('span');
@@ -61,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   //Paralax animation
-  gsap.registerPlugin(ScrollTrigger, InertiaPlugin);
 
   const images = document.querySelectorAll('.hero__img');
   let scrollDistanse = 100;
@@ -85,16 +82,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     gsap.to(img, {
       y: distance,
-      inertia: {
-        resistance: 500, // scroll resist
-      },
       scrollTrigger: {
         trigger: '.hero',
         start: 'top top',
         end: 'bottom top',
         scrub: 3,
-        inertia: true,
       },
+      ease: 'power1.out',
     });
   });
 

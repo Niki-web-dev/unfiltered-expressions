@@ -1,5 +1,8 @@
+//gsap H1 Hero text animation
 document.addEventListener('DOMContentLoaded', function () {
   // Check if the preloader has been shown before
+  gsap.registerPlugin(ScrollTrigger, InertiaPlugin);
+
   const preloaderShown = localStorage.getItem('preloaderShown');
 
   if (!preloaderShown) {
@@ -68,10 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
       navMenu.classList.remove('active');
     }
   });
-});
 
-//gsap H1 Hero text animation
-document.addEventListener('DOMContentLoaded', function () {
   // infinity navbar scroll text function
   let counter = 0;
 
@@ -172,13 +172,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  ctaHoverInAnimation();
-  window.addEventListener('load', updateNavbarStyles);
-  window.addEventListener('scroll', updateNavbarStyles);
-  window.addEventListener('resize', updateNavbarStyles);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
   function toTitleCase(text) {
     return text.toLowerCase().replace(/\b\w/g, function (match) {
       return match.toUpperCase();
@@ -191,4 +184,9 @@ document.addEventListener('DOMContentLoaded', function () {
       element.textContent = toTitleCase(element.textContent);
     });
   }
+
+  ctaHoverInAnimation();
+  window.addEventListener('load', updateNavbarStyles);
+  window.addEventListener('scroll', updateNavbarStyles);
+  window.addEventListener('resize', updateNavbarStyles);
 });
