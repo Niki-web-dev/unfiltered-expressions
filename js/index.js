@@ -176,44 +176,19 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('load', updateNavbarStyles);
   window.addEventListener('scroll', updateNavbarStyles);
   window.addEventListener('resize', updateNavbarStyles);
+});
 
-  // checkout selects
-  document.addEventListener('DOMContentLoaded', function () {
-    const inputElements = document.querySelectorAll('input.components-combobox-control__input');
-
-    if (inputElements.length === 0) {
-      console.warn('No input elements found with class .components-combobox-control__input');
-      return;
-    }
-
-    function checkAndSetLabelOpacity(inputElement) {
-      const container = inputElement.closest('.components-base-control__field');
-      if (!container) {
-        console.warn('Container not found for input:', inputElement);
-        return;
-      }
-      s;
-      const label = container.querySelector('.components-base-control__label');
-      if (!label) {
-        console.warn('Label not found for input:', inputElement);
-        return;
-      }
-
-      if (inputElement.value.trim() !== '') {
-        label.style.opacity = '0';
-        console.log('Label hidden for input:', inputElement);
-      } else {
-        label.style.opacity = '1';
-        console.log('Label shown for input:', inputElement);
-      }
-    }
-
-    inputElements.forEach(function (inputElement) {
-      checkAndSetLabelOpacity(inputElement);
-
-      inputElement.addEventListener('input', function () {
-        checkAndSetLabelOpacity(inputElement);
-      });
+document.addEventListener('DOMContentLoaded', function () {
+  function toTitleCase(text) {
+    return text.toLowerCase().replace(/\b\w/g, function (match) {
+      return match.toUpperCase();
     });
-  });
+  }
+
+  const titleElements = document.querySelectorAll('.total__info-wrapper .total__title');
+  if (titleElements) {
+    titleElements.forEach((element) => {
+      element.textContent = toTitleCase(element.textContent);
+    });
+  }
 });

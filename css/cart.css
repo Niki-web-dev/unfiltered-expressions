@@ -143,6 +143,7 @@
 
 .cart__total-subtotal {
   width: 100%;
+  font-weight: 500;
   max-width: 430rem;
 }
 
@@ -187,6 +188,9 @@
   width: 100%;
   font-size: 30rem;
   line-height: 141%;
+}
+.total__shiping .total__title {
+  text-transform: uppercase;
 }
 
 .total__title.total__price {
@@ -320,7 +324,7 @@
     padding-right: 30rem;
     margin: 0;
     padding-bottom: 60rem;
-    padding-top: 60rem;
+    padding-top: 100rem;
   }
 
   .total__price-wrapper {
@@ -346,6 +350,10 @@
   .yellow__button.big.checkout,
   .cart__count {
     font-size: 20rem;
+  }
+
+  .total__top div:last-child {
+    display: none;
   }
 
   .yellow__button.big.checkout {

@@ -116,6 +116,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const detail = artwork.querySelector('.artwork__container').cloneNode(true);
 
         if (activeArtWork !== artwork) {
+          document.querySelectorAll('.artwork__deatil')[0].style.display = 'none';
+          document.querySelectorAll('.artwork__deatil')[1].style.display = 'none';
           detailContainer.innerHTML = '';
           detailContainer.append(detail);
           detailContainer.style.display = 'flex';

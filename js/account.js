@@ -53,61 +53,21 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  function freezePaymant() {
-    function toggleFormState(isDisabled) {
-      paymantPane.querySelectorAll('input').forEach((input) => {
-        input.disabled = isDisabled;
-      });
-
-      paymantPane.querySelectorAll('.select__wrapper').forEach((select) => {
-        select.classList.toggle('pointer-event-none', isDisabled);
-      });
-
-      paymantPane.querySelectorAll('.state_select').forEach((select) => {
-        select.classList.toggle('pointer-event-none', isDisabled);
-      });
-
-      paymantPane.querySelector('.information__submit-wrapper').classList.toggle('hide', isDisabled);
-    }
-
-    freezePayInfoLabel.addEventListener('click', function () {
-      bilingAddressIsChecked = freezePayInfoLabel.querySelector('input')?.checked || false;
-      toggleFormState(bilingAddressIsChecked);
-
-      if (bilingAddressIsChecked) {
-        deliveryInputs.forEach((sourceInput, index) => {
-          if (paymentInputs[index]) {
-            paymentInputs[index].value = sourceInput.value;
-          }
-        });
-      }
-    });
-
-    deliveryInputs.forEach((input, index) => {
-      input.addEventListener('input', () => {
-        if (bilingAddressIsChecked && paymentInputs[index]) {
-          paymentInputs[index].value = input.value;
-        }
-      });
-    });
+  function formatTelephone(event) {
+    let input = event.target.value.replace(/\D/g, '').substring(0, 10);
+    input = input !== '' ? input.match(/.{1,3}/g).join('') : '';
+    event.target.value = input;
   }
 
   const accountTabs = document.querySelectorAll('.account__tab');
   const tabPanes = document.querySelectorAll('.account__tab-pane');
   const selectWrappers = document.querySelectorAll('.select__wrapper');
-  const freezePayInfoLabel = document.querySelector('.freeze-paymant');
-  const paymantPane = document.querySelector('.payment-pane');
-  const deliverPane = document.querySelector('.deliver-pane');
-  const deliveryInputs = deliverPane.querySelectorAll('input'); // give delivery inputs for copy value and them paste value to payments field if checked button is true
-  const paymentInputs = paymantPane.querySelectorAll('input'); // give payment inputs for paste value for inputs
-  let bilingAddressIsChecked = freezePayInfoLabel.querySelector('input')?.checked || false;
 
   selectImitation();
   tabFunction();
-  freezePaymant();
 
   const input = document.querySelector('#pseudo-phone');
-  const hiddenField = document.querySelector('#Phone-Number');
+  const hiddenField = document.querySelector('#account_phone');
 
   const iti = window.intlTelInput(input, {
     initialCountry: 'auto',
@@ -118,8 +78,8 @@ document.addEventListener('DOMContentLoaded', function () {
         .catch(() => callback('us'));
     },
     utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js',
-    customContainer: 'select__wrapper', // Класс для кастомного контейнера
-    separateDialCode: true, // Показывает код страны отдельно
+    customContainer: 'select__wrapper',
+    separateDialCode: true,
     useFullscreenPopup: false,
   });
 

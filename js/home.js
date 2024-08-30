@@ -5,6 +5,8 @@ window.addEventListener('load', function () {
 const preloaderShown = localStorage.getItem('preloaderShown');
 
 document.addEventListener('DOMContentLoaded', function () {
+  ScrollTrigger.refresh();
+
   const words = document.querySelectorAll('[data-words-slide-up]');
   words.forEach((item) => {
     const spans = item.querySelectorAll('span');
@@ -135,6 +137,30 @@ document.addEventListener('DOMContentLoaded', function () {
   const videoSection = document.getElementById('video-section');
   const backgroundVideo = document.getElementById('background-video');
 
+  if (videoSection) {
+    const svgWrapper = document.createElement('div');
+
+    svgWrapper.innerHTML = `
+      <svg width="100%" height="100%" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_158_36)">
+              <path d="M9.76233 24.424V6.57605L23.2277 15.5L9.76233 24.424ZM10.2344 7.45909V23.5369L22.365 15.496L10.2344 7.45502V7.45909Z" fill="currentcolor"></path>
+              <path d="M31 31H0V0H31V31ZM0.476109 30.5239H30.528V0.476109H0.476109V30.528V30.5239Z" fill="currentcolor"></path>
+          </g>
+          <defs>
+              <clipPath id="clip0_158_36">
+                  <rect width="31" height="31" fill="currentcolor"></rect>
+              </clipPath>
+          </defs>
+      </svg>
+    `;
+
+    videoSection.appendChild(svgWrapper);
+  } else {
+    console.error('Element with ID #video-section not found');
+  }
+
+  const playBtn = document.querySelector('#video-section svg');
+
   gsap.registerPlugin(ScrollTrigger);
 
   function isMobile() {
@@ -142,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function videoStart() {
-    if (backgroundVideo) {
+    if (backgroundVideo && !isMobile) {
       ScrollTrigger.create({
         trigger: videoSection,
         start: 'top 95%',
@@ -151,6 +177,11 @@ document.addEventListener('DOMContentLoaded', function () {
         onLeave: () => backgroundVideo.pause(),
         onEnterBack: () => backgroundVideo.play(),
         onLeaveBack: () => backgroundVideo.pause(),
+      });
+    } else if (isMobile && playBtn) {
+      playBtn.addEventListener('click', () => {
+        backgroundVideo.play();
+        playBtn.remove();
       });
     }
   }
