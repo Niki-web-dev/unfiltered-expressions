@@ -50,7 +50,6 @@ function isMobile() {
 
 document.addEventListener('DOMContentLoaded', function () {
   gsap.registerPlugin(ScrollTrigger, InertiaPlugin);
-  ScrollTrigger.refresh();
 
   const icon = document.querySelector('.advantages__icon');
   const icon2 = document.querySelector('.gallery__icon');
@@ -86,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function () {
         start: 'top 70%',
         end: 'bottom top',
         scrub: 1,
-        inertia: true,
       },
       ease: 'power1.out',
     });
