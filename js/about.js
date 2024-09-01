@@ -1,7 +1,3 @@
-window.addEventListener('load', function () {
-  // ScrollTrigger.refresh();
-});
-
 function heroAnimation() {
   const slides = document.querySelectorAll('.hero__slide');
   Array.from(slides)
@@ -53,6 +49,8 @@ function isMobile() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+  gsap.registerPlugin(ScrollTrigger, InertiaPlugin);
+
   const icon = document.querySelector('.advantages__icon');
   const icon2 = document.querySelector('.gallery__icon');
   const section = document.querySelector('.advantages__right-texts');
@@ -71,7 +69,6 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('resize', deskAnimation);
 
   //Paralax animation
-  gsap.registerPlugin(ScrollTrigger, InertiaPlugin);
 
   const images = document.querySelectorAll('.process__img');
   let scrollDistanse = 100;
@@ -95,4 +92,6 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     });
   });
+
+  ScrollTrigger.refresh();
 });

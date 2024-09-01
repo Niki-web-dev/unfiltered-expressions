@@ -52,43 +52,8 @@ document.addEventListener('DOMContentLoaded', function () {
       start: 'top top',
       end: `+=${works.clientHeight * 0.5}`,
       scrub: true,
-      markers: true,
     },
   });
-  // const worksWrapper = document.querySelector('.works__wrapper');
-  // const works = document.querySelector('.works');
-
-  // const wrapperWidth = worksWrapper.scrollWidth;
-  // const containerWidth = works.clientWidth;
-  // const scrollDistance = wrapperWidth - containerWidth + 20;
-
-  // const scrollAmount = scrollDistance > 0 ? scrollDistance : 0;
-
-  // function handleScroll() {
-  //   const worksRect = works.getBoundingClientRect();
-  //   const windowHeight = window.innerHeight;
-
-  //   // Увеличиваем значение, чтобы начать анимацию позже
-  //   const startOffset = windowHeight; // Множитель 0.5 означает середину окна
-
-  //   // Расчет прогресса с учетом сдвига
-  //   const progress = (windowHeight - worksRect.top - startOffset) / (windowHeight + works.clientHeight / 10);
-
-  //   // Ограничиваем прогресс от 0 до 1
-  //   const clampedProgress = Math.min(Math.max(progress, 0), 1);
-
-  //   // Вычисляем смещение
-  //   const translateX = -clampedProgress * scrollAmount;
-
-  //   // Применяем трансформацию
-  //   worksWrapper.style.transform = `translateX(${translateX}px)`;
-  // }
-
-  // window.addEventListener('scroll', handleScroll);
-
-  // handleScroll();
-
-  //Paralax animation
 
   const images = document.querySelectorAll('.hero__img');
   let scrollDistanse = 100;
