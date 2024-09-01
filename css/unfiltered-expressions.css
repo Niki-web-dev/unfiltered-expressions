@@ -4671,6 +4671,7 @@ body:not(.woocommerce-block-theme-has-button-styles)
   .works__wrapper {
     grid-column-gap: 30rem;
     grid-row-gap: 30rem;
+    padding-left: 30rem;
   }
   .works__work {
     min-width: 240rem;
