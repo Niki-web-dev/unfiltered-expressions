@@ -231,10 +231,10 @@ document.addEventListener('DOMContentLoaded', function () {
   setupAnimation();
 
   // Resize listener to reapply the animation on window resize
-  window.addEventListener('resize', function () {
-    ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    setupAnimation();
-  });
+  // window.addEventListener('resize', function () {
+  //   ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+  //   setupAnimation();
+  // });
 
   const firstProcessItem = document.querySelectorAll('.process__item');
 
