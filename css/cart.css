@@ -23,10 +23,6 @@
   background-color: var(--sand);
 }
 
-.total__shiping small {
-  color: var(--red);
-}
-
 .woocommerce .button.wc-backward {
   font-size: 16rem;
   color: var(--white);

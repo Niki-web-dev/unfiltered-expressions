@@ -1682,7 +1682,7 @@ body:not(.woocommerce-block-theme-has-button-styles)
 }
 .paly-icon {
   width: 100%;
-  max-width: 31rem;
+  max-width: 32rem;
   height: 31rem;
   margin-top: -3rem;
 }
@@ -1694,11 +1694,16 @@ body:not(.woocommerce-block-theme-has-button-styles)
   padding-top: 100rem;
   padding-bottom: 100rem;
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.video-pop-up iframe {
+  position: relative;
+  z-index: 100;
 }
 .video-pop-up.active {
   display: flex;
@@ -2957,7 +2962,6 @@ h3 {
 
 .works__work.detail img {
   width: 100%;
-  object-fit: cover;
 }
 .works__detail {
   color: var(--sand);
@@ -3264,6 +3268,7 @@ h3 {
 .artwork__content-row.last.detail {
   justify-content: flex-start;
   align-items: flex-start;
+  border-bottom: 1rem solid var(--white);
 }
 .artwork__row-left {
   border-right: 1rem solid var(--sand);
@@ -3825,6 +3830,7 @@ body:not(.woocommerce-block-theme-has-button-styles)
 
 .nav__contact-button.bg-black img {
   height: 24rem;
+  object-fit: contain;
 }
 
 .nav__contact-button:hover {
@@ -4438,7 +4444,12 @@ body:not(.woocommerce-block-theme-has-button-styles)
   }
   .nav__menu .nav__links {
     overflow: hidden;
-    min-height: 225rem;
+    min-height: 220rem;
+  }
+
+  .artwork__grid._1,
+  .artwork__grid._2 {
+    height: 400rem;
   }
   .nav__menu.active {
     z-index: 11;
@@ -4692,9 +4703,6 @@ body:not(.woocommerce-block-theme-has-button-styles)
   .nav__icon {
     width: 12rem;
     height: 12rem;
-  }
-  .nav__contacts {
-    padding-top: 21rem;
   }
   .nav__contact {
     font-size: 14rem;
@@ -5500,9 +5508,6 @@ body:not(.woocommerce-block-theme-has-button-styles)
     width: 12rem;
     min-width: 12rem;
     height: 12rem;
-  }
-  .nav__contacts {
-    padding-top: 21rem;
   }
   .nav__contact {
     font-size: 14rem;
@@ -6421,7 +6426,8 @@ body:not(.woocommerce-block-theme-has-button-styles)
     height: 12rem;
   }
   .nav__contacts {
-    padding-top: 21rem;
+    padding-top: 20rem;
+    gap: 20rem;
   }
   .nav__contact {
     font-size: 14rem;
@@ -6803,9 +6809,6 @@ body:not(.woocommerce-block-theme-has-button-styles)
   .nav__icon {
     width: 12rem;
     height: 12rem;
-  }
-  .nav__contacts {
-    padding-top: 21rem;
   }
   .nav__contact {
     font-size: 14rem;
@@ -7201,9 +7204,6 @@ body:not(.woocommerce-block-theme-has-button-styles)
     width: 12rem;
     height: 12rem;
   }
-  .nav__contacts {
-    padding-top: 21rem;
-  }
   .nav__contact {
     font-size: 14rem;
   }
@@ -7430,6 +7430,10 @@ body:not(.woocommerce-block-theme-has-button-styles)
   .paralax {
     background-attachment: scroll;
   }
+
+  .nav__link {
+    font-size: 16rem !important;
+  }
 }
 @media screen and (min-width: 1600px) {
   .hero__slider.swiper-wrapper {
@@ -7507,7 +7511,7 @@ body:not(.woocommerce-block-theme-has-button-styles)
 
 @media only screen and (max-height: 810px) {
   .nav__contacts {
-    padding-top: 30rem;
+    padding-top: 20rem;
   }
 
   .nav__link {
