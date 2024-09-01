@@ -5,6 +5,15 @@ window.addEventListener('load', function () {
 const preloaderShown = localStorage.getItem('preloaderShown');
 
 document.addEventListener('DOMContentLoaded', function () {
+  gsap.registerPlugin(ScrollTrigger, InertiaPlugin);
+  ScrollTrigger.config({ ignoreMobileResize: true });
+  const mm = gsap.matchMedia();
+
+  mm.add('(max-width: 1024)', () => {
+    if (ScrollTrigger.isTouch === 1) {
+      ScrollTrigger.normalizeScroll(true);
+    }
+  });
   const words = document.querySelectorAll('[data-words-slide-up]');
   words.forEach((item) => {
     const spans = item.querySelectorAll('span');

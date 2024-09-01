@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   // Check if the preloader has been shown before
   gsap.registerPlugin(ScrollTrigger, InertiaPlugin);
+  ScrollTrigger.config({ ignoreMobileResize: true });
   const mm = gsap.matchMedia();
 
   mm.add('(max-width: 1024)', () => {
