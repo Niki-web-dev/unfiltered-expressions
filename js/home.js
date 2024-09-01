@@ -1,7 +1,3 @@
-window.addEventListener('load', function () {
-  // ScrollTrigger.refresh();
-});
-
 const preloaderShown = localStorage.getItem('preloaderShown');
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -189,8 +185,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const playBtn = document.querySelector('#video-section svg');
 
-  gsap.registerPlugin(ScrollTrigger);
-
   function isMobile() {
     return window.innerWidth <= 479;
   }
@@ -241,8 +235,6 @@ document.addEventListener('DOMContentLoaded', function () {
     ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     setupAnimation();
   });
-
-  gsap.registerPlugin(ScrollTrigger);
 
   const firstProcessItem = document.querySelectorAll('.process__item');
 
