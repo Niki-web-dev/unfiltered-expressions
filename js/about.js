@@ -50,6 +50,7 @@ function isMobile() {
 
 document.addEventListener('DOMContentLoaded', function () {
   gsap.registerPlugin(ScrollTrigger, InertiaPlugin);
+  ScrollTrigger.refresh();
 
   const icon = document.querySelector('.advantages__icon');
   const icon2 = document.querySelector('.gallery__icon');
@@ -80,9 +81,6 @@ document.addEventListener('DOMContentLoaded', function () {
   images.forEach((img, i) => {
     gsap.to(img, {
       y: i % 2 === 0 ? scrollDistanse : scrollDistanse * -1,
-      inertia: {
-        resistance: 500, // scroll resist
-      },
       scrollTrigger: {
         trigger: '.process.h-auto',
         start: 'top 70%',
@@ -90,8 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
         scrub: 1,
         inertia: true,
       },
+      ease: 'power1.out',
     });
   });
-
-  ScrollTrigger.refresh();
 });
