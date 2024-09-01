@@ -59,9 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
       markers: true,
     },
   });
-  window.addEventListener('scroll', () => {
-    ScrollTrigger.refresh();
-  });
   // const worksWrapper = document.querySelector('.works__wrapper');
   // const works = document.querySelector('.works');
 
@@ -306,4 +303,6 @@ document.addEventListener('DOMContentLoaded', function () {
   } else {
     desktopProcessAnimation(-155);
   }
+
+  ScrollTrigger.refresh();
 });
