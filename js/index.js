@@ -2,7 +2,13 @@
 document.addEventListener('DOMContentLoaded', function () {
   // Check if the preloader has been shown before
   gsap.registerPlugin(ScrollTrigger, InertiaPlugin);
+  const mm = gsap.matchMedia();
 
+  mm.add('(max-width: 1024)', () => {
+    if (ScrollTrigger.isTouch === 1) {
+      ScrollTrigger.normalizeScroll(true);
+    }
+  });
   const preloaderShown = localStorage.getItem('preloaderShown');
 
   if (!preloaderShown) {
