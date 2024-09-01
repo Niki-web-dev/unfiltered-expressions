@@ -39,25 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   //work galley scroll while scroll page
-  // const worksWrapper = document.querySelector('.works__wrapper');
-  // const works = document.querySelector('.works');
-
-  // const wrapperWidth = worksWrapper.scrollWidth;
-  // const containerWidth = works.clientWidth;
-  // const scrollDistance = wrapperWidth - containerWidth + 20;
-
-  // const scrollAmount = scrollDistance > 0 ? scrollDistance : 0;
-
-  // gsap.to(worksWrapper, {
-  //   x: -scrollAmount,
-  //   ease: 'none',
-  //   scrollTrigger: {
-  //     trigger: works,
-  //     start: 'top top',
-  //     end: `+=${works.clientHeight * 0.5}`,
-  //     scrub: true,
-  //   },
-  // });
   const worksWrapper = document.querySelector('.works__wrapper');
   const works = document.querySelector('.works');
 
@@ -67,30 +48,51 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const scrollAmount = scrollDistance > 0 ? scrollDistance : 0;
 
-  function handleScroll() {
-    const worksRect = works.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
+  gsap.to(worksWrapper, {
+    x: -scrollAmount,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: works,
+      start: 'top top',
+      end: `+=${works.clientHeight * 0.5}`,
+      scrub: true,
+      markers: true,
+    },
+  });
 
-    // Увеличиваем значение, чтобы начать анимацию позже
-    const startOffset = windowHeight; // Множитель 0.5 означает середину окна
+  // const worksWrapper = document.querySelector('.works__wrapper');
+  // const works = document.querySelector('.works');
 
-    // Расчет прогресса с учетом сдвига
-    const progress = (windowHeight - worksRect.top - startOffset) / (windowHeight + works.clientHeight / 0.5);
+  // const wrapperWidth = worksWrapper.scrollWidth;
+  // const containerWidth = works.clientWidth;
+  // const scrollDistance = wrapperWidth - containerWidth + 20;
 
-    // Ограничиваем прогресс от 0 до 1
-    const clampedProgress = Math.min(Math.max(progress, 0), 1);
+  // const scrollAmount = scrollDistance > 0 ? scrollDistance : 0;
 
-    // Вычисляем смещение
-    const translateX = -clampedProgress * scrollAmount;
+  // function handleScroll() {
+  //   const worksRect = works.getBoundingClientRect();
+  //   const windowHeight = window.innerHeight;
 
-    // Применяем трансформацию
-    worksWrapper.style.transform = `translateX(${translateX}px)`;
-  }
+  //   // Увеличиваем значение, чтобы начать анимацию позже
+  //   const startOffset = windowHeight; // Множитель 0.5 означает середину окна
 
-  window.addEventListener('scroll', handleScroll);
+  //   // Расчет прогресса с учетом сдвига
+  //   const progress = (windowHeight - worksRect.top - startOffset) / (windowHeight + works.clientHeight / 0.5);
 
-  // Инициализация анимации при загрузке страницы
-  handleScroll();
+  //   // Ограничиваем прогресс от 0 до 1
+  //   const clampedProgress = Math.min(Math.max(progress, 0), 1);
+
+  //   // Вычисляем смещение
+  //   const translateX = -clampedProgress * scrollAmount;
+
+  //   // Применяем трансформацию
+  //   worksWrapper.style.transform = `translateX(${translateX}px)`;
+  // }
+
+  // window.addEventListener('scroll', handleScroll);
+
+  // // Инициализация анимации при загрузке страницы
+  // handleScroll();
 
   //Paralax animation
 
