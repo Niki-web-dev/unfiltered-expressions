@@ -89,4 +89,6 @@ document.addEventListener('DOMContentLoaded', function () {
       ease: 'power1.out',
     });
   });
+
+  ScrollTrigger.refresh();
 });

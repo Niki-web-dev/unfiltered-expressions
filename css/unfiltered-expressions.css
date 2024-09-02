@@ -3395,7 +3395,7 @@ h3 {
   flex-direction: column;
   gap: 20rem;
   margin-bottom: 22rem;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .post-465.page.type-page.status-publish.hentry,
@@ -4546,10 +4546,6 @@ body:not(.woocommerce-block-theme-has-button-styles)
   .gallery__cards.swiper-wrapper {
     flex-flow: row;
   }
-  .gallery__card {
-    padding-bottom: 80rem;
-    font-size: 14rem;
-  }
   .gallery__card.blue {
     border-left-style: none;
     border-right-style: none;
@@ -4557,9 +4553,9 @@ body:not(.woocommerce-block-theme-has-button-styles)
   .gallery__card.blue.swiper-slide:hover {
     background-color: var(--transparent);
   }
-  .gallery__card.yellow.swiper-slide {
+  /* .gallery__card.yellow.swiper-slide {
     min-width: 100%;
-  }
+  } */
   .gallery__card.yellow.swiper-slide:hover {
     background-color: var(--transparent);
     color: var(--white);
@@ -4944,13 +4940,36 @@ body:not(.woocommerce-block-theme-has-button-styles)
     line-height: 100%;
     transform: translate(5rem, -10rem) rotate(-20deg);
   }
-  .swiper-pagination {
-    flex-flow: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 10rem 40rem;
+
+  .slick-dots {
     display: flex;
-    position: relative;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0 0 40rem;
+
+    list-style-type: none;
+
+    li {
+      margin: 0 3rem;
+    }
+
+    button {
+      display: block;
+      width: 6rem;
+      height: 6rem;
+      padding: 0;
+
+      border: none;
+      border-radius: 50%;
+      background-color: var(--grey);
+
+      text-indent: -9999px;
+    }
+
+    li.slick-active button {
+      background-color: var(--blue);
+    }
   }
   .link-block {
     background-color: var(--grey);
@@ -5344,7 +5363,7 @@ body:not(.woocommerce-block-theme-has-button-styles)
     flex-flow: row;
   }
   .gallery__card {
-    padding-bottom: 80rem;
+    padding-bottom: 35rem;
     font-size: 14rem;
   }
   .gallery__card.blue {
@@ -5353,9 +5372,6 @@ body:not(.woocommerce-block-theme-has-button-styles)
   }
   .gallery__card.blue.swiper-slide:hover {
     background-color: var(--transparent);
-  }
-  .gallery__card.yellow.swiper-slide {
-    min-width: 100%;
   }
   .gallery__card.yellow.swiper-slide:hover {
     background-color: var(--transparent);
@@ -5767,14 +5783,6 @@ body:not(.woocommerce-block-theme-has-button-styles)
     grid-column-gap: 4rem;
     grid-row-gap: 4rem;
     padding-left: 4rem;
-  }
-  .swiper-pagination {
-    flex-flow: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 10rem 40rem;
-    display: flex;
-    position: relative;
   }
   .link-block {
     background-color: var(--grey);
