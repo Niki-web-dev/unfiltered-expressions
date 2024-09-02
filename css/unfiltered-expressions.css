@@ -17,7 +17,7 @@
   color: var(--white);
 }
 * {
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
 }
 
 .wc-block-components-order-summary .wc-block-components-order-summary-item__quantity {
@@ -6763,6 +6763,11 @@ body:not(.woocommerce-block-theme-has-button-styles)
     justify-content: flex-start;
     top: 75rem;
   }
+
+  .detail-works .works__container.detail {
+    top: 15rem;
+  }
+
   .artwork__row-left.py-24.px-27.mobile-pl-50 {
     padding-left: 50rem;
   }
@@ -7433,6 +7438,12 @@ body:not(.woocommerce-block-theme-has-button-styles)
     margin: 0;
     object-fit: cover;
   }
+
+  .works__flex {
+    display: flex;
+    min-height: 600rem;
+    height: 80vh;
+  }
 }
 
 @media screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -7514,7 +7525,8 @@ body:not(.woocommerce-block-theme-has-button-styles)
 
   .works__flex {
     display: flex;
-    height: 900rem;
+    min-height: 600rem;
+    height: 80vh;
   }
 }
 
